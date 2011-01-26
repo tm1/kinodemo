@@ -1,0 +1,449 @@
+object fmRepert: TfmRepert
+  Left = 230
+  Top = 108
+  Width = 620
+  Height = 400
+  ActiveControl = dbgRepert
+  BorderIcons = [biSystemMenu, biMaximize]
+  Caption = 'Редактирование репертуара'
+  Color = clBtnFace
+  Constraints.MinHeight = 300
+  Constraints.MinWidth = 620
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  OnActivate = FormActivate
+  OnClose = FormClose
+  PixelsPerInch = 96
+  TextHeight = 13
+  object dbgRepert: TDBGrid
+    Left = 0
+    Top = 169
+    Width = 612
+    Height = 163
+    Align = alClient
+    DataSource = dm.dRepert
+    Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
+    ReadOnly = True
+    TabOrder = 0
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'MS Sans Serif'
+    TitleFont.Style = []
+    OnDblClick = dbgRepertDblClick
+    OnKeyDown = dbgRepertKeyDown
+    OnKeyPress = dbgRepertKeyPress
+    Columns = <
+      item
+        Alignment = taCenter
+        Expanded = False
+        FieldName = 'Repert_Kod'
+        Title.Caption = 'Код'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Repert_DATE'
+        Title.Caption = 'Дата'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = '_Seans'
+        Title.Caption = 'Сеанс'
+        Width = 40
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = '_Film'
+        Title.Caption = 'Название фильма'
+        Width = 260
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = '_Tarifet'
+        Title.Caption = 'Тарифный план'
+        Width = 100
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = '_Zal'
+        Title.Caption = 'Зал'
+        Width = 200
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = '_Cinema'
+        Title.Caption = 'Кинотеатр'
+        Visible = True
+      end>
+  end
+  object pnBottom: TPanel
+    Left = 0
+    Top = 332
+    Width = 612
+    Height = 41
+    Align = alBottom
+    BevelOuter = bvNone
+    TabOrder = 1
+    object btCancel: TButton
+      Left = 520
+      Top = 8
+      Width = 75
+      Height = 25
+      Anchors = [akRight, akBottom]
+      Caption = 'Закрыть (&X)'
+      TabOrder = 0
+      OnClick = btCancelClick
+    end
+  end
+  object gbEdit: TGroupBox
+    Left = 0
+    Top = 0
+    Width = 612
+    Height = 169
+    Align = alTop
+    Caption = 'Редактирование'
+    TabOrder = 2
+    object Label1: TLabel
+      Left = 8
+      Top = 16
+      Width = 23
+      Height = 13
+      Caption = '&Код'
+      FocusControl = edRepert_Kod
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object Label2: TLabel
+      Left = 176
+      Top = 72
+      Width = 109
+      Height = 13
+      Caption = '&Название фильма'
+      FocusControl = cmFilm
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object Label3: TLabel
+      Left = 128
+      Top = 16
+      Width = 31
+      Height = 13
+      Caption = '&Дата'
+      FocusControl = dtpDate_Filt
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object Label4: TLabel
+      Left = 16
+      Top = 72
+      Width = 85
+      Height = 13
+      Caption = '&Время сеанса'
+      FocusControl = cmSeans
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object Label5: TLabel
+      Left = 456
+      Top = 72
+      Width = 39
+      Height = 13
+      Anchors = [akTop, akRight]
+      Caption = '&Тариф'
+      FocusControl = cmTarifet
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object Label6: TLabel
+      Left = 312
+      Top = 22
+      Width = 23
+      Height = 13
+      Caption = '&Зал'
+      FocusControl = cmZal_Filt
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object edRepert_Kod: TEdit
+      Left = 8
+      Top = 40
+      Width = 73
+      Height = 21
+      Color = clBtnFace
+      ReadOnly = True
+      TabOrder = 0
+      OnChange = edRepert_KodChange
+      OnKeyDown = dbgRepertKeyDown
+      OnKeyPress = cmRepert_FilmKeyPress
+    end
+    object btAddRec: TButton
+      Left = 96
+      Top = 128
+      Width = 75
+      Height = 25
+      Caption = '&Добавить (+)'
+      TabOrder = 11
+      OnClick = btAddRecClick
+    end
+    object btEditRec: TButton
+      Left = 8
+      Top = 128
+      Width = 75
+      Height = 25
+      Caption = '&Изменить'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 10
+      OnClick = btEditRecClick
+    end
+    object btDeleteRec: TButton
+      Left = 184
+      Top = 128
+      Width = 75
+      Height = 25
+      Caption = '&Удалить (-)'
+      TabOrder = 12
+      OnClick = btDeleteRecClick
+    end
+    object dtpDate_Filt: TDateTimePicker
+      Left = 96
+      Top = 40
+      Width = 113
+      Height = 21
+      CalAlignment = dtaLeft
+      Date = 37508.3727099074
+      Time = 37508.3727099074
+      DateFormat = dfShort
+      DateMode = dmComboBox
+      Kind = dtkDate
+      ParseInput = False
+      TabOrder = 1
+      OnChange = chFiltrateClick
+    end
+    object cmSeans: TComboBox
+      Left = 8
+      Top = 96
+      Width = 97
+      Height = 21
+      Style = csDropDownList
+      ItemHeight = 13
+      TabOrder = 4
+    end
+    object cmZal_Filt: TComboBox
+      Left = 216
+      Top = 42
+      Width = 233
+      Height = 21
+      Style = csDropDownList
+      ItemHeight = 13
+      TabOrder = 2
+      OnChange = chFiltrateClick
+    end
+    object btSeans: TWc_BitBtn
+      Left = 112
+      Top = 94
+      Width = 25
+      Height = 25
+      Action = fmMain.acSeans
+      TabOrder = 5
+      Glyph.Data = {
+        36040000424D3604000000000000360000002800000010000000100000000100
+        2000000000000004000000000000000000000000000000000000FF00FF00FF00
+        FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+        FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+        FF00FF00FF00FF00FF00FF00FF00000000000000000000000000000000000000
+        0000FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+        FF00FF00FF0000000000000000000000FF000000FF000000FF000000FF000000
+        FF000000000000000000FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+        FF00000000000000FF000000FF00BDBEBD00FFFFFF00FFFFFF00FFFFFF00BDBE
+        BD000000FF000000FF0000000000FF00FF00FF00FF00FF00FF00FF00FF000000
+        00000000FF000000FF00FFFFFF00FFFFFF00FFFFFF00FF000000FFFFFF00FFFF
+        FF00FFFFFF000000FF000000FF0000000000FF00FF00FF00FF00FF00FF000000
+        00000000FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FF000000FFFFFF000000FF0000000000FF00FF00FF00FF00000000000000
+        FF00BDBEBD00FFFFFF00FFFFFF0000000000FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00BDBEBD000000FF0000000000FF00FF00000000000000
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF0000000000FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF000000FF0000000000FF00FF00000000000000
+        FF00FFFFFF00FF000000FFFFFF00FFFFFF00FFFFFF000000FF00000000000000
+        00000000000000000000FFFFFF000000FF0000000000FF00FF00000000000000
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF000000FF0000000000FF00FF00000000000000
+        FF00BDBEBD00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00BDBEBD000000FF0000000000FF00FF00FF00FF000000
+        00000000FF00FFFFFF00FF000000FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FF000000FFFFFF000000FF0000000000FF00FF00FF00FF00FF00FF000000
+        00000000FF000000FF00FFFFFF00FFFFFF00FFFFFF00FF000000FFFFFF00FFFF
+        FF00FFFFFF000000FF000000FF0000000000FF00FF00FF00FF00FF00FF00FF00
+        FF00000000000000FF000000FF00BDBEBD00FFFFFF00FF000000FFFFFF00BDBE
+        BD000000FF000000FF0000000000FF00FF00FF00FF00FF00FF00FF00FF00FF00
+        FF00FF00FF0000000000000000000000FF000000FF000000FF000000FF000000
+        FF000000000000000000FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+        FF00FF00FF00FF00FF00FF00FF00000000000000000000000000000000000000
+        0000FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00}
+    end
+    object btFilm: TWc_BitBtn
+      Left = 360
+      Top = 94
+      Width = 25
+      Height = 25
+      Action = fmMain.acFilm
+      Anchors = [akTop, akRight]
+      TabOrder = 7
+      Glyph.Data = {
+        36040000424D3604000000000000360000002800000010000000100000000100
+        2000000000000004000000000000000000000000000000000000FF00FF000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        000000000000000000000000000000000000000000000000000000000000FF00
+        FF0000000000FF00FF0000000000FF00FF0000000000FF00FF0000000000FF00
+        FF0000000000FF00FF0000000000FF00FF0000000000FF00FF00000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        00000000000000000000000000000000000000000000000000000000FF00FF00
+        FF00FF00FF00FF00FF000000FF00FF00FF00FF00FF0000000000FF00FF000000
+        FF00FF00FF00FF00FF00FF00FF00FF00FF007B797B0000000000FF00FF000000
+        FF00FF00FF00FF00FF000000FF00FF00FF00FF00FF0000000000FF00FF00FF00
+        FF000000FF00FF00FF00FF00FF007B797B000000FF0000000000FF00FF007B79
+        7B000000FF007B797B000000FF00FF00FF00FF00FF0000000000FF00FF00FF00
+        FF007B797B000000FF007B797B000000FF00FF00FF0000000000FF00FF00FF00
+        FF000000FF000000FF00FF00FF00FF00FF00FF00FF0000000000FF00FF00FF00
+        FF00FF00FF000000FF000000FF00FF00FF00FF00FF0000000000FF00FF00FF00
+        FF000000FF000000FF00FF00FF000000FF00FF00FF0000000000FF00FF000000
+        FF00FF00FF000000FF000000FF00FF00FF00FF00FF0000000000FF00FF000000
+        FF000000FF000000FF000000FF00FF00FF00FF00FF0000000000FF00FF00FF00
+        FF000000FF000000FF000000FF000000FF000000FF00000000000000FF00FF00
+        FF000000FF000000FF00FF00FF00FF00FF00FF00FF0000000000FF00FF00FF00
+        FF00FF00FF00FF00FF000000FF00FF00FF00FF00FF0000000000FF00FF00FF00
+        FF00FF00FF000000FF000000FF00FF00FF00FF00FF0000000000FF00FF00FF00
+        FF00FF00FF00FF00FF000000FF000000FF00FF00FF0000000000FF00FF00FF00
+        FF00FF00FF000000FF000000FF00FF00FF00FF00FF0000000000FF00FF00FF00
+        FF00FF00FF00FF00FF000000FF000000FF00FF00FF0000000000FF00FF00FF00
+        FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF0000000000FF00FF00FF00
+        FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF0000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        000000000000000000000000000000000000000000000000000000000000FF00
+        FF0000000000FF00FF0000000000FF00FF0000000000FF00FF0000000000FF00
+        FF0000000000FF00FF0000000000FF00FF0000000000FF00FF00000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000}
+    end
+    object btTarifz: TWc_BitBtn
+      Left = 568
+      Top = 94
+      Width = 25
+      Height = 25
+      Action = fmMain.acTarifz
+      Anchors = [akTop, akRight]
+      TabOrder = 9
+      Glyph.Data = {
+        36040000424D3604000000000000360000002800000010000000100000000100
+        2000000000000004000000000000000000000000000000000000FF00FF00FF00
+        FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+        FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+        FF000000000000FFFF0000FFFF0000FFFF0000FFFF0000868400008684000000
+        00000000000000FFFF0000FFFF0000000000FF00FF00FF00FF00FF00FF000086
+        8400008684000000000000000000000000000000000000000000000000000000
+        000000FFFF0000FFFF0000FFFF000086840000000000FF00FF00FF00FF000000
+        000000868400008684000086840000868400008684000086840000FFFF0000FF
+        FF0000FFFF000086840000FFFF0000FFFF0000FFFF00FF00FF00000000000086
+        840000868400008684000086840000868400008684000086840000FFFF0000FF
+        FF000086840000FFFF0000FFFF000086840000FFFF00FF00FF00008684000000
+        00000000000000FFFF0000FFFF0000FFFF00008684000086840000FFFF0000FF
+        FF000086840000FFFF00000000000086840000FFFF00FF00FF00008684000086
+        840000868400008684000086840000868400008684000086840000FFFF000086
+        84000086840000FFFF0000FFFF0000FFFF0000FFFF00FF00FF00FF00FF000000
+        0000008684000086840000000000000000000000000000000000000000000086
+        840000FFFF00008684000086840000FFFF0000000000FF00FF00FF00FF000000
+        000000FFFF0000FFFF0000FFFF0000FFFF0000FFFF0000FFFF0000FFFF0000FF
+        FF000086840000FFFF0000FFFF0000000000FF00FF00FF00FF00FF00FF000000
+        0000000000000000000000FFFF00C6C7C600C6C7C600C6C7C600C6C7C6000000
+        00000000000000000000FF00FF00FF00FF00FF00FF00FF00FF00FF00FF000000
+        000000868400C6C7C6000000000000FFFF0000FFFF0000FFFF0000FFFF0000FF
+        FF0000FFFF0000000000FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+        FF00000000000086840000868400FFFFFF00FFFFFF00FFFFFF00008684000086
+        8400008684000086840000868400FF00FF00FF00FF00FF00FF00FF00FF00FF00
+        FF00FF00FF0000000000008684000086840000FFFF0000FFFF0000FFFF0000FF
+        FF0000FFFF000086840000000000FF00FF00FF00FF00FF00FF00FF00FF00FF00
+        FF00FF00FF00000000000086840000FFFF0000FFFF0000FFFF0000FFFF0000FF
+        FF00008684000086840000000000FF00FF00FF00FF00FF00FF00FF00FF00FF00
+        FF00FF00FF00FF00FF00FF00FF00000000000000000000000000000000000000
+        000000000000FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+        FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+        FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00}
+    end
+    object cmFilm: TComboBox
+      Left = 152
+      Top = 96
+      Width = 201
+      Height = 21
+      Style = csDropDownList
+      Anchors = [akLeft, akTop, akRight]
+      ItemHeight = 13
+      TabOrder = 6
+    end
+    object cmTarifet: TComboBox
+      Left = 400
+      Top = 96
+      Width = 161
+      Height = 21
+      Style = csDropDownList
+      Anchors = [akTop, akRight]
+      ItemHeight = 13
+      TabOrder = 8
+    end
+    object chFiltrate: TCheckBox
+      Left = 464
+      Top = 44
+      Width = 89
+      Height = 17
+      Caption = 'Фильтр'
+      Checked = True
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = [fsBold]
+      ParentFont = False
+      State = cbChecked
+      TabOrder = 3
+      OnClick = chFiltrateClick
+    end
+  end
+end

@@ -1,0 +1,739 @@
+[28.03.2004]-(13-35-18)-  ----------==========[Start]==========----------
+[28.03.2004]-(13-35-18)-  DEBUGFileName = demo4_run_(28.03.2004_13-35-18).log
+[28.03.2004]-(13-35-18)-  Bugger.Init
+[28.03.2004]-(13-35-18)-  uImports.Init
+[28.03.2004]-(13-35-19)-  Print1c module is opened, path - "C:\Print1c.dll".
+[28.03.2004]-(13-35-19)-  Module version is [1.3.0.3 Ready  release].
+[28.03.2004]-(13-35-19)-  uMain.Init
+[28.03.2004]-(13:35:19)-  28.03.2004_13:35:19
+[28.03.2004]-(13:35:19)-  uAddon.Init
+[28.03.2004]-(13:35:19)-  
+_____________________________________________________________________________
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+[28.03.2004]-(13:35:19)-  Application.Started
+[28.03.2004]-(13:35:19)-  > [Tdm.DatamoduleCreate]: ->
+[28.03.2004]-(13:35:19)-  :   [Tdm.DatamoduleCreate]: Tables is closed.
+[28.03.2004]-(13:35:19)-  :   [Tdm.DatamoduleCreate]: Alias with Name "KINO_DAT" is added.
+[28.03.2004]-(13:35:19)-  :   [Tdm.DatamoduleCreate]: Path is "C:\Delphi\KinoDemo.1.0.4.x.debug\KinoDemo.1.0.4.64.debug\DATA".
+[28.03.2004]-(13:35:19)-  < [Tdm.DatamoduleCreate]: <-
+[28.03.2004]-(13:35:19)-  > [TfmMain.FormCreate]: ->
+[28.03.2004]-(13:35:19)-  :   [FormActivate]: Showing Splash form...
+[28.03.2004]-(13:35:19)-  :   [TfmMain.FormCreate]: Init variables & constants...
+[28.03.2004]-(13:35:19)-  >   [TfmMain.Main_Activate_Proc]: ->
+[28.03.2004]-(13:35:19)-  |   : [TfmMain.Main_Activate_Proc]: Connecting DataBase...
+[28.03.2004]-(13:35:19)-  |   > [Tdm.dbAfterConnect]: ->
+[28.03.2004]-(13:35:19)-  |   < [Tdm.dbAfterConnect]: <-
+[28.03.2004]-(13:35:19)-  |   : 
+-----------------------------------------------------------------------------
+[28.03.2004]-(13:35:19)-  |   : [TfmMain.Main_Activate_Proc]: Init procs...
+[28.03.2004]-(13:35:19)-  |   > [TfmMain.acInfoExecute]: ->
+[28.03.2004]-(13:35:19)-  |   :   [TfmMain.acInfoExecute]: fmInfo.Show - after Create
+[28.03.2004]-(13:35:19)-  |   < [TfmMain.acInfoExecute]: <-
+[28.03.2004]-(13:35:19)-  |   : 
+*****************************************************************************
+[28.03.2004]-(13:35:19)-  |   > [Load_All_Zals]: ->
+[28.03.2004]-(13:35:19)-  |   >   [Tdm.PrepareQuery_Zal]: ->
+[28.03.2004]-(13:35:19)-  |   |   > [Combo_Load_DataSet]: ->
+[28.03.2004]-(13:35:19)-  |   |   :   [Combo_Load_DataSet]: DataSet.Name is (qZal).
+[28.03.2004]-(13:35:19)-  |   |   :   [Combo_Load_DataSet]: Start cycle...
+[28.03.2004]-(13:35:19)-  |   |   :   [Combo_Load_DataSet]: Finish cycle...
+[28.03.2004]-(13:35:19)-  |   |   < [Combo_Load_DataSet]: <-
+[28.03.2004]-(13:35:19)-  |   |   : [Tdm.PrepareQuery_Zal]: RecordCount = 1
+[28.03.2004]-(13:35:19)-  |   <   [Tdm.PrepareQuery_Zal]: <-
+[28.03.2004]-(13:35:19)-  |   :   [Load_All_Zals]: Items.Count = (1)
+[28.03.2004]-(13:35:19)-  |   :   [Load_All_Zals]: ItemIndex = (-1)
+[28.03.2004]-(13:35:19)-  |   :   [Load_All_Zals]: Cur_Zal_Kod = -1
+[28.03.2004]-(13:35:19)-  |   :   [Load_All_Zals]: RecordCount = 1
+[28.03.2004]-(13:35:19)-  |   >   [Combo_Load_DataSet]: ->
+[28.03.2004]-(13:35:19)-  |   |   : [Combo_Load_DataSet]: DataSet.Name is (qZal).
+[28.03.2004]-(13:35:19)-  |   |   : [Combo_Load_DataSet]: Start cycle...
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Zal_Map]: ->
+[28.03.2004]-(13:35:19)-  |   |   :   [Load_Zal_Map]: cmZal.Enabled = false
+[28.03.2004]-(13:35:19)-  |   |   :   [Load_Zal_Map]: ImportZal(002) - Begin
+[28.03.2004]-(13:35:19)-  |   |   :   [Load_Zal_Map]: ImportZal(002) - End
+[28.03.2004]-(13:35:19)-  |   |   :   [Load_Zal_Map]: CreateZal(002) - Begin
+[28.03.2004]-(13:35:19)-  |   |   :   [Load_Zal_Map]: CreateZal(002) - End
+[28.03.2004]-(13:35:19)-  |   |   :   [Load_Zal_Map]: cmZal.Enabled = true
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Zal_Map]: <-
+[28.03.2004]-(13:35:19)-  |   |   : [Load_Zal_Map]: Work time - (0:00:00.301)
+[28.03.2004]-(13:35:19)-  |   |   : [Combo_Load_DataSet]: Finish cycle...
+[28.03.2004]-(13:35:19)-  |   <   [Combo_Load_DataSet]: <-
+[28.03.2004]-(13:35:19)-  |   < [Load_All_Zals]: <-
+[28.03.2004]-(13:35:19)-  |   : 
+*****************************************************************************
+[28.03.2004]-(13:35:19)-  |   : [Load_All_Zals]: Work time - (0:00:00.341)
+[28.03.2004]-(13:35:19)-  |   : 
+*****************************************************************************
+[28.03.2004]-(13:35:19)-  |   > [Load_All_Ticket_Types]: ->
+[28.03.2004]-(13:35:19)-  |   >   [Clear_User_Interface]: ->
+[28.03.2004]-(13:35:19)-  |   <   [Clear_User_Interface]: <-
+[28.03.2004]-(13:35:19)-  |   >   [Load_User_Interface_Info]: ->
+[28.03.2004]-(13:35:19)-  |   <   [Load_User_Interface_Info]: <-
+[28.03.2004]-(13:35:19)-  |   >   [Tdm.PrepareQuery_Tarifpl_SQL]: ->
+[28.03.2004]-(13:35:19)-  |   |   : [Tdm.PrepareQuery_Tarifpl_SQL]: FilterMode is (1)
+[28.03.2004]-(13:35:19)-  |   <   [Tdm.PrepareQuery_Tarifpl_SQL]: <-
+[28.03.2004]-(13:35:19)-  |   :   [Load_All_Ticket_Types]: RecordCount = 17
+[28.03.2004]-(13:35:19)-  |   >   [Combo_Load_DataSet]: ->
+[28.03.2004]-(13:35:19)-  |   |   : [Combo_Load_DataSet]: DataSet.Name is (qTarifpl).
+[28.03.2004]-(13:35:19)-  |   |   : [Combo_Load_DataSet]: Start cycle...
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifpl_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   >   [Add_Tarifpl_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   |   : [Add_Tarifpl_Desc]: Tarifpl_Kod = (1)
+[28.03.2004]-(13:35:19)-  |   |   |   : [Add_Tarifpl_Desc]: str_Tarifpl_Nam = (Взрослый)
+[28.03.2004]-(13:35:19)-  |   |   |   : [Add_Tarifpl_Desc]: Add to fmInfo.lvTarifz.Items
+[28.03.2004]-(13:35:19)-  |   |   <   [Add_Tarifpl_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifpl_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifpl_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   >   [Add_Tarifpl_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   |   : [Add_Tarifpl_Desc]: Tarifpl_Kod = (2)
+[28.03.2004]-(13:35:19)-  |   |   |   : [Add_Tarifpl_Desc]: str_Tarifpl_Nam = (Студенческий/Пенсионный)
+[28.03.2004]-(13:35:19)-  |   |   |   : [Add_Tarifpl_Desc]: Add to fmInfo.lvTarifz.Items
+[28.03.2004]-(13:35:19)-  |   |   <   [Add_Tarifpl_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifpl_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifpl_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   >   [Add_Tarifpl_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   |   : [Add_Tarifpl_Desc]: Tarifpl_Kod = (3)
+[28.03.2004]-(13:35:19)-  |   |   |   : [Add_Tarifpl_Desc]: str_Tarifpl_Nam = (Школьный)
+[28.03.2004]-(13:35:19)-  |   |   |   : [Add_Tarifpl_Desc]: Add to fmInfo.lvTarifz.Items
+[28.03.2004]-(13:35:19)-  |   |   <   [Add_Tarifpl_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifpl_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifpl_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   >   [Add_Tarifpl_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   |   : [Add_Tarifpl_Desc]: Tarifpl_Kod = (5)
+[28.03.2004]-(13:35:19)-  |   |   |   : [Add_Tarifpl_Desc]: str_Tarifpl_Nam = (Скидка 20%)
+[28.03.2004]-(13:35:19)-  |   |   |   : [Add_Tarifpl_Desc]: Add to fmInfo.lvTarifz.Items
+[28.03.2004]-(13:35:19)-  |   |   <   [Add_Tarifpl_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifpl_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifpl_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   >   [Add_Tarifpl_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   |   : [Add_Tarifpl_Desc]: Tarifpl_Kod = (7)
+[28.03.2004]-(13:35:19)-  |   |   |   : [Add_Tarifpl_Desc]: str_Tarifpl_Nam = (Скидка 50%)
+[28.03.2004]-(13:35:19)-  |   |   |   : [Add_Tarifpl_Desc]: Add to fmInfo.lvTarifz.Items
+[28.03.2004]-(13:35:19)-  |   |   <   [Add_Tarifpl_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifpl_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifpl_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   >   [Add_Tarifpl_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   |   : [Add_Tarifpl_Desc]: Tarifpl_Kod = (8)
+[28.03.2004]-(13:35:19)-  |   |   |   : [Add_Tarifpl_Desc]: str_Tarifpl_Nam = (Скидка групповая 1)
+[28.03.2004]-(13:35:19)-  |   |   |   : [Add_Tarifpl_Desc]: Add to fmInfo.lvTarifz.Items
+[28.03.2004]-(13:35:19)-  |   |   <   [Add_Tarifpl_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifpl_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifpl_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   >   [Add_Tarifpl_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   |   : [Add_Tarifpl_Desc]: Tarifpl_Kod = (9)
+[28.03.2004]-(13:35:19)-  |   |   |   : [Add_Tarifpl_Desc]: str_Tarifpl_Nam = (Скидка групповая 2)
+[28.03.2004]-(13:35:19)-  |   |   |   : [Add_Tarifpl_Desc]: Add to fmInfo.lvTarifz.Items
+[28.03.2004]-(13:35:19)-  |   |   <   [Add_Tarifpl_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifpl_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifpl_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   >   [Add_Tarifpl_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   |   : [Add_Tarifpl_Desc]: Tarifpl_Kod = (10)
+[28.03.2004]-(13:35:19)-  |   |   |   : [Add_Tarifpl_Desc]: str_Tarifpl_Nam = (Пригласительный)
+[28.03.2004]-(13:35:19)-  |   |   |   : [Add_Tarifpl_Desc]: Add to fmInfo.lvTarifz.Items
+[28.03.2004]-(13:35:19)-  |   |   <   [Add_Tarifpl_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifpl_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifpl_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   >   [Add_Tarifpl_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   |   : [Add_Tarifpl_Desc]: Tarifpl_Kod = (11)
+[28.03.2004]-(13:35:19)-  |   |   |   : [Add_Tarifpl_Desc]: str_Tarifpl_Nam = (Пригласительный на руках)
+[28.03.2004]-(13:35:19)-  |   |   |   : [Add_Tarifpl_Desc]: Add to fmInfo.lvTarifz.Items
+[28.03.2004]-(13:35:19)-  |   |   <   [Add_Tarifpl_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifpl_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifpl_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   >   [Add_Tarifpl_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   |   : [Add_Tarifpl_Desc]: Tarifpl_Kod = (12)
+[28.03.2004]-(13:35:19)-  |   |   |   : [Add_Tarifpl_Desc]: str_Tarifpl_Nam = (VIP карточка)
+[28.03.2004]-(13:35:19)-  |   |   |   : [Add_Tarifpl_Desc]: Add to fmInfo.lvTarifz.Items
+[28.03.2004]-(13:35:19)-  |   |   <   [Add_Tarifpl_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifpl_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifpl_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   >   [Add_Tarifpl_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   |   : [Add_Tarifpl_Desc]: Tarifpl_Kod = (13)
+[28.03.2004]-(13:35:19)-  |   |   |   : [Add_Tarifpl_Desc]: str_Tarifpl_Nam = (Взрослый абонемент)
+[28.03.2004]-(13:35:19)-  |   |   |   : [Add_Tarifpl_Desc]: Add to fmInfo.lvTarifz.Items
+[28.03.2004]-(13:35:19)-  |   |   <   [Add_Tarifpl_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifpl_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifpl_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   >   [Add_Tarifpl_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   |   : [Add_Tarifpl_Desc]: Tarifpl_Kod = (14)
+[28.03.2004]-(13:35:19)-  |   |   |   : [Add_Tarifpl_Desc]: str_Tarifpl_Nam = (Студенческий абонемент)
+[28.03.2004]-(13:35:19)-  |   |   |   : [Add_Tarifpl_Desc]: Add to fmInfo.lvTarifz.Items
+[28.03.2004]-(13:35:19)-  |   |   <   [Add_Tarifpl_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifpl_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifpl_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   >   [Add_Tarifpl_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   |   : [Add_Tarifpl_Desc]: Tarifpl_Kod = (15)
+[28.03.2004]-(13:35:19)-  |   |   |   : [Add_Tarifpl_Desc]: str_Tarifpl_Nam = (Школьный абонемент)
+[28.03.2004]-(13:35:19)-  |   |   |   : [Add_Tarifpl_Desc]: Add to fmInfo.lvTarifz.Items
+[28.03.2004]-(13:35:19)-  |   |   <   [Add_Tarifpl_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifpl_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifpl_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   >   [Add_Tarifpl_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   |   : [Add_Tarifpl_Desc]: Tarifpl_Kod = (16)
+[28.03.2004]-(13:35:19)-  |   |   |   : [Add_Tarifpl_Desc]: Add to fmInfo.lvTarifz.Items
+[28.03.2004]-(13:35:19)-  |   |   <   [Add_Tarifpl_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifpl_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifpl_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   >   [Add_Tarifpl_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   |   : [Add_Tarifpl_Desc]: Tarifpl_Kod = (17)
+[28.03.2004]-(13:35:19)-  |   |   |   : [Add_Tarifpl_Desc]: Add to fmInfo.lvTarifz.Items
+[28.03.2004]-(13:35:19)-  |   |   <   [Add_Tarifpl_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifpl_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifpl_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   >   [Add_Tarifpl_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   |   : [Add_Tarifpl_Desc]: Tarifpl_Kod = (18)
+[28.03.2004]-(13:35:19)-  |   |   |   : [Add_Tarifpl_Desc]: Add to fmInfo.lvTarifz.Items
+[28.03.2004]-(13:35:19)-  |   |   <   [Add_Tarifpl_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifpl_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifpl_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   >   [Add_Tarifpl_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   |   : [Add_Tarifpl_Desc]: Tarifpl_Kod = (19)
+[28.03.2004]-(13:35:19)-  |   |   |   : [Add_Tarifpl_Desc]: Add to fmInfo.lvTarifz.Items
+[28.03.2004]-(13:35:19)-  |   |   <   [Add_Tarifpl_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifpl_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   : [Combo_Load_DataSet]: Finish cycle...
+[28.03.2004]-(13:35:19)-  |   <   [Combo_Load_DataSet]: <-
+[28.03.2004]-(13:35:19)-  |   < [Load_All_Ticket_Types]: <-
+[28.03.2004]-(13:35:19)-  |   : 
+*****************************************************************************
+[28.03.2004]-(13:35:19)-  |   : [Load_All_Ticket_Types]: Work time - (0:00:00.070)
+[28.03.2004]-(13:35:19)-  |   : 
+*****************************************************************************
+[28.03.2004]-(13:35:19)-  |   > [Load_All_Tarifs]: ->
+[28.03.2004]-(13:35:19)-  |   >   [Tdm.PrepareQuery_Tarifz_SQL]: ->
+[28.03.2004]-(13:35:19)-  |   |   : [Tdm.PrepareQuery_Tarifz_SQL]: FilterMode is (4)
+[28.03.2004]-(13:35:19)-  |   <   [Tdm.PrepareQuery_Tarifz_SQL]: <-
+[28.03.2004]-(13:35:19)-  |   :   [Load_All_Tarifs]: RecordCount = 112
+[28.03.2004]-(13:35:19)-  |   >   [Combo_Load_DataSet]: ->
+[28.03.2004]-(13:35:19)-  |   |   : [Combo_Load_DataSet]: DataSet.Name is (qTarifz).
+[28.03.2004]-(13:35:19)-  |   |   : [Combo_Load_DataSet]: Start cycle...
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifet_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   :   [Load_Tarifet_Desc]: Add("_1_1=350")
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifet_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifet_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   :   [Load_Tarifet_Desc]: Add("_1_2=250")
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifet_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifet_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   :   [Load_Tarifet_Desc]: Add("_1_3=150")
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifet_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifet_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   :   [Load_Tarifet_Desc]: Add("_1_5=100")
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifet_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifet_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   :   [Load_Tarifet_Desc]: Add("_1_7=50")
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifet_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifet_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   :   [Load_Tarifet_Desc]: Add("_1_8=150")
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifet_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifet_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   :   [Load_Tarifet_Desc]: Add("_1_9=100")
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifet_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifet_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   :   [Load_Tarifet_Desc]: Add("_2_1=150")
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifet_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifet_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   :   [Load_Tarifet_Desc]: Add("_2_2=150")
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifet_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifet_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   :   [Load_Tarifet_Desc]: Add("_2_3=150")
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifet_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifet_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   :   [Load_Tarifet_Desc]: Add("_2_5=150")
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifet_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifet_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   :   [Load_Tarifet_Desc]: Add("_2_7=75")
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifet_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifet_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   :   [Load_Tarifet_Desc]: Add("_2_8=150")
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifet_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifet_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   :   [Load_Tarifet_Desc]: Add("_2_9=150")
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifet_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifet_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   :   [Load_Tarifet_Desc]: Add("_3_1=200")
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifet_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifet_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   :   [Load_Tarifet_Desc]: Add("_3_2=200")
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifet_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifet_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   :   [Load_Tarifet_Desc]: Add("_3_3=200")
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifet_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifet_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   :   [Load_Tarifet_Desc]: Add("_3_5=200")
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifet_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifet_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   :   [Load_Tarifet_Desc]: Add("_3_7=100")
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifet_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifet_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   :   [Load_Tarifet_Desc]: Add("_3_8=200")
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifet_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifet_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   :   [Load_Tarifet_Desc]: Add("_3_9=200")
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifet_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifet_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   :   [Load_Tarifet_Desc]: Add("_4_1=250")
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifet_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifet_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   :   [Load_Tarifet_Desc]: Add("_4_2=250")
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifet_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifet_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   :   [Load_Tarifet_Desc]: Add("_4_3=150")
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifet_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifet_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   :   [Load_Tarifet_Desc]: Add("_4_5=250")
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifet_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifet_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   :   [Load_Tarifet_Desc]: Add("_4_7=125")
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifet_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifet_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   :   [Load_Tarifet_Desc]: Add("_4_8=100")
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifet_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifet_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   :   [Load_Tarifet_Desc]: Add("_4_9=150")
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifet_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifet_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   :   [Load_Tarifet_Desc]: Add("_5_1=300")
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifet_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifet_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   :   [Load_Tarifet_Desc]: Add("_5_2=300")
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifet_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifet_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   :   [Load_Tarifet_Desc]: Add("_5_3=150")
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifet_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifet_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   :   [Load_Tarifet_Desc]: Add("_5_5=240")
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifet_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifet_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   :   [Load_Tarifet_Desc]: Add("_5_7=150")
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifet_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifet_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   :   [Load_Tarifet_Desc]: Add("_5_8=100")
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifet_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifet_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   :   [Load_Tarifet_Desc]: Add("_5_9=150")
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifet_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifet_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   :   [Load_Tarifet_Desc]: Add("_6_1=350")
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifet_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifet_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   :   [Load_Tarifet_Desc]: Add("_6_2=250")
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifet_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifet_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   :   [Load_Tarifet_Desc]: Add("_6_3=150")
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifet_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifet_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   :   [Load_Tarifet_Desc]: Add("_6_5=280")
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifet_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifet_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   :   [Load_Tarifet_Desc]: Add("_6_7=175")
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifet_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifet_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   :   [Load_Tarifet_Desc]: Add("_6_8=100")
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifet_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifet_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   :   [Load_Tarifet_Desc]: Add("_6_9=150")
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifet_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifet_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   :   [Load_Tarifet_Desc]: Add("_7_1=400")
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifet_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifet_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   :   [Load_Tarifet_Desc]: Add("_7_2=300")
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifet_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifet_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   :   [Load_Tarifet_Desc]: Add("_7_3=200")
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifet_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifet_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   :   [Load_Tarifet_Desc]: Add("_7_5=320")
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifet_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifet_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   :   [Load_Tarifet_Desc]: Add("_7_7=200")
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifet_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifet_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   :   [Load_Tarifet_Desc]: Add("_7_8=100")
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifet_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifet_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   :   [Load_Tarifet_Desc]: Add("_7_9=150")
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifet_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifet_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   :   [Load_Tarifet_Desc]: Add("_8_1=450")
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifet_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifet_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   :   [Load_Tarifet_Desc]: Add("_8_2=350")
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifet_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifet_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   :   [Load_Tarifet_Desc]: Add("_8_3=200")
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifet_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifet_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   :   [Load_Tarifet_Desc]: Add("_8_5=360")
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifet_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifet_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   :   [Load_Tarifet_Desc]: Add("_8_7=225")
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifet_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifet_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   :   [Load_Tarifet_Desc]: Add("_8_8=100")
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifet_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifet_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   :   [Load_Tarifet_Desc]: Add("_8_9=150")
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifet_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifet_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   :   [Load_Tarifet_Desc]: Add("_9_1=500")
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifet_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifet_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   :   [Load_Tarifet_Desc]: Add("_9_2=400")
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifet_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifet_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   :   [Load_Tarifet_Desc]: Add("_9_3=250")
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifet_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifet_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   :   [Load_Tarifet_Desc]: Add("_9_5=400")
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifet_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifet_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   :   [Load_Tarifet_Desc]: Add("_9_7=250")
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifet_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifet_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   :   [Load_Tarifet_Desc]: Add("_9_8=100")
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifet_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifet_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   :   [Load_Tarifet_Desc]: Add("_9_9=150")
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifet_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifet_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   :   [Load_Tarifet_Desc]: Add("_10_1=550")
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifet_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifet_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   :   [Load_Tarifet_Desc]: Add("_10_2=550")
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifet_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifet_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   :   [Load_Tarifet_Desc]: Add("_10_3=300")
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifet_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifet_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   :   [Load_Tarifet_Desc]: Add("_10_5=440")
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifet_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifet_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   :   [Load_Tarifet_Desc]: Add("_10_7=275")
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifet_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifet_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   :   [Load_Tarifet_Desc]: Add("_10_8=150")
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifet_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifet_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   :   [Load_Tarifet_Desc]: Add("_10_9=100")
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifet_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifet_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   :   [Load_Tarifet_Desc]: Add("_11_1=600")
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifet_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifet_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   :   [Load_Tarifet_Desc]: Add("_11_2=550")
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifet_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifet_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   :   [Load_Tarifet_Desc]: Add("_11_3=500")
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifet_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifet_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   :   [Load_Tarifet_Desc]: Add("_11_5=480")
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifet_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifet_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   :   [Load_Tarifet_Desc]: Add("_11_7=360")
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifet_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifet_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   :   [Load_Tarifet_Desc]: Add("_11_8=300")
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifet_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifet_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   :   [Load_Tarifet_Desc]: Add("_11_9=300")
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifet_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifet_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   :   [Load_Tarifet_Desc]: Add("_12_1=650")
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifet_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifet_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   :   [Load_Tarifet_Desc]: Add("_12_2=550")
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifet_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifet_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   :   [Load_Tarifet_Desc]: Add("_12_3=300")
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifet_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifet_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   :   [Load_Tarifet_Desc]: Add("_12_5=520")
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifet_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifet_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   :   [Load_Tarifet_Desc]: Add("_12_7=325")
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifet_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifet_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   :   [Load_Tarifet_Desc]: Add("_12_8=100")
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifet_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifet_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   :   [Load_Tarifet_Desc]: Add("_12_9=150")
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifet_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifet_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   :   [Load_Tarifet_Desc]: Add("_13_1=700")
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifet_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifet_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   :   [Load_Tarifet_Desc]: Add("_13_2=650")
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifet_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifet_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   :   [Load_Tarifet_Desc]: Add("_13_3=600")
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifet_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifet_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   :   [Load_Tarifet_Desc]: Add("_13_5=560")
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifet_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifet_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   :   [Load_Tarifet_Desc]: Add("_13_7=420")
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifet_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifet_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   :   [Load_Tarifet_Desc]: Add("_13_8=350")
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifet_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifet_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   :   [Load_Tarifet_Desc]: Add("_13_9=350")
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifet_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifet_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   :   [Load_Tarifet_Desc]: Add("_14_1=750")
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifet_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifet_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   :   [Load_Tarifet_Desc]: Add("_14_2=700")
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifet_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifet_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   :   [Load_Tarifet_Desc]: Add("_14_3=650")
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifet_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifet_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   :   [Load_Tarifet_Desc]: Add("_14_5=600")
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifet_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifet_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   :   [Load_Tarifet_Desc]: Add("_14_7=450")
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifet_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifet_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   :   [Load_Tarifet_Desc]: Add("_14_8=375")
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifet_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifet_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   :   [Load_Tarifet_Desc]: Add("_14_9=375")
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifet_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifet_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   :   [Load_Tarifet_Desc]: Add("_15_1=800")
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifet_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifet_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   :   [Load_Tarifet_Desc]: Add("_15_2=750")
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifet_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifet_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   :   [Load_Tarifet_Desc]: Add("_15_3=700")
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifet_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifet_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   :   [Load_Tarifet_Desc]: Add("_15_5=640")
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifet_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifet_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   :   [Load_Tarifet_Desc]: Add("_15_7=480")
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifet_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifet_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   :   [Load_Tarifet_Desc]: Add("_15_8=400")
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifet_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifet_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   :   [Load_Tarifet_Desc]: Add("_15_9=400")
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifet_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifet_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   :   [Load_Tarifet_Desc]: Add("_17_1=500")
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifet_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifet_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   :   [Load_Tarifet_Desc]: Add("_17_2=400")
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifet_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifet_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   :   [Load_Tarifet_Desc]: Add("_17_3=300")
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifet_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifet_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   :   [Load_Tarifet_Desc]: Add("_17_5=400")
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifet_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifet_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   :   [Load_Tarifet_Desc]: Add("_17_7=250")
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifet_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifet_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   :   [Load_Tarifet_Desc]: Add("_17_8=150")
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifet_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   > [Load_Tarifet_Desc]: ->
+[28.03.2004]-(13:35:19)-  |   |   :   [Load_Tarifet_Desc]: Add("_17_9=100")
+[28.03.2004]-(13:35:19)-  |   |   < [Load_Tarifet_Desc]: <-
+[28.03.2004]-(13:35:19)-  |   |   : [Combo_Load_DataSet]: Finish cycle...
+[28.03.2004]-(13:35:19)-  |   <   [Combo_Load_DataSet]: <-
+[28.03.2004]-(13:35:19)-  |   < [Load_All_Tarifs]: <-
+[28.03.2004]-(13:35:19)-  |   : 
+*****************************************************************************
+[28.03.2004]-(13:35:19)-  |   : [Load_All_Tarifs]: Work time - (0:00:00.110)
+[28.03.2004]-(13:35:19)-  |   : 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[28.03.2004]-(13:35:19)-  |   > [Refresh_Zal]: ->
+[28.03.2004]-(13:35:19)-  |   :   [Refresh_Zal]: cmZal.Enabled = false
+[28.03.2004]-(13:35:19)-  |   :   [Refresh_Zal]: Cur_Panel_Cntr is "pnZal_2".
+[28.03.2004]-(13:35:19)-  |   :   [Refresh_Zal]: Before - Cur_Panel_Cntr.Owner is "pnZal_Container".
+[28.03.2004]-(13:35:19)-  |   :   [Refresh_Zal]: Before - Cur_Panel_Cntr.Parent is "pnZal_Container".
+[28.03.2004]-(13:35:19)-  |   :   [Refresh_Zal]: After - Cur_Panel_Cntr.Owner is "sbMain".
+[28.03.2004]-(13:35:19)-  |   :   [Refresh_Zal]: After - Cur_Panel_Cntr.Parent is "sbx_Cntr".
+[28.03.2004]-(13:35:19)-  |   >   [GetOption]: ->
+[28.03.2004]-(13:35:19)-  |   |   : [GetOption]: OptionName = (Print_Serial2)
+[28.03.2004]-(13:35:19)-  |   |   : [GetOption]: OptionValue = (FaLSe)
+[28.03.2004]-(13:35:19)-  |   |   : [GetOption]: str_OptionName = (Print_Serial2)
+[28.03.2004]-(13:35:19)-  |   |   : [GetOption]: str_OptionValue = (TRUE)
+[28.03.2004]-(13:35:19)-  |   |   : [GetOption]: Result = 1
+[28.03.2004]-(13:35:19)-  |   <   [GetOption]: <-
+[28.03.2004]-(13:35:19)-  |   >   [GetOption]: ->
+[28.03.2004]-(13:35:19)-  |   |   : [GetOption]: OptionName = (SerialNum_2)
+[28.03.2004]-(13:35:19)-  |   |   : [GetOption]: OptionValue = (unknown)
+[28.03.2004]-(13:35:19)-  |   |   : [GetOption]: str_OptionName = (SerialNum_2)
+[28.03.2004]-(13:35:19)-  |   |   : [GetOption]: str_OptionValue = (5297)
+[28.03.2004]-(13:35:19)-  |   |   : [GetOption]: Result = 1
+[28.03.2004]-(13:35:19)-  |   <   [GetOption]: <-
+[28.03.2004]-(13:35:19)-  |   >   [SaveOption]: ->
+[28.03.2004]-(13:35:19)-  |   |   : [SaveOption]: OptionName = (Print_Serial2)
+[28.03.2004]-(13:35:19)-  |   |   : [SaveOption]: OptionValue = (TRUE)
+[28.03.2004]-(13:35:19)-  |   |   : [SaveOption]: Result = 1
+[28.03.2004]-(13:35:19)-  |   <   [SaveOption]: <-
+[28.03.2004]-(13:35:19)-  |   :   [Refresh_Zal]: str_Print_Serial = true
+[28.03.2004]-(13:35:19)-  |   :   [Refresh_Zal]: _Print_Serial = TRUE
+[28.03.2004]-(13:35:19)-  |   :   [Refresh_Zal]: str_Serial = 5297
+[28.03.2004]-(13:35:19)-  |   :   [Refresh_Zal]: _Serial = 5297
+[28.03.2004]-(13:35:19)-  |   >   [Init_Cur_Repert]: ->
+[28.03.2004]-(13:35:19)-  |   |   > [Tdm.PrepareQuery_Repert_SQL]: ->
+[28.03.2004]-(13:35:19)-  |   |   :   [Tdm.PrepareQuery_Repert_SQL]: FilterMode is (1)
+[28.03.2004]-(13:35:19)-  |   |   :   [Tdm.PrepareQuery_Repert_SQL]: Filter_Date is (12/30/1899)
+[28.03.2004]-(13:35:19)-  |   |   :   [Tdm.PrepareQuery_Repert_SQL]: Filter_Zal_Kod is (2)
+[28.03.2004]-(13:35:19)-  |   |   < [Tdm.PrepareQuery_Repert_SQL]: <-
+[28.03.2004]-(13:35:19)-  |   |   : [Init_Cur_Repert]: RecordCount = 0
+[28.03.2004]-(13:35:19)-  |   |   > [Combo_Load_DataSet]: ->
+[28.03.2004]-(13:35:19)-  |   |   :   [Combo_Load_DataSet]: DataSet.Name is (qRepert).
+[28.03.2004]-(13:35:19)-  |   |   :   [Combo_Load_DataSet]: Start cycle...
+[28.03.2004]-(13:35:19)-  |   |   :   [Combo_Load_DataSet]: Finish cycle...
+[28.03.2004]-(13:35:19)-  |   |   < [Combo_Load_DataSet]: <-
+[28.03.2004]-(13:35:19)-  |   |   : [Init_Cur_Repert]: Tabs.Count = 0
+[28.03.2004]-(13:35:19)-  |   <   [Init_Cur_Repert]: <-
+[28.03.2004]-(13:35:19)-  |   :   
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+[28.03.2004]-(13:35:19)-  |   >   [TfmMain.tbcFilmChange]: ->
+[28.03.2004]-(13:35:19)-  |   |   : [TfmMain.tbcFilmChange]: Film_Kod = (-1)
+[28.03.2004]-(13:35:19)-  |   |   : 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[28.03.2004]-(13:35:19)-  |   |   > [Refresh_Film]: ->
+[28.03.2004]-(13:35:19)-  |   |   >   [Load_Tarifet]: ->
+[28.03.2004]-(13:35:19)-  |   |   |   > [Tdm.PrepareQuery_Repert_SQL]: ->
+[28.03.2004]-(13:35:19)-  |   |   |   :   [Tdm.PrepareQuery_Repert_SQL]: FilterMode is (2)
+[28.03.2004]-(13:35:19)-  |   |   |   :   [Tdm.PrepareQuery_Repert_SQL]: Filter_Repert_Kod is (-1)
+[28.03.2004]-(13:35:19)-  |   |   |   < [Tdm.PrepareQuery_Repert_SQL]: <-
+[28.03.2004]-(13:35:19)-  |   |   |   : [Load_Tarifet]: RecordCount = 0
+[28.03.2004]-(13:35:19)-  |   |   <   [Load_Tarifet]: <-
+[28.03.2004]-(13:35:19)-  |   |   :   [Load_Tarifet]: Work time - (0:00:00.030)
+[28.03.2004]-(13:35:19)-  |   |   :   
+-----------------------------------------------------------------------------
+[28.03.2004]-(13:35:19)-  |   |   >   [Load_All_TC]: ->
+[28.03.2004]-(13:35:19)-  |   |   <   [Load_All_TC]: <-
+[28.03.2004]-(13:35:19)-  |   |   :   [Load_All_TC]: Work time - (0:00:00.000)
+[28.03.2004]-(13:35:19)-  |   |   >   [Refresh_TC_Count]: ->
+[28.03.2004]-(13:35:19)-  |   |   |   : [Refresh_TC_Count]: Length(52) = "Помеч. 0, своб. [0] из 0. Сеть: 0 из 0. Сломано = 0."
+[28.03.2004]-(13:35:19)-  |   |   <   [Refresh_TC_Count]: <-
+[28.03.2004]-(13:35:19)-  |   |   < [Refresh_Film]: <-
+[28.03.2004]-(13:35:19)-  |   |   : 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[28.03.2004]-(13:35:19)-  |   <   [TfmMain.tbcFilmChange]: <-
+[28.03.2004]-(13:35:19)-  |   :   
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+[28.03.2004]-(13:35:19)-  |   :   [TfmMain.tbcFilmChange]: Work time - (0:00:00.040)
+[28.03.2004]-(13:35:19)-  |   :   [Refresh_Zal]: -> cmZal.Enabled = true
+[28.03.2004]-(13:35:19)-  |   < [Refresh_Zal]: <-
+[28.03.2004]-(13:35:19)-  |   : 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[28.03.2004]-(13:35:19)-  |   : 
+ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
+[28.03.2004]-(13:35:19)-  |   > [TfmMain.dtpDateChange]: ->
+[28.03.2004]-(13:35:19)-  |   :   [TfmMain.dtpDateChange]: Date is (28/03/2004)
+[28.03.2004]-(13:35:19)-  |   :   
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[28.03.2004]-(13:35:19)-  |   >   [Refresh_Date]: ->
+[28.03.2004]-(13:35:19)-  |   |   > [Init_Cur_Repert]: ->
+[28.03.2004]-(13:35:19)-  |   |   >   [Tdm.PrepareQuery_Repert_SQL]: ->
+[28.03.2004]-(13:35:19)-  |   |   |   : [Tdm.PrepareQuery_Repert_SQL]: FilterMode is (1)
+[28.03.2004]-(13:35:19)-  |   |   |   : [Tdm.PrepareQuery_Repert_SQL]: Filter_Date is (03/28/2004)
+[28.03.2004]-(13:35:19)-  |   |   |   : [Tdm.PrepareQuery_Repert_SQL]: Filter_Zal_Kod is (2)
+[28.03.2004]-(13:35:19)-  |   |   <   [Tdm.PrepareQuery_Repert_SQL]: <-
+[28.03.2004]-(13:35:19)-  |   |   :   [Init_Cur_Repert]: RecordCount = 0
+[28.03.2004]-(13:35:19)-  |   |   >   [Combo_Load_DataSet]: ->
+[28.03.2004]-(13:35:19)-  |   |   |   : [Combo_Load_DataSet]: DataSet.Name is (qRepert).
+[28.03.2004]-(13:35:19)-  |   |   |   : [Combo_Load_DataSet]: Start cycle...
+[28.03.2004]-(13:35:19)-  |   |   |   : [Combo_Load_DataSet]: Finish cycle...
+[28.03.2004]-(13:35:19)-  |   |   <   [Combo_Load_DataSet]: <-
+[28.03.2004]-(13:35:19)-  |   |   :   [Init_Cur_Repert]: Tabs.Count = 0
+[28.03.2004]-(13:35:19)-  |   |   < [Init_Cur_Repert]: <-
+[28.03.2004]-(13:35:19)-  |   |   : 
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+[28.03.2004]-(13:35:19)-  |   |   > [TfmMain.tbcFilmChange]: ->
+[28.03.2004]-(13:35:19)-  |   |   :   [TfmMain.tbcFilmChange]: Film_Kod = (-1)
+[28.03.2004]-(13:35:19)-  |   |   :   
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[28.03.2004]-(13:35:19)-  |   |   >   [Refresh_Film]: ->
+[28.03.2004]-(13:35:19)-  |   |   |   > [Load_Tarifet]: ->
+[28.03.2004]-(13:35:19)-  |   |   |   >   [Tdm.PrepareQuery_Repert_SQL]: ->
+[28.03.2004]-(13:35:19)-  |   |   |   |   : [Tdm.PrepareQuery_Repert_SQL]: FilterMode is (2)
+[28.03.2004]-(13:35:19)-  |   |   |   |   : [Tdm.PrepareQuery_Repert_SQL]: Filter_Repert_Kod is (-1)
+[28.03.2004]-(13:35:19)-  |   |   |   <   [Tdm.PrepareQuery_Repert_SQL]: <-
+[28.03.2004]-(13:35:19)-  |   |   |   :   [Load_Tarifet]: RecordCount = 0
+[28.03.2004]-(13:35:19)-  |   |   |   < [Load_Tarifet]: <-
+[28.03.2004]-(13:35:19)-  |   |   |   : [Load_Tarifet]: Work time - (0:00:00.030)
+[28.03.2004]-(13:35:19)-  |   |   |   : 
+-----------------------------------------------------------------------------
+[28.03.2004]-(13:35:19)-  |   |   |   > [Load_All_TC]: ->
+[28.03.2004]-(13:35:19)-  |   |   |   < [Load_All_TC]: <-
+[28.03.2004]-(13:35:19)-  |   |   |   : [Load_All_TC]: Work time - (0:00:00.000)
+[28.03.2004]-(13:35:19)-  |   |   |   > [Refresh_TC_Count]: ->
+[28.03.2004]-(13:35:19)-  |   |   |   :   [Refresh_TC_Count]: Length(52) = "Помеч. 0, своб. [0] из 0. Сеть: 0 из 0. Сломано = 0."
+[28.03.2004]-(13:35:19)-  |   |   |   < [Refresh_TC_Count]: <-
+[28.03.2004]-(13:35:19)-  |   |   <   [Refresh_Film]: <-
+[28.03.2004]-(13:35:19)-  |   |   :   
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[28.03.2004]-(13:35:19)-  |   |   < [TfmMain.tbcFilmChange]: <-
+[28.03.2004]-(13:35:19)-  |   |   : 
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+[28.03.2004]-(13:35:19)-  |   |   : [TfmMain.tbcFilmChange]: Work time - (0:00:00.040)
+[28.03.2004]-(13:35:19)-  |   <   [Refresh_Date]: <-
+[28.03.2004]-(13:35:19)-  |   :   
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[28.03.2004]-(13:35:19)-  |   < [TfmMain.dtpDateChange]: <-
+[28.03.2004]-(13:35:19)-  |   : 
+ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
+[28.03.2004]-(13:35:19)-  |   : [TfmMain.dtpDateChange]: Work time - (0:00:00.080)
+[28.03.2004]-(13:35:19)-  |   : 
+-----------------------------------------------------------------------------
+[28.03.2004]-(13:35:19)-  |   : [TfmMain.Main_Activate_Proc]: Closing Splash form...
+[28.03.2004]-(13:35:19)-  |   > [TfmSplash.FormClose]: ->
+[28.03.2004]-(13:35:19)-  |   :   [TfmSplash.FormClose]: Sender.Name = (fmMain)
+[28.03.2004]-(13:35:19)-  |   < [TfmSplash.FormClose]: <-
+[28.03.2004]-(13:35:19)-  |   : [TfmMain.Main_Activate_Proc]: Splash form is freed...
+[28.03.2004]-(13:35:19)-  |   : [TfmMain.Main_Activate_Proc]: Done activating.
+[28.03.2004]-(13:35:19)-  <   [TfmMain.Main_Activate_Proc]: <-
+[28.03.2004]-(13:35:19)-  :   
+-----------------------------------------------------------------------------
+[28.03.2004]-(13:35:19)-  >   [GetOption]: ->
+[28.03.2004]-(13:35:19)-  |   : [GetOption]: OptionName = (TotalPrintedCount)
+[28.03.2004]-(13:35:19)-  |   : [GetOption]: OptionValue = ()
+[28.03.2004]-(13:35:19)-  |   : [GetOption]: str_OptionName = (TotalPrintedCount)
+[28.03.2004]-(13:35:19)-  |   : [GetOption]: str_OptionValue = (5501)
+[28.03.2004]-(13:35:19)-  |   : [GetOption]: Result = 1
+[28.03.2004]-(13:35:19)-  <   [GetOption]: <-
+[28.03.2004]-(13:35:19)-  >   [SaveOption]: ->
+[28.03.2004]-(13:35:19)-  |   : [SaveOption]: OptionName = (TotalPrintedCount)
+[28.03.2004]-(13:35:19)-  |   : [SaveOption]: OptionValue = (5501)
+[28.03.2004]-(13:35:19)-  |   : [SaveOption]: Result = 1
+[28.03.2004]-(13:35:19)-  <   [SaveOption]: <-
+[28.03.2004]-(13:35:19)-  >   [TfmMain.NetSrv_Up]: ->
+[28.03.2004]-(13:35:19)-  <   [TfmMain.NetSrv_Up]: <-
+[28.03.2004]-(13:35:19)-  < [TfmMain.FormCreate]: <-
+[28.03.2004]-(13:35:19)-  : 
+-----------------------------------------------------------------------------
+[28.03.2004]-(13:35:19)-  > [TfmMain.FormActivate]: ->
+[28.03.2004]-(13:35:19)-  < [TfmMain.FormActivate]: <-
+[28.03.2004]-(13:35:19)-  : 
+-----------------------------------------------------------------------------
+[28.03.2004]-(13:35:21)-  > [TfmMain.acInfoExecute]: ->
+[28.03.2004]-(13:35:21)-  :   [TfmMain.acInfoExecute]: fmInfo.Hide
+[28.03.2004]-(13:35:21)-  < [TfmMain.acInfoExecute]: <-
+[28.03.2004]-(13:35:35)-  > [TfmMain.FormClose]: ->
+[28.03.2004]-(13:35:35)-  :   [TfmMain.FormClose]: MessageDlg(...mtConfirmation...)
+[28.03.2004]-(13:35:35)-  :   [TfmMain.FormClose]: Answer - Yes
+[28.03.2004]-(13:35:35)-  :   [TfmMain.FormClose]: DataBase is disconnected.
+[28.03.2004]-(13:35:35)-  < [TfmMain.FormClose]: <-
+[28.03.2004]-(13:35:35)-  Application.Finished
+[28.03.2004]-(13:35:35)-  
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+_____________________________________________________________________________
+[28.03.2004]-(13:35:35)-  uAddon.Final
+[28.03.2004]-(13:35:35)-  uMain.Final
+[28.03.2004]-(13:35:35)-  uImports.Final
+[28.03.2004]-(13:35:35)-  Print1c module is closed.
+[28.03.2004]-(13:35:35)-  Bugger.Final
+[28.03.2004]-(13:35:35)-  ----------==========[Finish]==========----------

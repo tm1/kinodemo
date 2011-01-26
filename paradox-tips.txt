@@ -1,0 +1,295 @@
+-----------------------------------------------------------------------
+...prevent Data Corruption?
+Author: Gerd Burgdorf 
+1 Comment to this tip [Write new comment]
+[ Print tip ]
+
+Tip Rating (3):
+[Picture][Picture][Picture][Picture][Picture]
+
+
+
+{ 
+  Wenn eine Datenbank bzw. eine Tabelle (Paradox oder DBase) 
+ lokal auf einem PC installiert ist und BDE-Einstellung 
+ "LOCAL SHARE" FALSE ist, dann werden &Auml;nderungen des Tabelleninhalts 
+ durch die BDE zwischengespeichert. 
+ Diese Daten sind bei einem Chrash weg. 
+ Daher kann es sich empfehlen die Zwischenspeicherung zu umgehen: 
+
+ If a database or a table is local on a PC installed (Paradox or Dbase) 
+ and the BDE-setting "LOCAL SHARE" is FALSE, then changings are not 
+ stored immediatly but are kept in the memory. 
+ This changings are gone after a chrash. 
+ So it might be better after changing to store the data physically on the disk: 
+} 
+
+
+uses 
+BDE; 
+
+procedure TForm1.Table1AfterPost(DataSet: TDataSet); 
+begin 
+DbiSaveChanges(Table1.Handle); 
+end; 
+
+-----------------------------------------------------------------------
+...access Paradox tables on CD or read-only drives?
+Author: Damian Gorski
+0 Comments to this tip [Write new comment]
+[ Print tip ]
+
+Tip Rating (3):
+[Picture][Picture][Picture][Picture][Picture]
+
+
+
+{This Technical Information document will step through the concepts 
+regarding accessing Paradox tables which are located on a CD-ROM or 
+any read-only device. 
+
+The Paradox locking scheme requires the existence of a PDOXUSRS.LCK 
+file to handle its locking logic. This file is generally created at 
+run-time and resides in the directory which also contains the tables. 
+However, with a CD-ROM there is not a way to create this file at 
+run-time on the CD-ROM. The solution is simple, we create this file 
+
+and put it on the CD-ROM when the CD is pressed. The following steps 
+will give you a very simple utility program for creating the 
+PDOXUSRS.LCK file which you will then copy to the CD-ROM image.} 
+
+{1. Starting with a blank project add the following components:} TEdit, 
+TButton and TDatabase. 
+
+
+{2. In the OnClick event for the button use the following code:} 
+
+procedure TForm1.Button1Click(Sender: TObject); 
+begin 
+ if ChkPath then 
+Check(DbiAcqPersistTableLock(Database1.Handle, 
+     'PARADOX.DRO', 'PARADOX')); 
+end; 
+
+
+{3. The ChkPath function is a user defined method of the form. It will 
+simply check the path entered in the Edit box and make sure it exists. 
+Here is the function:} 
+
+function TForm1.ChkPath: Boolean; 
+var 
+s: array[0..100] of char; 
+begin 
+ if DirectoryExists(Edit1.Text) then 
+ begin 
+DataBase1.DatabaseName := 'TempDB'; 
+   DataBase1.DriverName   := 'Standard'; 
+   DataBase1.LoginPrompt  := False; 
+   DataBase1.Connected    := False; 
+
+   DataBase1.Params.Add('Path=' + Edit1.Text); 
+   DataBase1.Connected := True; 
+   Result := True; 
+end 
+ else 
+ begin 
+StrPCopy(s, 'Directory : ' + Edit1.Text + ' Does Not Exist'); 
+   Application.MessageBox(s, 'Error!', MB_ICONSTOP); 
+   Result := False; 
+end; 
+end; 
+
+{ Note: Don't forget to put the function header in the public section 
+       of the form.} 
+
+
+{4. There is one more thing you need to add before compiling, in the 
+Uses statement at the top of the unit add the following units:} 
+
+Delphi 1.0: FileCtrl, DbiProcs, DbiTypes, DbiErrs.Delphi 2.0: FileCtrl, BDE 
+
+{When you have compiled and executed the utility program, it will 
+create two files in the directory you specified. The two files created 
+are: PDOXUSRS.LCK and PARADOX.LCK.} 
+
+{Note: The PARADOX.LCK file is only necessary when accessing Paradox for 
+DOS tables so you can delete it.} 
+
+{5. The only thing left for you to do is copy the remaining file 
+(PDOXUSRS.LCK) to the CD-ROM image. Of course your tables will be 
+Read-Only.} 
+
+{Note: If you want to clean up this utility for future use, you can 
+change the text property of the Edit box to be some default directory 
+and change the Caption property of the Button to be something more 
+meaningful.} 
+
+{Here is the final version of the code:} 
+
+unit Unit1; 
+
+interface 
+
+uses 
+Windows, Messages, SysUtils, Classes, Graphics, Controls, 
+ Forms, Dialogs, DB, StdCtrls, FileCtrl, 
+
+{$IFDEF WIN32} 
+BDE; 
+{$ELSE} 
+DbiProcs, DbiTypes, DbiErrs; 
+
+{$ENDIF } 
+
+
+type 
+TForm1 = class(TForm) 
+   Edit1: TEdit; 
+   Button1: TButton; 
+   Database1: TDatabase; 
+procedure Button1Click(Sender: TObject); 
+private 
+{ Private declarations } 
+public 
+{ Public declarations } 
+function ChkPath: Boolean; 
+end; 
+
+var 
+Form1: TForm1; 
+
+implementation 
+
+{$R *.DFM} 
+
+function TForm1.ChkPath: Boolean; 
+var 
+s: array[0..100] of char; 
+begin 
+ if DirectoryExists(Edit1.Text) then 
+ begin 
+DataBase1.DatabaseName := 'TempDB'; 
+
+   DataBase1.DriverName  := 'Standard'; 
+   DataBase1.LoginPrompt := False; 
+   DataBase1.Connected   := False; 
+   DataBase1.Params.Add('Path=' + Edit1.Text); 
+   DataBase1.Connected := True; 
+   Result := True; 
+end 
+ else 
+ begin 
+StrPCopy(s, 'Directory : ' + Edit1.Text + ' Does Not Exist'); 
+   Application.MessageBox(s, 'Error!', MB_ICONSTOP); 
+   Result := False; 
+end; 
+end; 
+
+procedure TForm1.Button1Click(Sender: TObject); 
+begin 
+ if ChkPath then 
+Check(DbiAcqPersistTableLock(Database1.Handle, 
+     'PARADOX.DRO', 'PARADOX')); 
+end; 
+
+end. 
+
+-----------------------------------------------------------------------
+...automate logon for Paradox tables?
+Author: Damian Gorski
+1 Comment to this tip [Write new comment]
+[ Print tip ]
+
+Tip Rating (2):
+[Picture][Picture][Picture][Picture][Picture]
+
+
+
+{ 
+ The table component's ACTIVE property must be set to FALSE 
+ (If it is active before you have added the pasword, you will be prompted). 
+ Then, put this code in the handler for the form's OnCreate event: 
+} 
+Session.AddPassword('My secret password'); 
+ Table1.Active := True; 
+
+{ 
+ Once you close the table, you can remove the password with 
+ RemovePassword('My secret password'), 
+ or you can remove all current passwords with RemoveAllPasswords. 
+ (Note: This is for Paradox tables only.) 
+} 
+
+-----------------------------------------------------------------------
+...open a password-saved paradox database without knowing the password?
+Author: Babak Sateli
+Homepage: http://www.cdcenterco.com
+2 Comments to this tip [Write new comment]
+[ Print tip ]
+
+Tip Rating (26):
+[Picture][Picture][Picture][Picture][Picture]
+
+
+
+If you forget your paradox table password, try out 
+on of these passwords, it works well. 
+
+for PARADOX 7.0 use this password: "jIGGAe" or "cupcdvum" 
+for PARADOX 5.0 use this password: same thing 
+for PARADOX 4.x (DOS) use this password: "nx66ppx"
+
+-----------------------------------------------------------------------
+...add a password to a paradox table?
+Author: Simon Grossenbacher
+Homepage: http://www.swissdelphicenter.ch
+1 Comment to this tip [Write new comment]
+[ Print tip ]
+
+Tip Rating (1):
+[Picture][Picture][Picture][Picture][Picture]
+
+
+
+uses 
+Bde, SysUtils, dbtables, windows; 
+
+
+function StrToOem(const AnsiStr: string): string; 
+begin 
+SetLength(Result, Length(AnsiStr)); 
+if Length(Result)  0 then 
+CharToOem(PChar(AnsiStr), PChar(Result)); 
+end; 
+
+function TablePasswort(var Table: TTable; password: string): Boolean; 
+var 
+pTblDesc: pCRTblDesc; 
+ hDb: hDBIDb; 
+begin 
+Result := False; 
+with Table do 
+ begin 
+   if Active and (not Exclusive) then Close; 
+if (not Exclusive) then Exclusive := True; 
+if (not Active) then Open; 
+   hDB := DBHandle; 
+   Close; 
+end; 
+ GetMem(pTblDesc, SizeOf(CRTblDesc)); 
+ FillChar(pTblDesc^, SizeOf(CRTblDesc), 0); 
+with pTblDesc^ do 
+ begin 
+StrPCopy(szTblName, StrToOem(Table.TableName)); 
+   szTblType := szParadox; 
+   StrPCopy(szPassword, StrToOem(Password)); 
+   bPack      := True; 
+   bProtected := True; 
+end; 
+if DbiDoRestructure(hDb, 1, pTblDesc, nil, nil, nil, False) DBIERR_NONE then Exit; 
+if pTblDesc  nil then FreeMem(pTblDesc, SizeOf(CRTblDesc)); 
+ Result := True; 
+end; 
+
+-----------------------------------------------------------------------
+

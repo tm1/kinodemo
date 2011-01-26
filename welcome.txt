@@ -1,0 +1,2 @@
++OK^ DemoX 1.0.3.x server ready <bb7288e6a58ebba48aacad9caba28eb9bba68a89a586bea832baa69eb4a38ab3a3a08cfaa582554988baa698a9a28864b8a48e85c5e7dcc0>
++OK^ Hello, master. You may use DATA.

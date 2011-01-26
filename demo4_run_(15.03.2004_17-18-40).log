@@ -1,0 +1,1409 @@
+[15.03.2004]-(17-18-40)-  ----------==========[Start]==========----------
+[15.03.2004]-(17-18-40)-  DEBUGFileName = demo4_run_(15.03.2004_17-18-40).log
+[15.03.2004]-(17-18-40)-  Bugger.Init
+[15.03.2004]-(17-18-40)-  uImports.Init
+[15.03.2004]-(17-18-40)-  Print1c module is opened, path - "C:\Print1c.dll".
+[15.03.2004]-(17-18-40)-  Module version is [1.3.0.3 Ready  release].
+[15.03.2004]-(17-18-40)-  uMain.Init
+[15.03.2004]-(17:18:40)-  15.03.2004_17:18:40
+[15.03.2004]-(17:18:40)-  uAddon.Init
+[15.03.2004]-(17:18:40)-  
+_____________________________________________________________________________
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+[15.03.2004]-(17:18:40)-  Application.Started
+[15.03.2004]-(17:18:40)-  > [Tdm.DatamoduleCreate]: ->
+[15.03.2004]-(17:18:40)-  :   [Tdm.DatamoduleCreate]: Tables is closed.
+[15.03.2004]-(17:18:40)-  :   [Tdm.DatamoduleCreate]: Alias with Name "KINO_DAT" is added.
+[15.03.2004]-(17:18:40)-  :   [Tdm.DatamoduleCreate]: Path is "C:\DELPHI\KinoDemo.1.0.4.x.debug\KinoDemo.1.0.4.63.debug\DATA".
+[15.03.2004]-(17:18:40)-  < [Tdm.DatamoduleCreate]: <-
+[15.03.2004]-(17:18:40)-  > [TfmMain.FormCreate]: ->
+[15.03.2004]-(17:18:40)-  :   [FormActivate]: Showing Splash form...
+[15.03.2004]-(17:18:40)-  :   [TfmMain.FormCreate]: Init variables & constants...
+[15.03.2004]-(17:18:40)-  >   [TfmMain.Main_Activate_Proc]: ->
+[15.03.2004]-(17:18:40)-  |   : [TfmMain.Main_Activate_Proc]: Connecting DataBase...
+[15.03.2004]-(17:18:40)-  |   > [Tdm.dbAfterConnect]: ->
+[15.03.2004]-(17:18:40)-  |   < [Tdm.dbAfterConnect]: <-
+[15.03.2004]-(17:18:40)-  |   : 
+-----------------------------------------------------------------------------
+[15.03.2004]-(17:18:40)-  |   : [TfmMain.Main_Activate_Proc]: Init procs...
+[15.03.2004]-(17:18:40)-  |   > [TfmMain.acInfoExecute]: ->
+[15.03.2004]-(17:18:40)-  |   :   [TfmMain.acInfoExecute]: fmInfo.Show - after Create
+[15.03.2004]-(17:18:40)-  |   < [TfmMain.acInfoExecute]: <-
+[15.03.2004]-(17:18:40)-  |   : 
+*****************************************************************************
+[15.03.2004]-(17:18:40)-  |   > [Load_All_Zals]: ->
+[15.03.2004]-(17:18:40)-  |   >   [Tdm.PrepareQuery_Zal]: ->
+[15.03.2004]-(17:18:40)-  |   |   > [Combo_Load_DataSet]: ->
+[15.03.2004]-(17:18:40)-  |   |   :   [Combo_Load_DataSet]: DataSet.Name is (qZal).
+[15.03.2004]-(17:18:40)-  |   |   :   [Combo_Load_DataSet]: Start cycle...
+[15.03.2004]-(17:18:40)-  |   |   :   [Combo_Load_DataSet]: Finish cycle...
+[15.03.2004]-(17:18:40)-  |   |   < [Combo_Load_DataSet]: <-
+[15.03.2004]-(17:18:40)-  |   |   : [Tdm.PrepareQuery_Zal]: RecordCount = 1
+[15.03.2004]-(17:18:40)-  |   <   [Tdm.PrepareQuery_Zal]: <-
+[15.03.2004]-(17:18:40)-  |   :   [Load_All_Zals]: Items.Count = (1)
+[15.03.2004]-(17:18:40)-  |   :   [Load_All_Zals]: ItemIndex = (-1)
+[15.03.2004]-(17:18:40)-  |   :   [Load_All_Zals]: Cur_Zal_Kod = -1
+[15.03.2004]-(17:18:40)-  |   :   [Load_All_Zals]: RecordCount = 1
+[15.03.2004]-(17:18:40)-  |   >   [Combo_Load_DataSet]: ->
+[15.03.2004]-(17:18:40)-  |   |   : [Combo_Load_DataSet]: DataSet.Name is (qZal).
+[15.03.2004]-(17:18:40)-  |   |   : [Combo_Load_DataSet]: Start cycle...
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Zal_Map]: ->
+[15.03.2004]-(17:18:40)-  |   |   :   [Load_Zal_Map]: cmZal.Enabled = false
+[15.03.2004]-(17:18:40)-  |   |   :   [Load_Zal_Map]: ImportZal(002) - Begin
+[15.03.2004]-(17:18:40)-  |   |   :   [Load_Zal_Map]: ImportZal(002) - End
+[15.03.2004]-(17:18:40)-  |   |   :   [Load_Zal_Map]: CreateZal(002) - Begin
+[15.03.2004]-(17:18:40)-  |   |   :   [Load_Zal_Map]: CreateZal(002) - End
+[15.03.2004]-(17:18:40)-  |   |   :   [Load_Zal_Map]: cmZal.Enabled = true
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Zal_Map]: <-
+[15.03.2004]-(17:18:40)-  |   |   : [Load_Zal_Map]: Work time - (0:00:00.219)
+[15.03.2004]-(17:18:40)-  |   |   : [Combo_Load_DataSet]: Finish cycle...
+[15.03.2004]-(17:18:40)-  |   <   [Combo_Load_DataSet]: <-
+[15.03.2004]-(17:18:40)-  |   < [Load_All_Zals]: <-
+[15.03.2004]-(17:18:40)-  |   : 
+*****************************************************************************
+[15.03.2004]-(17:18:40)-  |   : [Load_All_Zals]: Work time - (0:00:00.250)
+[15.03.2004]-(17:18:40)-  |   : 
+*****************************************************************************
+[15.03.2004]-(17:18:40)-  |   > [Load_All_Ticket_Types]: ->
+[15.03.2004]-(17:18:40)-  |   >   [Clear_User_Interface]: ->
+[15.03.2004]-(17:18:40)-  |   <   [Clear_User_Interface]: <-
+[15.03.2004]-(17:18:40)-  |   >   [Load_User_Interface_Info]: ->
+[15.03.2004]-(17:18:40)-  |   <   [Load_User_Interface_Info]: <-
+[15.03.2004]-(17:18:40)-  |   >   [Tdm.PrepareQuery_Tarifpl_SQL]: ->
+[15.03.2004]-(17:18:40)-  |   |   : [Tdm.PrepareQuery_Tarifpl_SQL]: FilterMode is (1)
+[15.03.2004]-(17:18:40)-  |   <   [Tdm.PrepareQuery_Tarifpl_SQL]: <-
+[15.03.2004]-(17:18:40)-  |   :   [Load_All_Ticket_Types]: RecordCount = 17
+[15.03.2004]-(17:18:40)-  |   >   [Combo_Load_DataSet]: ->
+[15.03.2004]-(17:18:40)-  |   |   : [Combo_Load_DataSet]: DataSet.Name is (qTarifpl).
+[15.03.2004]-(17:18:40)-  |   |   : [Combo_Load_DataSet]: Start cycle...
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifpl_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   >   [Add_Tarifpl_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   |   : [Add_Tarifpl_Desc]: Tarifpl_Kod = (1)
+[15.03.2004]-(17:18:40)-  |   |   |   : [Add_Tarifpl_Desc]: str_Tarifpl_Nam = (Взрослый)
+[15.03.2004]-(17:18:40)-  |   |   |   : [Add_Tarifpl_Desc]: Add to fmInfo.lvTarifz.Items
+[15.03.2004]-(17:18:40)-  |   |   <   [Add_Tarifpl_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifpl_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifpl_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   >   [Add_Tarifpl_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   |   : [Add_Tarifpl_Desc]: Tarifpl_Kod = (2)
+[15.03.2004]-(17:18:40)-  |   |   |   : [Add_Tarifpl_Desc]: str_Tarifpl_Nam = (Студенческий/Пенсионный)
+[15.03.2004]-(17:18:40)-  |   |   |   : [Add_Tarifpl_Desc]: Add to fmInfo.lvTarifz.Items
+[15.03.2004]-(17:18:40)-  |   |   <   [Add_Tarifpl_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifpl_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifpl_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   >   [Add_Tarifpl_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   |   : [Add_Tarifpl_Desc]: Tarifpl_Kod = (3)
+[15.03.2004]-(17:18:40)-  |   |   |   : [Add_Tarifpl_Desc]: str_Tarifpl_Nam = (Школьный)
+[15.03.2004]-(17:18:40)-  |   |   |   : [Add_Tarifpl_Desc]: Add to fmInfo.lvTarifz.Items
+[15.03.2004]-(17:18:40)-  |   |   <   [Add_Tarifpl_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifpl_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifpl_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   >   [Add_Tarifpl_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   |   : [Add_Tarifpl_Desc]: Tarifpl_Kod = (5)
+[15.03.2004]-(17:18:40)-  |   |   |   : [Add_Tarifpl_Desc]: str_Tarifpl_Nam = (Скидка 20%)
+[15.03.2004]-(17:18:40)-  |   |   |   : [Add_Tarifpl_Desc]: Add to fmInfo.lvTarifz.Items
+[15.03.2004]-(17:18:40)-  |   |   <   [Add_Tarifpl_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifpl_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifpl_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   >   [Add_Tarifpl_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   |   : [Add_Tarifpl_Desc]: Tarifpl_Kod = (7)
+[15.03.2004]-(17:18:40)-  |   |   |   : [Add_Tarifpl_Desc]: str_Tarifpl_Nam = (Скидка 50%)
+[15.03.2004]-(17:18:40)-  |   |   |   : [Add_Tarifpl_Desc]: Add to fmInfo.lvTarifz.Items
+[15.03.2004]-(17:18:40)-  |   |   <   [Add_Tarifpl_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifpl_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifpl_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   >   [Add_Tarifpl_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   |   : [Add_Tarifpl_Desc]: Tarifpl_Kod = (8)
+[15.03.2004]-(17:18:40)-  |   |   |   : [Add_Tarifpl_Desc]: str_Tarifpl_Nam = (Скидка групповая 1)
+[15.03.2004]-(17:18:40)-  |   |   |   : [Add_Tarifpl_Desc]: Add to fmInfo.lvTarifz.Items
+[15.03.2004]-(17:18:40)-  |   |   <   [Add_Tarifpl_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifpl_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifpl_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   >   [Add_Tarifpl_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   |   : [Add_Tarifpl_Desc]: Tarifpl_Kod = (9)
+[15.03.2004]-(17:18:40)-  |   |   |   : [Add_Tarifpl_Desc]: str_Tarifpl_Nam = (Скидка групповая 2)
+[15.03.2004]-(17:18:40)-  |   |   |   : [Add_Tarifpl_Desc]: Add to fmInfo.lvTarifz.Items
+[15.03.2004]-(17:18:40)-  |   |   <   [Add_Tarifpl_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifpl_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifpl_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   >   [Add_Tarifpl_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   |   : [Add_Tarifpl_Desc]: Tarifpl_Kod = (10)
+[15.03.2004]-(17:18:40)-  |   |   |   : [Add_Tarifpl_Desc]: str_Tarifpl_Nam = (Пригласительный)
+[15.03.2004]-(17:18:40)-  |   |   |   : [Add_Tarifpl_Desc]: Add to fmInfo.lvTarifz.Items
+[15.03.2004]-(17:18:40)-  |   |   <   [Add_Tarifpl_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifpl_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifpl_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   >   [Add_Tarifpl_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   |   : [Add_Tarifpl_Desc]: Tarifpl_Kod = (11)
+[15.03.2004]-(17:18:40)-  |   |   |   : [Add_Tarifpl_Desc]: str_Tarifpl_Nam = (Пригласительный на руках)
+[15.03.2004]-(17:18:40)-  |   |   |   : [Add_Tarifpl_Desc]: Add to fmInfo.lvTarifz.Items
+[15.03.2004]-(17:18:40)-  |   |   <   [Add_Tarifpl_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifpl_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifpl_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   >   [Add_Tarifpl_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   |   : [Add_Tarifpl_Desc]: Tarifpl_Kod = (12)
+[15.03.2004]-(17:18:40)-  |   |   |   : [Add_Tarifpl_Desc]: str_Tarifpl_Nam = (VIP карточка)
+[15.03.2004]-(17:18:40)-  |   |   |   : [Add_Tarifpl_Desc]: Add to fmInfo.lvTarifz.Items
+[15.03.2004]-(17:18:40)-  |   |   <   [Add_Tarifpl_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifpl_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifpl_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   >   [Add_Tarifpl_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   |   : [Add_Tarifpl_Desc]: Tarifpl_Kod = (13)
+[15.03.2004]-(17:18:40)-  |   |   |   : [Add_Tarifpl_Desc]: str_Tarifpl_Nam = (Взрослый абонемент)
+[15.03.2004]-(17:18:40)-  |   |   |   : [Add_Tarifpl_Desc]: Add to fmInfo.lvTarifz.Items
+[15.03.2004]-(17:18:40)-  |   |   <   [Add_Tarifpl_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifpl_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifpl_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   >   [Add_Tarifpl_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   |   : [Add_Tarifpl_Desc]: Tarifpl_Kod = (14)
+[15.03.2004]-(17:18:40)-  |   |   |   : [Add_Tarifpl_Desc]: str_Tarifpl_Nam = (Студенческий абонемент)
+[15.03.2004]-(17:18:40)-  |   |   |   : [Add_Tarifpl_Desc]: Add to fmInfo.lvTarifz.Items
+[15.03.2004]-(17:18:40)-  |   |   <   [Add_Tarifpl_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifpl_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifpl_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   >   [Add_Tarifpl_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   |   : [Add_Tarifpl_Desc]: Tarifpl_Kod = (15)
+[15.03.2004]-(17:18:40)-  |   |   |   : [Add_Tarifpl_Desc]: str_Tarifpl_Nam = (Школьный абонемент)
+[15.03.2004]-(17:18:40)-  |   |   |   : [Add_Tarifpl_Desc]: Add to fmInfo.lvTarifz.Items
+[15.03.2004]-(17:18:40)-  |   |   <   [Add_Tarifpl_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifpl_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifpl_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   >   [Add_Tarifpl_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   |   : [Add_Tarifpl_Desc]: Tarifpl_Kod = (16)
+[15.03.2004]-(17:18:40)-  |   |   |   : [Add_Tarifpl_Desc]: Add to fmInfo.lvTarifz.Items
+[15.03.2004]-(17:18:40)-  |   |   <   [Add_Tarifpl_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifpl_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifpl_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   >   [Add_Tarifpl_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   |   : [Add_Tarifpl_Desc]: Tarifpl_Kod = (17)
+[15.03.2004]-(17:18:40)-  |   |   |   : [Add_Tarifpl_Desc]: Add to fmInfo.lvTarifz.Items
+[15.03.2004]-(17:18:40)-  |   |   <   [Add_Tarifpl_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifpl_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifpl_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   >   [Add_Tarifpl_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   |   : [Add_Tarifpl_Desc]: Tarifpl_Kod = (18)
+[15.03.2004]-(17:18:40)-  |   |   |   : [Add_Tarifpl_Desc]: Add to fmInfo.lvTarifz.Items
+[15.03.2004]-(17:18:40)-  |   |   <   [Add_Tarifpl_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifpl_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifpl_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   >   [Add_Tarifpl_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   |   : [Add_Tarifpl_Desc]: Tarifpl_Kod = (19)
+[15.03.2004]-(17:18:40)-  |   |   |   : [Add_Tarifpl_Desc]: Add to fmInfo.lvTarifz.Items
+[15.03.2004]-(17:18:40)-  |   |   <   [Add_Tarifpl_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifpl_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   : [Combo_Load_DataSet]: Finish cycle...
+[15.03.2004]-(17:18:40)-  |   <   [Combo_Load_DataSet]: <-
+[15.03.2004]-(17:18:40)-  |   < [Load_All_Ticket_Types]: <-
+[15.03.2004]-(17:18:40)-  |   : 
+*****************************************************************************
+[15.03.2004]-(17:18:40)-  |   : [Load_All_Ticket_Types]: Work time - (0:00:00.078)
+[15.03.2004]-(17:18:40)-  |   : 
+*****************************************************************************
+[15.03.2004]-(17:18:40)-  |   > [Load_All_Tarifs]: ->
+[15.03.2004]-(17:18:40)-  |   >   [Tdm.PrepareQuery_Tarifz_SQL]: ->
+[15.03.2004]-(17:18:40)-  |   |   : [Tdm.PrepareQuery_Tarifz_SQL]: FilterMode is (4)
+[15.03.2004]-(17:18:40)-  |   <   [Tdm.PrepareQuery_Tarifz_SQL]: <-
+[15.03.2004]-(17:18:40)-  |   :   [Load_All_Tarifs]: RecordCount = 112
+[15.03.2004]-(17:18:40)-  |   >   [Combo_Load_DataSet]: ->
+[15.03.2004]-(17:18:40)-  |   |   : [Combo_Load_DataSet]: DataSet.Name is (qTarifz).
+[15.03.2004]-(17:18:40)-  |   |   : [Combo_Load_DataSet]: Start cycle...
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifet_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   :   [Load_Tarifet_Desc]: Add("_1_1=350")
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifet_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifet_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   :   [Load_Tarifet_Desc]: Add("_1_2=250")
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifet_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifet_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   :   [Load_Tarifet_Desc]: Add("_1_3=150")
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifet_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifet_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   :   [Load_Tarifet_Desc]: Add("_1_5=100")
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifet_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifet_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   :   [Load_Tarifet_Desc]: Add("_1_7=50")
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifet_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifet_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   :   [Load_Tarifet_Desc]: Add("_1_8=150")
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifet_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifet_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   :   [Load_Tarifet_Desc]: Add("_1_9=100")
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifet_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifet_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   :   [Load_Tarifet_Desc]: Add("_2_1=150")
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifet_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifet_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   :   [Load_Tarifet_Desc]: Add("_2_2=150")
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifet_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifet_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   :   [Load_Tarifet_Desc]: Add("_2_3=150")
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifet_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifet_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   :   [Load_Tarifet_Desc]: Add("_2_5=150")
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifet_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifet_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   :   [Load_Tarifet_Desc]: Add("_2_7=75")
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifet_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifet_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   :   [Load_Tarifet_Desc]: Add("_2_8=150")
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifet_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifet_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   :   [Load_Tarifet_Desc]: Add("_2_9=150")
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifet_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifet_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   :   [Load_Tarifet_Desc]: Add("_3_1=200")
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifet_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifet_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   :   [Load_Tarifet_Desc]: Add("_3_2=200")
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifet_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifet_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   :   [Load_Tarifet_Desc]: Add("_3_3=200")
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifet_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifet_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   :   [Load_Tarifet_Desc]: Add("_3_5=200")
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifet_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifet_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   :   [Load_Tarifet_Desc]: Add("_3_7=100")
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifet_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifet_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   :   [Load_Tarifet_Desc]: Add("_3_8=200")
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifet_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifet_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   :   [Load_Tarifet_Desc]: Add("_3_9=200")
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifet_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifet_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   :   [Load_Tarifet_Desc]: Add("_4_1=250")
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifet_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifet_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   :   [Load_Tarifet_Desc]: Add("_4_2=250")
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifet_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifet_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   :   [Load_Tarifet_Desc]: Add("_4_3=150")
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifet_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifet_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   :   [Load_Tarifet_Desc]: Add("_4_5=250")
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifet_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifet_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   :   [Load_Tarifet_Desc]: Add("_4_7=125")
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifet_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifet_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   :   [Load_Tarifet_Desc]: Add("_4_8=100")
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifet_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifet_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   :   [Load_Tarifet_Desc]: Add("_4_9=150")
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifet_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifet_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   :   [Load_Tarifet_Desc]: Add("_5_1=300")
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifet_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifet_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   :   [Load_Tarifet_Desc]: Add("_5_2=300")
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifet_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifet_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   :   [Load_Tarifet_Desc]: Add("_5_3=150")
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifet_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifet_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   :   [Load_Tarifet_Desc]: Add("_5_5=240")
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifet_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifet_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   :   [Load_Tarifet_Desc]: Add("_5_7=150")
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifet_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifet_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   :   [Load_Tarifet_Desc]: Add("_5_8=100")
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifet_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifet_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   :   [Load_Tarifet_Desc]: Add("_5_9=150")
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifet_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifet_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   :   [Load_Tarifet_Desc]: Add("_6_1=350")
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifet_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifet_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   :   [Load_Tarifet_Desc]: Add("_6_2=250")
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifet_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifet_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   :   [Load_Tarifet_Desc]: Add("_6_3=150")
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifet_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifet_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   :   [Load_Tarifet_Desc]: Add("_6_5=280")
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifet_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifet_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   :   [Load_Tarifet_Desc]: Add("_6_7=175")
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifet_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifet_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   :   [Load_Tarifet_Desc]: Add("_6_8=100")
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifet_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifet_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   :   [Load_Tarifet_Desc]: Add("_6_9=150")
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifet_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifet_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   :   [Load_Tarifet_Desc]: Add("_7_1=400")
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifet_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifet_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   :   [Load_Tarifet_Desc]: Add("_7_2=300")
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifet_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifet_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   :   [Load_Tarifet_Desc]: Add("_7_3=200")
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifet_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifet_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   :   [Load_Tarifet_Desc]: Add("_7_5=320")
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifet_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifet_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   :   [Load_Tarifet_Desc]: Add("_7_7=200")
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifet_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifet_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   :   [Load_Tarifet_Desc]: Add("_7_8=100")
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifet_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifet_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   :   [Load_Tarifet_Desc]: Add("_7_9=150")
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifet_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifet_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   :   [Load_Tarifet_Desc]: Add("_8_1=450")
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifet_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifet_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   :   [Load_Tarifet_Desc]: Add("_8_2=350")
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifet_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifet_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   :   [Load_Tarifet_Desc]: Add("_8_3=200")
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifet_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifet_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   :   [Load_Tarifet_Desc]: Add("_8_5=360")
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifet_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifet_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   :   [Load_Tarifet_Desc]: Add("_8_7=225")
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifet_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifet_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   :   [Load_Tarifet_Desc]: Add("_8_8=100")
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifet_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifet_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   :   [Load_Tarifet_Desc]: Add("_8_9=150")
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifet_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifet_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   :   [Load_Tarifet_Desc]: Add("_9_1=500")
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifet_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifet_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   :   [Load_Tarifet_Desc]: Add("_9_2=400")
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifet_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifet_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   :   [Load_Tarifet_Desc]: Add("_9_3=250")
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifet_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifet_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   :   [Load_Tarifet_Desc]: Add("_9_5=400")
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifet_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifet_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   :   [Load_Tarifet_Desc]: Add("_9_7=250")
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifet_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifet_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   :   [Load_Tarifet_Desc]: Add("_9_8=100")
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifet_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifet_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   :   [Load_Tarifet_Desc]: Add("_9_9=150")
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifet_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifet_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   :   [Load_Tarifet_Desc]: Add("_10_1=550")
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifet_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifet_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   :   [Load_Tarifet_Desc]: Add("_10_2=550")
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifet_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifet_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   :   [Load_Tarifet_Desc]: Add("_10_3=300")
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifet_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifet_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   :   [Load_Tarifet_Desc]: Add("_10_5=440")
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifet_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifet_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   :   [Load_Tarifet_Desc]: Add("_10_7=275")
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifet_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifet_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   :   [Load_Tarifet_Desc]: Add("_10_8=150")
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifet_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifet_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   :   [Load_Tarifet_Desc]: Add("_10_9=100")
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifet_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifet_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   :   [Load_Tarifet_Desc]: Add("_11_1=600")
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifet_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifet_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   :   [Load_Tarifet_Desc]: Add("_11_2=550")
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifet_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifet_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   :   [Load_Tarifet_Desc]: Add("_11_3=500")
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifet_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifet_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   :   [Load_Tarifet_Desc]: Add("_11_5=480")
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifet_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifet_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   :   [Load_Tarifet_Desc]: Add("_11_7=360")
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifet_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifet_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   :   [Load_Tarifet_Desc]: Add("_11_8=300")
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifet_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifet_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   :   [Load_Tarifet_Desc]: Add("_11_9=300")
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifet_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifet_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   :   [Load_Tarifet_Desc]: Add("_12_1=650")
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifet_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifet_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   :   [Load_Tarifet_Desc]: Add("_12_2=550")
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifet_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifet_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   :   [Load_Tarifet_Desc]: Add("_12_3=300")
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifet_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifet_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   :   [Load_Tarifet_Desc]: Add("_12_5=520")
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifet_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifet_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   :   [Load_Tarifet_Desc]: Add("_12_7=325")
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifet_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifet_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   :   [Load_Tarifet_Desc]: Add("_12_8=100")
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifet_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifet_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   :   [Load_Tarifet_Desc]: Add("_12_9=150")
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifet_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifet_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   :   [Load_Tarifet_Desc]: Add("_13_1=700")
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifet_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifet_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   :   [Load_Tarifet_Desc]: Add("_13_2=650")
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifet_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifet_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   :   [Load_Tarifet_Desc]: Add("_13_3=600")
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifet_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifet_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   :   [Load_Tarifet_Desc]: Add("_13_5=560")
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifet_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifet_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   :   [Load_Tarifet_Desc]: Add("_13_7=420")
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifet_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifet_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   :   [Load_Tarifet_Desc]: Add("_13_8=350")
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifet_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifet_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   :   [Load_Tarifet_Desc]: Add("_13_9=350")
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifet_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifet_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   :   [Load_Tarifet_Desc]: Add("_14_1=750")
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifet_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifet_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   :   [Load_Tarifet_Desc]: Add("_14_2=700")
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifet_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifet_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   :   [Load_Tarifet_Desc]: Add("_14_3=650")
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifet_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifet_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   :   [Load_Tarifet_Desc]: Add("_14_5=600")
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifet_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifet_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   :   [Load_Tarifet_Desc]: Add("_14_7=450")
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifet_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifet_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   :   [Load_Tarifet_Desc]: Add("_14_8=375")
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifet_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifet_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   :   [Load_Tarifet_Desc]: Add("_14_9=375")
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifet_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifet_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   :   [Load_Tarifet_Desc]: Add("_15_1=800")
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifet_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifet_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   :   [Load_Tarifet_Desc]: Add("_15_2=750")
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifet_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifet_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   :   [Load_Tarifet_Desc]: Add("_15_3=700")
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifet_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifet_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   :   [Load_Tarifet_Desc]: Add("_15_5=640")
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifet_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifet_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   :   [Load_Tarifet_Desc]: Add("_15_7=480")
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifet_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifet_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   :   [Load_Tarifet_Desc]: Add("_15_8=400")
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifet_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifet_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   :   [Load_Tarifet_Desc]: Add("_15_9=400")
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifet_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifet_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   :   [Load_Tarifet_Desc]: Add("_17_1=500")
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifet_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifet_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   :   [Load_Tarifet_Desc]: Add("_17_2=400")
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifet_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifet_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   :   [Load_Tarifet_Desc]: Add("_17_3=300")
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifet_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifet_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   :   [Load_Tarifet_Desc]: Add("_17_5=400")
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifet_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifet_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   :   [Load_Tarifet_Desc]: Add("_17_7=250")
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifet_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifet_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   :   [Load_Tarifet_Desc]: Add("_17_8=150")
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifet_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   > [Load_Tarifet_Desc]: ->
+[15.03.2004]-(17:18:40)-  |   |   :   [Load_Tarifet_Desc]: Add("_17_9=100")
+[15.03.2004]-(17:18:40)-  |   |   < [Load_Tarifet_Desc]: <-
+[15.03.2004]-(17:18:40)-  |   |   : [Combo_Load_DataSet]: Finish cycle...
+[15.03.2004]-(17:18:40)-  |   <   [Combo_Load_DataSet]: <-
+[15.03.2004]-(17:18:40)-  |   < [Load_All_Tarifs]: <-
+[15.03.2004]-(17:18:40)-  |   : 
+*****************************************************************************
+[15.03.2004]-(17:18:40)-  |   : [Load_All_Tarifs]: Work time - (0:00:00.125)
+[15.03.2004]-(17:18:40)-  |   : 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[15.03.2004]-(17:18:40)-  |   > [Refresh_Zal]: ->
+[15.03.2004]-(17:18:40)-  |   :   [Refresh_Zal]: cmZal.Enabled = false
+[15.03.2004]-(17:18:40)-  |   :   [Refresh_Zal]: Cur_Panel_Cntr is "pnZal_2".
+[15.03.2004]-(17:18:40)-  |   :   [Refresh_Zal]: Before - Cur_Panel_Cntr.Owner is "pnZal_Container".
+[15.03.2004]-(17:18:40)-  |   :   [Refresh_Zal]: Before - Cur_Panel_Cntr.Parent is "pnZal_Container".
+[15.03.2004]-(17:18:40)-  |   :   [Refresh_Zal]: After - Cur_Panel_Cntr.Owner is "sbMain".
+[15.03.2004]-(17:18:40)-  |   :   [Refresh_Zal]: After - Cur_Panel_Cntr.Parent is "sbx_Cntr".
+[15.03.2004]-(17:18:40)-  |   >   [GetOption]: ->
+[15.03.2004]-(17:18:40)-  |   |   : [GetOption]: OptionName = (Print_Serial2)
+[15.03.2004]-(17:18:40)-  |   |   : [GetOption]: OptionValue = (FaLSe)
+[15.03.2004]-(17:18:40)-  |   |   : [GetOption]: str_OptionName = (Print_Serial2)
+[15.03.2004]-(17:18:40)-  |   |   : [GetOption]: str_OptionValue = (TRUE)
+[15.03.2004]-(17:18:40)-  |   |   : [GetOption]: Result = 1
+[15.03.2004]-(17:18:40)-  |   <   [GetOption]: <-
+[15.03.2004]-(17:18:40)-  |   >   [GetOption]: ->
+[15.03.2004]-(17:18:40)-  |   |   : [GetOption]: OptionName = (SerialNum_2)
+[15.03.2004]-(17:18:40)-  |   |   : [GetOption]: OptionValue = (unknown)
+[15.03.2004]-(17:18:40)-  |   |   : [GetOption]: str_OptionName = (SerialNum_2)
+[15.03.2004]-(17:18:40)-  |   |   : [GetOption]: str_OptionValue = (5297)
+[15.03.2004]-(17:18:40)-  |   |   : [GetOption]: Result = 1
+[15.03.2004]-(17:18:40)-  |   <   [GetOption]: <-
+[15.03.2004]-(17:18:40)-  |   >   [SaveOption]: ->
+[15.03.2004]-(17:18:40)-  |   |   : [SaveOption]: OptionName = (Print_Serial2)
+[15.03.2004]-(17:18:40)-  |   |   : [SaveOption]: OptionValue = (TRUE)
+[15.03.2004]-(17:18:40)-  |   |   : [SaveOption]: Result = 1
+[15.03.2004]-(17:18:40)-  |   <   [SaveOption]: <-
+[15.03.2004]-(17:18:40)-  |   :   [Refresh_Zal]: str_Print_Serial = true
+[15.03.2004]-(17:18:40)-  |   :   [Refresh_Zal]: _Print_Serial = TRUE
+[15.03.2004]-(17:18:40)-  |   :   [Refresh_Zal]: str_Serial = 5297
+[15.03.2004]-(17:18:40)-  |   :   [Refresh_Zal]: _Serial = 5297
+[15.03.2004]-(17:18:40)-  |   >   [Init_Cur_Repert]: ->
+[15.03.2004]-(17:18:40)-  |   |   > [Tdm.PrepareQuery_Repert_SQL]: ->
+[15.03.2004]-(17:18:40)-  |   |   :   [Tdm.PrepareQuery_Repert_SQL]: FilterMode is (1)
+[15.03.2004]-(17:18:40)-  |   |   :   [Tdm.PrepareQuery_Repert_SQL]: Filter_Date is (12/30/1899)
+[15.03.2004]-(17:18:40)-  |   |   :   [Tdm.PrepareQuery_Repert_SQL]: Filter_Zal_Kod is (2)
+[15.03.2004]-(17:18:40)-  |   |   < [Tdm.PrepareQuery_Repert_SQL]: <-
+[15.03.2004]-(17:18:40)-  |   |   : [Init_Cur_Repert]: RecordCount = 0
+[15.03.2004]-(17:18:40)-  |   |   > [Combo_Load_DataSet]: ->
+[15.03.2004]-(17:18:40)-  |   |   :   [Combo_Load_DataSet]: DataSet.Name is (qRepert).
+[15.03.2004]-(17:18:40)-  |   |   :   [Combo_Load_DataSet]: Start cycle...
+[15.03.2004]-(17:18:40)-  |   |   :   [Combo_Load_DataSet]: Finish cycle...
+[15.03.2004]-(17:18:40)-  |   |   < [Combo_Load_DataSet]: <-
+[15.03.2004]-(17:18:40)-  |   |   : [Init_Cur_Repert]: Tabs.Count = 0
+[15.03.2004]-(17:18:40)-  |   <   [Init_Cur_Repert]: <-
+[15.03.2004]-(17:18:40)-  |   :   
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+[15.03.2004]-(17:18:40)-  |   >   [TfmMain.tbcFilmChange]: ->
+[15.03.2004]-(17:18:40)-  |   |   : [TfmMain.tbcFilmChange]: Film_Kod = (-1)
+[15.03.2004]-(17:18:40)-  |   |   : 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[15.03.2004]-(17:18:40)-  |   |   > [Refresh_Film]: ->
+[15.03.2004]-(17:18:40)-  |   |   >   [Load_Tarifet]: ->
+[15.03.2004]-(17:18:40)-  |   |   |   > [Tdm.PrepareQuery_Repert_SQL]: ->
+[15.03.2004]-(17:18:40)-  |   |   |   :   [Tdm.PrepareQuery_Repert_SQL]: FilterMode is (2)
+[15.03.2004]-(17:18:40)-  |   |   |   :   [Tdm.PrepareQuery_Repert_SQL]: Filter_Repert_Kod is (-1)
+[15.03.2004]-(17:18:40)-  |   |   |   < [Tdm.PrepareQuery_Repert_SQL]: <-
+[15.03.2004]-(17:18:40)-  |   |   |   : [Load_Tarifet]: RecordCount = 0
+[15.03.2004]-(17:18:40)-  |   |   <   [Load_Tarifet]: <-
+[15.03.2004]-(17:18:40)-  |   |   :   [Load_Tarifet]: Work time - (0:00:00.031)
+[15.03.2004]-(17:18:40)-  |   |   :   
+-----------------------------------------------------------------------------
+[15.03.2004]-(17:18:40)-  |   |   >   [Load_All_TC]: ->
+[15.03.2004]-(17:18:40)-  |   |   <   [Load_All_TC]: <-
+[15.03.2004]-(17:18:40)-  |   |   :   [Load_All_TC]: Work time - (0:00:00.000)
+[15.03.2004]-(17:18:40)-  |   |   >   [Refresh_TC_Count]: ->
+[15.03.2004]-(17:18:40)-  |   |   |   : [Refresh_TC_Count]: Length(52) = "Помеч. 0, своб. [0] из 0. Сеть: 0 из 0. Сломано = 0."
+[15.03.2004]-(17:18:40)-  |   |   <   [Refresh_TC_Count]: <-
+[15.03.2004]-(17:18:40)-  |   |   < [Refresh_Film]: <-
+[15.03.2004]-(17:18:40)-  |   |   : 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[15.03.2004]-(17:18:40)-  |   <   [TfmMain.tbcFilmChange]: <-
+[15.03.2004]-(17:18:40)-  |   :   
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+[15.03.2004]-(17:18:40)-  |   :   [TfmMain.tbcFilmChange]: Work time - (0:00:00.031)
+[15.03.2004]-(17:18:40)-  |   :   [Refresh_Zal]: -> cmZal.Enabled = true
+[15.03.2004]-(17:18:40)-  |   < [Refresh_Zal]: <-
+[15.03.2004]-(17:18:40)-  |   : 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[15.03.2004]-(17:18:40)-  |   : 
+ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
+[15.03.2004]-(17:18:40)-  |   > [TfmMain.dtpDateChange]: ->
+[15.03.2004]-(17:18:40)-  |   :   [TfmMain.dtpDateChange]: Date is (15/03/2004)
+[15.03.2004]-(17:18:40)-  |   :   
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[15.03.2004]-(17:18:40)-  |   >   [Refresh_Date]: ->
+[15.03.2004]-(17:18:40)-  |   |   > [Init_Cur_Repert]: ->
+[15.03.2004]-(17:18:40)-  |   |   >   [Tdm.PrepareQuery_Repert_SQL]: ->
+[15.03.2004]-(17:18:40)-  |   |   |   : [Tdm.PrepareQuery_Repert_SQL]: FilterMode is (1)
+[15.03.2004]-(17:18:40)-  |   |   |   : [Tdm.PrepareQuery_Repert_SQL]: Filter_Date is (03/15/2004)
+[15.03.2004]-(17:18:40)-  |   |   |   : [Tdm.PrepareQuery_Repert_SQL]: Filter_Zal_Kod is (2)
+[15.03.2004]-(17:18:40)-  |   |   <   [Tdm.PrepareQuery_Repert_SQL]: <-
+[15.03.2004]-(17:18:40)-  |   |   :   [Init_Cur_Repert]: RecordCount = 0
+[15.03.2004]-(17:18:40)-  |   |   >   [Combo_Load_DataSet]: ->
+[15.03.2004]-(17:18:40)-  |   |   |   : [Combo_Load_DataSet]: DataSet.Name is (qRepert).
+[15.03.2004]-(17:18:40)-  |   |   |   : [Combo_Load_DataSet]: Start cycle...
+[15.03.2004]-(17:18:40)-  |   |   |   : [Combo_Load_DataSet]: Finish cycle...
+[15.03.2004]-(17:18:40)-  |   |   <   [Combo_Load_DataSet]: <-
+[15.03.2004]-(17:18:40)-  |   |   :   [Init_Cur_Repert]: Tabs.Count = 0
+[15.03.2004]-(17:18:40)-  |   |   < [Init_Cur_Repert]: <-
+[15.03.2004]-(17:18:40)-  |   |   : 
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+[15.03.2004]-(17:18:40)-  |   |   > [TfmMain.tbcFilmChange]: ->
+[15.03.2004]-(17:18:40)-  |   |   :   [TfmMain.tbcFilmChange]: Film_Kod = (-1)
+[15.03.2004]-(17:18:40)-  |   |   :   
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[15.03.2004]-(17:18:40)-  |   |   >   [Refresh_Film]: ->
+[15.03.2004]-(17:18:40)-  |   |   |   > [Load_Tarifet]: ->
+[15.03.2004]-(17:18:40)-  |   |   |   >   [Tdm.PrepareQuery_Repert_SQL]: ->
+[15.03.2004]-(17:18:40)-  |   |   |   |   : [Tdm.PrepareQuery_Repert_SQL]: FilterMode is (2)
+[15.03.2004]-(17:18:40)-  |   |   |   |   : [Tdm.PrepareQuery_Repert_SQL]: Filter_Repert_Kod is (-1)
+[15.03.2004]-(17:18:40)-  |   |   |   <   [Tdm.PrepareQuery_Repert_SQL]: <-
+[15.03.2004]-(17:18:40)-  |   |   |   :   [Load_Tarifet]: RecordCount = 0
+[15.03.2004]-(17:18:40)-  |   |   |   < [Load_Tarifet]: <-
+[15.03.2004]-(17:18:40)-  |   |   |   : [Load_Tarifet]: Work time - (0:00:00.031)
+[15.03.2004]-(17:18:40)-  |   |   |   : 
+-----------------------------------------------------------------------------
+[15.03.2004]-(17:18:40)-  |   |   |   > [Load_All_TC]: ->
+[15.03.2004]-(17:18:40)-  |   |   |   < [Load_All_TC]: <-
+[15.03.2004]-(17:18:40)-  |   |   |   : [Load_All_TC]: Work time - (0:00:00.000)
+[15.03.2004]-(17:18:40)-  |   |   |   > [Refresh_TC_Count]: ->
+[15.03.2004]-(17:18:40)-  |   |   |   :   [Refresh_TC_Count]: Length(52) = "Помеч. 0, своб. [0] из 0. Сеть: 0 из 0. Сломано = 0."
+[15.03.2004]-(17:18:40)-  |   |   |   < [Refresh_TC_Count]: <-
+[15.03.2004]-(17:18:40)-  |   |   <   [Refresh_Film]: <-
+[15.03.2004]-(17:18:40)-  |   |   :   
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[15.03.2004]-(17:18:40)-  |   |   < [TfmMain.tbcFilmChange]: <-
+[15.03.2004]-(17:18:40)-  |   |   : 
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+[15.03.2004]-(17:18:40)-  |   |   : [TfmMain.tbcFilmChange]: Work time - (0:00:00.031)
+[15.03.2004]-(17:18:40)-  |   <   [Refresh_Date]: <-
+[15.03.2004]-(17:18:40)-  |   :   
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[15.03.2004]-(17:18:40)-  |   < [TfmMain.dtpDateChange]: <-
+[15.03.2004]-(17:18:40)-  |   : 
+ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
+[15.03.2004]-(17:18:40)-  |   : [TfmMain.dtpDateChange]: Work time - (0:00:00.094)
+[15.03.2004]-(17:18:40)-  |   : 
+-----------------------------------------------------------------------------
+[15.03.2004]-(17:18:40)-  |   : [TfmMain.Main_Activate_Proc]: Closing Splash form...
+[15.03.2004]-(17:18:40)-  |   > [TfmSplash.FormClose]: ->
+[15.03.2004]-(17:18:40)-  |   :   [TfmSplash.FormClose]: Sender.Name = (fmMain)
+[15.03.2004]-(17:18:40)-  |   < [TfmSplash.FormClose]: <-
+[15.03.2004]-(17:18:40)-  |   : [TfmMain.Main_Activate_Proc]: Splash form is freed...
+[15.03.2004]-(17:18:40)-  |   : [TfmMain.Main_Activate_Proc]: Done activating.
+[15.03.2004]-(17:18:40)-  <   [TfmMain.Main_Activate_Proc]: <-
+[15.03.2004]-(17:18:40)-  :   
+-----------------------------------------------------------------------------
+[15.03.2004]-(17:18:40)-  >   [GetOption]: ->
+[15.03.2004]-(17:18:40)-  |   : [GetOption]: OptionName = (TotalPrintedCount)
+[15.03.2004]-(17:18:40)-  |   : [GetOption]: OptionValue = ()
+[15.03.2004]-(17:18:40)-  |   : [GetOption]: str_OptionName = (TotalPrintedCount)
+[15.03.2004]-(17:18:40)-  |   : [GetOption]: str_OptionValue = (5501)
+[15.03.2004]-(17:18:40)-  |   : [GetOption]: Result = 1
+[15.03.2004]-(17:18:40)-  <   [GetOption]: <-
+[15.03.2004]-(17:18:41)-  >   [SaveOption]: ->
+[15.03.2004]-(17:18:41)-  |   : [SaveOption]: OptionName = (TotalPrintedCount)
+[15.03.2004]-(17:18:41)-  |   : [SaveOption]: OptionValue = (5501)
+[15.03.2004]-(17:18:41)-  |   : [SaveOption]: Result = 1
+[15.03.2004]-(17:18:41)-  <   [SaveOption]: <-
+[15.03.2004]-(17:18:41)-  >   [TfmMain.NetSrv_Up]: ->
+[15.03.2004]-(17:18:41)-  <   [TfmMain.NetSrv_Up]: <-
+[15.03.2004]-(17:18:41)-  < [TfmMain.FormCreate]: <-
+[15.03.2004]-(17:18:41)-  : 
+-----------------------------------------------------------------------------
+[15.03.2004]-(17:18:41)-  > [TfmMain.FormActivate]: ->
+[15.03.2004]-(17:18:41)-  < [TfmMain.FormActivate]: <-
+[15.03.2004]-(17:18:41)-  : 
+-----------------------------------------------------------------------------
+[15.03.2004]-(17:18:42)-  > [TfmMain.FormActivate]: ->
+[15.03.2004]-(17:18:42)-  < [TfmMain.FormActivate]: <-
+[15.03.2004]-(17:18:42)-  : 
+-----------------------------------------------------------------------------
+[15.03.2004]-(17:18:46)-  > [TfmMain.acRepertExecute]: ->
+[15.03.2004]-(17:18:46)-  :   [TfmMain.acRepertExecute]: fmRepert.ShowModal
+[15.03.2004]-(17:18:46)-  >   [Tdm.PrepareQuery_Seans]: ->
+[15.03.2004]-(17:18:46)-  |   > [Combo_Load_DataSet]: ->
+[15.03.2004]-(17:18:46)-  |   :   [Combo_Load_DataSet]: DataSet.Name is (qSeans).
+[15.03.2004]-(17:18:46)-  |   :   [Combo_Load_DataSet]: Start cycle...
+[15.03.2004]-(17:18:46)-  |   :   [Combo_Load_DataSet]: Finish cycle...
+[15.03.2004]-(17:18:46)-  |   < [Combo_Load_DataSet]: <-
+[15.03.2004]-(17:18:46)-  |   : [Tdm.PrepareQuery_Seans]: RecordCount = 108
+[15.03.2004]-(17:18:46)-  <   [Tdm.PrepareQuery_Seans]: <-
+[15.03.2004]-(17:18:46)-  >   [Tdm.PrepareQuery_Film]: ->
+[15.03.2004]-(17:18:46)-  |   > [Combo_Load_DataSet]: ->
+[15.03.2004]-(17:18:46)-  |   :   [Combo_Load_DataSet]: DataSet.Name is (qFilm).
+[15.03.2004]-(17:18:46)-  |   :   [Combo_Load_DataSet]: Start cycle...
+[15.03.2004]-(17:18:46)-  |   :   [Combo_Load_DataSet]: Finish cycle...
+[15.03.2004]-(17:18:46)-  |   < [Combo_Load_DataSet]: <-
+[15.03.2004]-(17:18:46)-  |   : [Tdm.PrepareQuery_Film]: RecordCount = 17
+[15.03.2004]-(17:18:46)-  <   [Tdm.PrepareQuery_Film]: <-
+[15.03.2004]-(17:18:46)-  >   [Tdm.PrepareQuery_Tarifet_SQL]: ->
+[15.03.2004]-(17:18:46)-  |   : [Tdm.PrepareQuery_Tarifet_SQL]: FilterMode is (0)
+[15.03.2004]-(17:18:46)-  |   > [Combo_Load_DataSet]: ->
+[15.03.2004]-(17:18:46)-  |   :   [Combo_Load_DataSet]: DataSet.Name is (qTarifet).
+[15.03.2004]-(17:18:46)-  |   :   [Combo_Load_DataSet]: Start cycle...
+[15.03.2004]-(17:18:46)-  |   :   [Combo_Load_DataSet]: Finish cycle...
+[15.03.2004]-(17:18:46)-  |   < [Combo_Load_DataSet]: <-
+[15.03.2004]-(17:18:46)-  |   : [Tdm.PrepareQuery_Tarifet_SQL]: RecordCount = 16
+[15.03.2004]-(17:18:46)-  <   [Tdm.PrepareQuery_Tarifet_SQL]: <-
+[15.03.2004]-(17:18:46)-  >   [Tdm.PrepareQuery_Zal]: ->
+[15.03.2004]-(17:18:46)-  |   > [Combo_Load_DataSet]: ->
+[15.03.2004]-(17:18:46)-  |   :   [Combo_Load_DataSet]: DataSet.Name is (qZal).
+[15.03.2004]-(17:18:46)-  |   :   [Combo_Load_DataSet]: Start cycle...
+[15.03.2004]-(17:18:46)-  |   :   [Combo_Load_DataSet]: Finish cycle...
+[15.03.2004]-(17:18:46)-  |   < [Combo_Load_DataSet]: <-
+[15.03.2004]-(17:18:46)-  |   : [Tdm.PrepareQuery_Zal]: RecordCount = 1
+[15.03.2004]-(17:18:46)-  <   [Tdm.PrepareQuery_Zal]: <-
+[15.03.2004]-(17:18:51)-  :   
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[15.03.2004]-(17:18:51)-  >   [Refresh_Date]: ->
+[15.03.2004]-(17:18:51)-  |   > [Init_Cur_Repert]: ->
+[15.03.2004]-(17:18:51)-  |   >   [Tdm.PrepareQuery_Repert_SQL]: ->
+[15.03.2004]-(17:18:51)-  |   |   : [Tdm.PrepareQuery_Repert_SQL]: FilterMode is (1)
+[15.03.2004]-(17:18:51)-  |   |   : [Tdm.PrepareQuery_Repert_SQL]: Filter_Date is (03/15/2004)
+[15.03.2004]-(17:18:51)-  |   |   : [Tdm.PrepareQuery_Repert_SQL]: Filter_Zal_Kod is (2)
+[15.03.2004]-(17:18:51)-  |   <   [Tdm.PrepareQuery_Repert_SQL]: <-
+[15.03.2004]-(17:18:51)-  |   :   [Init_Cur_Repert]: RecordCount = 0
+[15.03.2004]-(17:18:51)-  |   >   [Combo_Load_DataSet]: ->
+[15.03.2004]-(17:18:51)-  |   |   : [Combo_Load_DataSet]: DataSet.Name is (qRepert).
+[15.03.2004]-(17:18:51)-  |   |   : [Combo_Load_DataSet]: Start cycle...
+[15.03.2004]-(17:18:51)-  |   |   : [Combo_Load_DataSet]: Finish cycle...
+[15.03.2004]-(17:18:51)-  |   <   [Combo_Load_DataSet]: <-
+[15.03.2004]-(17:18:51)-  |   :   [Init_Cur_Repert]: Tabs.Count = 0
+[15.03.2004]-(17:18:51)-  |   < [Init_Cur_Repert]: <-
+[15.03.2004]-(17:18:51)-  |   : 
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+[15.03.2004]-(17:18:51)-  |   > [TfmMain.tbcFilmChange]: ->
+[15.03.2004]-(17:18:51)-  |   :   [TfmMain.tbcFilmChange]: Film_Kod = (-1)
+[15.03.2004]-(17:18:51)-  |   :   
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[15.03.2004]-(17:18:51)-  |   >   [Refresh_Film]: ->
+[15.03.2004]-(17:18:51)-  |   |   > [Load_Tarifet]: ->
+[15.03.2004]-(17:18:51)-  |   |   >   [Tdm.PrepareQuery_Repert_SQL]: ->
+[15.03.2004]-(17:18:51)-  |   |   |   : [Tdm.PrepareQuery_Repert_SQL]: FilterMode is (2)
+[15.03.2004]-(17:18:51)-  |   |   |   : [Tdm.PrepareQuery_Repert_SQL]: Filter_Repert_Kod is (-1)
+[15.03.2004]-(17:18:51)-  |   |   <   [Tdm.PrepareQuery_Repert_SQL]: <-
+[15.03.2004]-(17:18:51)-  |   |   :   [Load_Tarifet]: RecordCount = 0
+[15.03.2004]-(17:18:51)-  |   |   < [Load_Tarifet]: <-
+[15.03.2004]-(17:18:51)-  |   |   : [Load_Tarifet]: Work time - (0:00:00.031)
+[15.03.2004]-(17:18:51)-  |   |   : 
+-----------------------------------------------------------------------------
+[15.03.2004]-(17:18:51)-  |   |   > [Load_All_TC]: ->
+[15.03.2004]-(17:18:51)-  |   |   < [Load_All_TC]: <-
+[15.03.2004]-(17:18:51)-  |   |   : [Load_All_TC]: Work time - (0:00:00.000)
+[15.03.2004]-(17:18:51)-  |   |   > [Refresh_TC_Count]: ->
+[15.03.2004]-(17:18:51)-  |   |   :   [Refresh_TC_Count]: Length(52) = "Помеч. 0, своб. [0] из 0. Сеть: 0 из 0. Сломано = 0."
+[15.03.2004]-(17:18:51)-  |   |   < [Refresh_TC_Count]: <-
+[15.03.2004]-(17:18:51)-  |   <   [Refresh_Film]: <-
+[15.03.2004]-(17:18:51)-  |   :   
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[15.03.2004]-(17:18:51)-  |   < [TfmMain.tbcFilmChange]: <-
+[15.03.2004]-(17:18:51)-  |   : 
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+[15.03.2004]-(17:18:51)-  |   : [TfmMain.tbcFilmChange]: Work time - (0:00:00.031)
+[15.03.2004]-(17:18:51)-  <   [Refresh_Date]: <-
+[15.03.2004]-(17:18:51)-  :   
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[15.03.2004]-(17:18:51)-  < [TfmMain.acRepertExecute]: <-
+[15.03.2004]-(17:18:54)-  : 
+ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
+[15.03.2004]-(17:18:54)-  > [TfmMain.dtpDateChange]: ->
+[15.03.2004]-(17:18:54)-  :   [TfmMain.dtpDateChange]: Date is (23/03/2004)
+[15.03.2004]-(17:18:54)-  :   
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[15.03.2004]-(17:18:54)-  >   [Refresh_Date]: ->
+[15.03.2004]-(17:18:54)-  |   > [Init_Cur_Repert]: ->
+[15.03.2004]-(17:18:54)-  |   >   [Tdm.PrepareQuery_Repert_SQL]: ->
+[15.03.2004]-(17:18:54)-  |   |   : [Tdm.PrepareQuery_Repert_SQL]: FilterMode is (1)
+[15.03.2004]-(17:18:54)-  |   |   : [Tdm.PrepareQuery_Repert_SQL]: Filter_Date is (03/23/2004)
+[15.03.2004]-(17:18:54)-  |   |   : [Tdm.PrepareQuery_Repert_SQL]: Filter_Zal_Kod is (2)
+[15.03.2004]-(17:18:54)-  |   <   [Tdm.PrepareQuery_Repert_SQL]: <-
+[15.03.2004]-(17:18:54)-  |   :   [Init_Cur_Repert]: RecordCount = 0
+[15.03.2004]-(17:18:54)-  |   >   [Combo_Load_DataSet]: ->
+[15.03.2004]-(17:18:54)-  |   |   : [Combo_Load_DataSet]: DataSet.Name is (qRepert).
+[15.03.2004]-(17:18:54)-  |   |   : [Combo_Load_DataSet]: Start cycle...
+[15.03.2004]-(17:18:54)-  |   |   : [Combo_Load_DataSet]: Finish cycle...
+[15.03.2004]-(17:18:54)-  |   <   [Combo_Load_DataSet]: <-
+[15.03.2004]-(17:18:54)-  |   :   [Init_Cur_Repert]: Tabs.Count = 0
+[15.03.2004]-(17:18:54)-  |   < [Init_Cur_Repert]: <-
+[15.03.2004]-(17:18:54)-  |   : 
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+[15.03.2004]-(17:18:54)-  |   > [TfmMain.tbcFilmChange]: ->
+[15.03.2004]-(17:18:54)-  |   :   [TfmMain.tbcFilmChange]: Film_Kod = (-1)
+[15.03.2004]-(17:18:54)-  |   :   
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[15.03.2004]-(17:18:54)-  |   >   [Refresh_Film]: ->
+[15.03.2004]-(17:18:54)-  |   |   > [Load_Tarifet]: ->
+[15.03.2004]-(17:18:54)-  |   |   >   [Tdm.PrepareQuery_Repert_SQL]: ->
+[15.03.2004]-(17:18:54)-  |   |   |   : [Tdm.PrepareQuery_Repert_SQL]: FilterMode is (2)
+[15.03.2004]-(17:18:54)-  |   |   |   : [Tdm.PrepareQuery_Repert_SQL]: Filter_Repert_Kod is (-1)
+[15.03.2004]-(17:18:54)-  |   |   <   [Tdm.PrepareQuery_Repert_SQL]: <-
+[15.03.2004]-(17:18:54)-  |   |   :   [Load_Tarifet]: RecordCount = 0
+[15.03.2004]-(17:18:54)-  |   |   < [Load_Tarifet]: <-
+[15.03.2004]-(17:18:54)-  |   |   : [Load_Tarifet]: Work time - (0:00:00.031)
+[15.03.2004]-(17:18:54)-  |   |   : 
+-----------------------------------------------------------------------------
+[15.03.2004]-(17:18:54)-  |   |   > [Load_All_TC]: ->
+[15.03.2004]-(17:18:54)-  |   |   < [Load_All_TC]: <-
+[15.03.2004]-(17:18:54)-  |   |   : [Load_All_TC]: Work time - (0:00:00.000)
+[15.03.2004]-(17:18:54)-  |   |   > [Refresh_TC_Count]: ->
+[15.03.2004]-(17:18:54)-  |   |   :   [Refresh_TC_Count]: Length(52) = "Помеч. 0, своб. [0] из 0. Сеть: 0 из 0. Сломано = 0."
+[15.03.2004]-(17:18:54)-  |   |   < [Refresh_TC_Count]: <-
+[15.03.2004]-(17:18:54)-  |   <   [Refresh_Film]: <-
+[15.03.2004]-(17:18:54)-  |   :   
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[15.03.2004]-(17:18:54)-  |   < [TfmMain.tbcFilmChange]: <-
+[15.03.2004]-(17:18:54)-  |   : 
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+[15.03.2004]-(17:18:54)-  |   : [TfmMain.tbcFilmChange]: Work time - (0:00:00.046)
+[15.03.2004]-(17:18:54)-  <   [Refresh_Date]: <-
+[15.03.2004]-(17:18:54)-  :   
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[15.03.2004]-(17:18:54)-  < [TfmMain.dtpDateChange]: <-
+[15.03.2004]-(17:18:54)-  : 
+ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
+[15.03.2004]-(17:18:54)-  : [TfmMain.dtpDateChange]: Work time - (0:00:00.078)
+[15.03.2004]-(17:18:56)-  : 
+ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
+[15.03.2004]-(17:18:56)-  > [TfmMain.dtpDateChange]: ->
+[15.03.2004]-(17:18:56)-  :   [TfmMain.dtpDateChange]: Date is (23/10/2004)
+[15.03.2004]-(17:18:56)-  :   
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[15.03.2004]-(17:18:56)-  >   [Refresh_Date]: ->
+[15.03.2004]-(17:18:56)-  |   > [Init_Cur_Repert]: ->
+[15.03.2004]-(17:18:56)-  |   >   [Tdm.PrepareQuery_Repert_SQL]: ->
+[15.03.2004]-(17:18:56)-  |   |   : [Tdm.PrepareQuery_Repert_SQL]: FilterMode is (1)
+[15.03.2004]-(17:18:56)-  |   |   : [Tdm.PrepareQuery_Repert_SQL]: Filter_Date is (10/23/2004)
+[15.03.2004]-(17:18:56)-  |   |   : [Tdm.PrepareQuery_Repert_SQL]: Filter_Zal_Kod is (2)
+[15.03.2004]-(17:18:56)-  |   <   [Tdm.PrepareQuery_Repert_SQL]: <-
+[15.03.2004]-(17:18:56)-  |   :   [Init_Cur_Repert]: RecordCount = 0
+[15.03.2004]-(17:18:56)-  |   >   [Combo_Load_DataSet]: ->
+[15.03.2004]-(17:18:56)-  |   |   : [Combo_Load_DataSet]: DataSet.Name is (qRepert).
+[15.03.2004]-(17:18:56)-  |   |   : [Combo_Load_DataSet]: Start cycle...
+[15.03.2004]-(17:18:56)-  |   |   : [Combo_Load_DataSet]: Finish cycle...
+[15.03.2004]-(17:18:56)-  |   <   [Combo_Load_DataSet]: <-
+[15.03.2004]-(17:18:56)-  |   :   [Init_Cur_Repert]: Tabs.Count = 0
+[15.03.2004]-(17:18:56)-  |   < [Init_Cur_Repert]: <-
+[15.03.2004]-(17:18:56)-  |   : 
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+[15.03.2004]-(17:18:56)-  |   > [TfmMain.tbcFilmChange]: ->
+[15.03.2004]-(17:18:56)-  |   :   [TfmMain.tbcFilmChange]: Film_Kod = (-1)
+[15.03.2004]-(17:18:56)-  |   :   
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[15.03.2004]-(17:18:56)-  |   >   [Refresh_Film]: ->
+[15.03.2004]-(17:18:56)-  |   |   > [Load_Tarifet]: ->
+[15.03.2004]-(17:18:56)-  |   |   >   [Tdm.PrepareQuery_Repert_SQL]: ->
+[15.03.2004]-(17:18:56)-  |   |   |   : [Tdm.PrepareQuery_Repert_SQL]: FilterMode is (2)
+[15.03.2004]-(17:18:56)-  |   |   |   : [Tdm.PrepareQuery_Repert_SQL]: Filter_Repert_Kod is (-1)
+[15.03.2004]-(17:18:56)-  |   |   <   [Tdm.PrepareQuery_Repert_SQL]: <-
+[15.03.2004]-(17:18:56)-  |   |   :   [Load_Tarifet]: RecordCount = 0
+[15.03.2004]-(17:18:56)-  |   |   < [Load_Tarifet]: <-
+[15.03.2004]-(17:18:56)-  |   |   : [Load_Tarifet]: Work time - (0:00:00.047)
+[15.03.2004]-(17:18:56)-  |   |   : 
+-----------------------------------------------------------------------------
+[15.03.2004]-(17:18:56)-  |   |   > [Load_All_TC]: ->
+[15.03.2004]-(17:18:56)-  |   |   < [Load_All_TC]: <-
+[15.03.2004]-(17:18:56)-  |   |   : [Load_All_TC]: Work time - (0:00:00.000)
+[15.03.2004]-(17:18:56)-  |   |   > [Refresh_TC_Count]: ->
+[15.03.2004]-(17:18:56)-  |   |   :   [Refresh_TC_Count]: Length(52) = "Помеч. 0, своб. [0] из 0. Сеть: 0 из 0. Сломано = 0."
+[15.03.2004]-(17:18:56)-  |   |   < [Refresh_TC_Count]: <-
+[15.03.2004]-(17:18:56)-  |   <   [Refresh_Film]: <-
+[15.03.2004]-(17:18:56)-  |   :   
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[15.03.2004]-(17:18:56)-  |   < [TfmMain.tbcFilmChange]: <-
+[15.03.2004]-(17:18:56)-  |   : 
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+[15.03.2004]-(17:18:56)-  |   : [TfmMain.tbcFilmChange]: Work time - (0:00:00.047)
+[15.03.2004]-(17:18:56)-  <   [Refresh_Date]: <-
+[15.03.2004]-(17:18:56)-  :   
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[15.03.2004]-(17:18:56)-  < [TfmMain.dtpDateChange]: <-
+[15.03.2004]-(17:18:56)-  : 
+ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
+[15.03.2004]-(17:18:56)-  : [TfmMain.dtpDateChange]: Work time - (0:00:00.078)
+[15.03.2004]-(17:18:58)-  : 
+ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
+[15.03.2004]-(17:18:58)-  > [TfmMain.dtpDateChange]: ->
+[15.03.2004]-(17:18:58)-  :   [TfmMain.dtpDateChange]: Date is (23/09/2004)
+[15.03.2004]-(17:18:58)-  :   
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[15.03.2004]-(17:18:58)-  >   [Refresh_Date]: ->
+[15.03.2004]-(17:18:58)-  |   > [Init_Cur_Repert]: ->
+[15.03.2004]-(17:18:58)-  |   >   [Tdm.PrepareQuery_Repert_SQL]: ->
+[15.03.2004]-(17:18:58)-  |   |   : [Tdm.PrepareQuery_Repert_SQL]: FilterMode is (1)
+[15.03.2004]-(17:18:58)-  |   |   : [Tdm.PrepareQuery_Repert_SQL]: Filter_Date is (09/23/2004)
+[15.03.2004]-(17:18:58)-  |   |   : [Tdm.PrepareQuery_Repert_SQL]: Filter_Zal_Kod is (2)
+[15.03.2004]-(17:18:58)-  |   <   [Tdm.PrepareQuery_Repert_SQL]: <-
+[15.03.2004]-(17:18:58)-  |   :   [Init_Cur_Repert]: RecordCount = 0
+[15.03.2004]-(17:18:58)-  |   >   [Combo_Load_DataSet]: ->
+[15.03.2004]-(17:18:58)-  |   |   : [Combo_Load_DataSet]: DataSet.Name is (qRepert).
+[15.03.2004]-(17:18:58)-  |   |   : [Combo_Load_DataSet]: Start cycle...
+[15.03.2004]-(17:18:58)-  |   |   : [Combo_Load_DataSet]: Finish cycle...
+[15.03.2004]-(17:18:58)-  |   <   [Combo_Load_DataSet]: <-
+[15.03.2004]-(17:18:58)-  |   :   [Init_Cur_Repert]: Tabs.Count = 0
+[15.03.2004]-(17:18:58)-  |   < [Init_Cur_Repert]: <-
+[15.03.2004]-(17:18:58)-  |   : 
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+[15.03.2004]-(17:18:58)-  |   > [TfmMain.tbcFilmChange]: ->
+[15.03.2004]-(17:18:58)-  |   :   [TfmMain.tbcFilmChange]: Film_Kod = (-1)
+[15.03.2004]-(17:18:58)-  |   :   
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[15.03.2004]-(17:18:58)-  |   >   [Refresh_Film]: ->
+[15.03.2004]-(17:18:58)-  |   |   > [Load_Tarifet]: ->
+[15.03.2004]-(17:18:58)-  |   |   >   [Tdm.PrepareQuery_Repert_SQL]: ->
+[15.03.2004]-(17:18:58)-  |   |   |   : [Tdm.PrepareQuery_Repert_SQL]: FilterMode is (2)
+[15.03.2004]-(17:18:58)-  |   |   |   : [Tdm.PrepareQuery_Repert_SQL]: Filter_Repert_Kod is (-1)
+[15.03.2004]-(17:18:58)-  |   |   <   [Tdm.PrepareQuery_Repert_SQL]: <-
+[15.03.2004]-(17:18:58)-  |   |   :   [Load_Tarifet]: RecordCount = 0
+[15.03.2004]-(17:18:58)-  |   |   < [Load_Tarifet]: <-
+[15.03.2004]-(17:18:58)-  |   |   : [Load_Tarifet]: Work time - (0:00:00.031)
+[15.03.2004]-(17:18:58)-  |   |   : 
+-----------------------------------------------------------------------------
+[15.03.2004]-(17:18:58)-  |   |   > [Load_All_TC]: ->
+[15.03.2004]-(17:18:58)-  |   |   < [Load_All_TC]: <-
+[15.03.2004]-(17:18:58)-  |   |   : [Load_All_TC]: Work time - (0:00:00.000)
+[15.03.2004]-(17:18:58)-  |   |   > [Refresh_TC_Count]: ->
+[15.03.2004]-(17:18:58)-  |   |   :   [Refresh_TC_Count]: Length(52) = "Помеч. 0, своб. [0] из 0. Сеть: 0 из 0. Сломано = 0."
+[15.03.2004]-(17:18:58)-  |   |   < [Refresh_TC_Count]: <-
+[15.03.2004]-(17:18:58)-  |   <   [Refresh_Film]: <-
+[15.03.2004]-(17:18:58)-  |   :   
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[15.03.2004]-(17:18:58)-  |   < [TfmMain.tbcFilmChange]: <-
+[15.03.2004]-(17:18:58)-  |   : 
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+[15.03.2004]-(17:18:58)-  |   : [TfmMain.tbcFilmChange]: Work time - (0:00:00.047)
+[15.03.2004]-(17:18:58)-  <   [Refresh_Date]: <-
+[15.03.2004]-(17:18:58)-  :   
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[15.03.2004]-(17:18:58)-  < [TfmMain.dtpDateChange]: <-
+[15.03.2004]-(17:18:58)-  : 
+ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
+[15.03.2004]-(17:18:58)-  : [TfmMain.dtpDateChange]: Work time - (0:00:00.094)
+[15.03.2004]-(17:18:58)-  : 
+ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
+[15.03.2004]-(17:18:58)-  > [TfmMain.dtpDateChange]: ->
+[15.03.2004]-(17:18:58)-  :   [TfmMain.dtpDateChange]: Date is (23/09/2004)
+[15.03.2004]-(17:18:58)-  :   
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[15.03.2004]-(17:18:58)-  >   [Refresh_Date]: ->
+[15.03.2004]-(17:18:58)-  <   [Refresh_Date]: <-
+[15.03.2004]-(17:18:58)-  :   
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[15.03.2004]-(17:18:58)-  < [TfmMain.dtpDateChange]: <-
+[15.03.2004]-(17:18:58)-  : 
+ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
+[15.03.2004]-(17:18:58)-  : [TfmMain.dtpDateChange]: Work time - (0:00:00.000)
+[15.03.2004]-(17:18:59)-  : 
+ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
+[15.03.2004]-(17:18:59)-  > [TfmMain.dtpDateChange]: ->
+[15.03.2004]-(17:18:59)-  :   [TfmMain.dtpDateChange]: Date is (23/08/2004)
+[15.03.2004]-(17:18:59)-  :   
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[15.03.2004]-(17:18:59)-  >   [Refresh_Date]: ->
+[15.03.2004]-(17:18:59)-  |   > [Init_Cur_Repert]: ->
+[15.03.2004]-(17:18:59)-  |   >   [Tdm.PrepareQuery_Repert_SQL]: ->
+[15.03.2004]-(17:18:59)-  |   |   : [Tdm.PrepareQuery_Repert_SQL]: FilterMode is (1)
+[15.03.2004]-(17:18:59)-  |   |   : [Tdm.PrepareQuery_Repert_SQL]: Filter_Date is (08/23/2004)
+[15.03.2004]-(17:18:59)-  |   |   : [Tdm.PrepareQuery_Repert_SQL]: Filter_Zal_Kod is (2)
+[15.03.2004]-(17:18:59)-  |   <   [Tdm.PrepareQuery_Repert_SQL]: <-
+[15.03.2004]-(17:18:59)-  |   :   [Init_Cur_Repert]: RecordCount = 0
+[15.03.2004]-(17:18:59)-  |   >   [Combo_Load_DataSet]: ->
+[15.03.2004]-(17:18:59)-  |   |   : [Combo_Load_DataSet]: DataSet.Name is (qRepert).
+[15.03.2004]-(17:18:59)-  |   |   : [Combo_Load_DataSet]: Start cycle...
+[15.03.2004]-(17:18:59)-  |   |   : [Combo_Load_DataSet]: Finish cycle...
+[15.03.2004]-(17:18:59)-  |   <   [Combo_Load_DataSet]: <-
+[15.03.2004]-(17:18:59)-  |   :   [Init_Cur_Repert]: Tabs.Count = 0
+[15.03.2004]-(17:18:59)-  |   < [Init_Cur_Repert]: <-
+[15.03.2004]-(17:18:59)-  |   : 
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+[15.03.2004]-(17:18:59)-  |   > [TfmMain.tbcFilmChange]: ->
+[15.03.2004]-(17:18:59)-  |   :   [TfmMain.tbcFilmChange]: Film_Kod = (-1)
+[15.03.2004]-(17:18:59)-  |   :   
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[15.03.2004]-(17:18:59)-  |   >   [Refresh_Film]: ->
+[15.03.2004]-(17:18:59)-  |   |   > [Load_Tarifet]: ->
+[15.03.2004]-(17:18:59)-  |   |   >   [Tdm.PrepareQuery_Repert_SQL]: ->
+[15.03.2004]-(17:18:59)-  |   |   |   : [Tdm.PrepareQuery_Repert_SQL]: FilterMode is (2)
+[15.03.2004]-(17:18:59)-  |   |   |   : [Tdm.PrepareQuery_Repert_SQL]: Filter_Repert_Kod is (-1)
+[15.03.2004]-(17:18:59)-  |   |   <   [Tdm.PrepareQuery_Repert_SQL]: <-
+[15.03.2004]-(17:18:59)-  |   |   :   [Load_Tarifet]: RecordCount = 0
+[15.03.2004]-(17:18:59)-  |   |   < [Load_Tarifet]: <-
+[15.03.2004]-(17:18:59)-  |   |   : [Load_Tarifet]: Work time - (0:00:00.031)
+[15.03.2004]-(17:18:59)-  |   |   : 
+-----------------------------------------------------------------------------
+[15.03.2004]-(17:18:59)-  |   |   > [Load_All_TC]: ->
+[15.03.2004]-(17:18:59)-  |   |   < [Load_All_TC]: <-
+[15.03.2004]-(17:18:59)-  |   |   : [Load_All_TC]: Work time - (0:00:00.000)
+[15.03.2004]-(17:18:59)-  |   |   > [Refresh_TC_Count]: ->
+[15.03.2004]-(17:18:59)-  |   |   :   [Refresh_TC_Count]: Length(52) = "Помеч. 0, своб. [0] из 0. Сеть: 0 из 0. Сломано = 0."
+[15.03.2004]-(17:18:59)-  |   |   < [Refresh_TC_Count]: <-
+[15.03.2004]-(17:18:59)-  |   <   [Refresh_Film]: <-
+[15.03.2004]-(17:18:59)-  |   :   
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[15.03.2004]-(17:18:59)-  |   < [TfmMain.tbcFilmChange]: <-
+[15.03.2004]-(17:18:59)-  |   : 
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+[15.03.2004]-(17:18:59)-  |   : [TfmMain.tbcFilmChange]: Work time - (0:00:00.047)
+[15.03.2004]-(17:18:59)-  <   [Refresh_Date]: <-
+[15.03.2004]-(17:18:59)-  :   
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[15.03.2004]-(17:18:59)-  < [TfmMain.dtpDateChange]: <-
+[15.03.2004]-(17:18:59)-  : 
+ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
+[15.03.2004]-(17:18:59)-  : [TfmMain.dtpDateChange]: Work time - (0:00:00.078)
+[15.03.2004]-(17:18:59)-  : 
+ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
+[15.03.2004]-(17:18:59)-  > [TfmMain.dtpDateChange]: ->
+[15.03.2004]-(17:18:59)-  :   [TfmMain.dtpDateChange]: Date is (23/08/2004)
+[15.03.2004]-(17:18:59)-  :   
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[15.03.2004]-(17:18:59)-  >   [Refresh_Date]: ->
+[15.03.2004]-(17:18:59)-  <   [Refresh_Date]: <-
+[15.03.2004]-(17:18:59)-  :   
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[15.03.2004]-(17:18:59)-  < [TfmMain.dtpDateChange]: <-
+[15.03.2004]-(17:18:59)-  : 
+ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
+[15.03.2004]-(17:18:59)-  : [TfmMain.dtpDateChange]: Work time - (0:00:00.000)
+[15.03.2004]-(17:19:00)-  : 
+ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
+[15.03.2004]-(17:19:00)-  > [TfmMain.dtpDateChange]: ->
+[15.03.2004]-(17:19:00)-  :   [TfmMain.dtpDateChange]: Date is (23/08/2004)
+[15.03.2004]-(17:19:00)-  :   
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[15.03.2004]-(17:19:00)-  >   [Refresh_Date]: ->
+[15.03.2004]-(17:19:00)-  <   [Refresh_Date]: <-
+[15.03.2004]-(17:19:00)-  :   
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[15.03.2004]-(17:19:00)-  < [TfmMain.dtpDateChange]: <-
+[15.03.2004]-(17:19:00)-  : 
+ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
+[15.03.2004]-(17:19:00)-  : [TfmMain.dtpDateChange]: Work time - (0:00:00.015)
+[15.03.2004]-(17:19:03)-  : 
+ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
+[15.03.2004]-(17:19:03)-  > [TfmMain.dtpDateChange]: ->
+[15.03.2004]-(17:19:03)-  :   [TfmMain.dtpDateChange]: Date is (23/09/2004)
+[15.03.2004]-(17:19:03)-  :   
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[15.03.2004]-(17:19:03)-  >   [Refresh_Date]: ->
+[15.03.2004]-(17:19:03)-  |   > [Init_Cur_Repert]: ->
+[15.03.2004]-(17:19:03)-  |   >   [Tdm.PrepareQuery_Repert_SQL]: ->
+[15.03.2004]-(17:19:03)-  |   |   : [Tdm.PrepareQuery_Repert_SQL]: FilterMode is (1)
+[15.03.2004]-(17:19:03)-  |   |   : [Tdm.PrepareQuery_Repert_SQL]: Filter_Date is (09/23/2004)
+[15.03.2004]-(17:19:03)-  |   |   : [Tdm.PrepareQuery_Repert_SQL]: Filter_Zal_Kod is (2)
+[15.03.2004]-(17:19:03)-  |   <   [Tdm.PrepareQuery_Repert_SQL]: <-
+[15.03.2004]-(17:19:03)-  |   :   [Init_Cur_Repert]: RecordCount = 0
+[15.03.2004]-(17:19:03)-  |   >   [Combo_Load_DataSet]: ->
+[15.03.2004]-(17:19:03)-  |   |   : [Combo_Load_DataSet]: DataSet.Name is (qRepert).
+[15.03.2004]-(17:19:03)-  |   |   : [Combo_Load_DataSet]: Start cycle...
+[15.03.2004]-(17:19:03)-  |   |   : [Combo_Load_DataSet]: Finish cycle...
+[15.03.2004]-(17:19:03)-  |   <   [Combo_Load_DataSet]: <-
+[15.03.2004]-(17:19:03)-  |   :   [Init_Cur_Repert]: Tabs.Count = 0
+[15.03.2004]-(17:19:03)-  |   < [Init_Cur_Repert]: <-
+[15.03.2004]-(17:19:03)-  |   : 
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+[15.03.2004]-(17:19:03)-  |   > [TfmMain.tbcFilmChange]: ->
+[15.03.2004]-(17:19:03)-  |   :   [TfmMain.tbcFilmChange]: Film_Kod = (-1)
+[15.03.2004]-(17:19:03)-  |   :   
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[15.03.2004]-(17:19:03)-  |   >   [Refresh_Film]: ->
+[15.03.2004]-(17:19:03)-  |   |   > [Load_Tarifet]: ->
+[15.03.2004]-(17:19:03)-  |   |   >   [Tdm.PrepareQuery_Repert_SQL]: ->
+[15.03.2004]-(17:19:03)-  |   |   |   : [Tdm.PrepareQuery_Repert_SQL]: FilterMode is (2)
+[15.03.2004]-(17:19:03)-  |   |   |   : [Tdm.PrepareQuery_Repert_SQL]: Filter_Repert_Kod is (-1)
+[15.03.2004]-(17:19:03)-  |   |   <   [Tdm.PrepareQuery_Repert_SQL]: <-
+[15.03.2004]-(17:19:03)-  |   |   :   [Load_Tarifet]: RecordCount = 0
+[15.03.2004]-(17:19:03)-  |   |   < [Load_Tarifet]: <-
+[15.03.2004]-(17:19:03)-  |   |   : [Load_Tarifet]: Work time - (0:00:00.031)
+[15.03.2004]-(17:19:03)-  |   |   : 
+-----------------------------------------------------------------------------
+[15.03.2004]-(17:19:03)-  |   |   > [Load_All_TC]: ->
+[15.03.2004]-(17:19:03)-  |   |   < [Load_All_TC]: <-
+[15.03.2004]-(17:19:03)-  |   |   : [Load_All_TC]: Work time - (0:00:00.000)
+[15.03.2004]-(17:19:03)-  |   |   > [Refresh_TC_Count]: ->
+[15.03.2004]-(17:19:03)-  |   |   :   [Refresh_TC_Count]: Length(52) = "Помеч. 0, своб. [0] из 0. Сеть: 0 из 0. Сломано = 0."
+[15.03.2004]-(17:19:03)-  |   |   < [Refresh_TC_Count]: <-
+[15.03.2004]-(17:19:03)-  |   <   [Refresh_Film]: <-
+[15.03.2004]-(17:19:03)-  |   :   
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[15.03.2004]-(17:19:03)-  |   < [TfmMain.tbcFilmChange]: <-
+[15.03.2004]-(17:19:03)-  |   : 
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+[15.03.2004]-(17:19:03)-  |   : [TfmMain.tbcFilmChange]: Work time - (0:00:00.047)
+[15.03.2004]-(17:19:03)-  <   [Refresh_Date]: <-
+[15.03.2004]-(17:19:03)-  :   
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[15.03.2004]-(17:19:03)-  < [TfmMain.dtpDateChange]: <-
+[15.03.2004]-(17:19:03)-  : 
+ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
+[15.03.2004]-(17:19:03)-  : [TfmMain.dtpDateChange]: Work time - (0:00:00.078)
+[15.03.2004]-(17:19:03)-  : 
+ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
+[15.03.2004]-(17:19:03)-  > [TfmMain.dtpDateChange]: ->
+[15.03.2004]-(17:19:03)-  :   [TfmMain.dtpDateChange]: Date is (23/09/2004)
+[15.03.2004]-(17:19:03)-  :   
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[15.03.2004]-(17:19:03)-  >   [Refresh_Date]: ->
+[15.03.2004]-(17:19:03)-  <   [Refresh_Date]: <-
+[15.03.2004]-(17:19:03)-  :   
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[15.03.2004]-(17:19:03)-  < [TfmMain.dtpDateChange]: <-
+[15.03.2004]-(17:19:03)-  : 
+ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
+[15.03.2004]-(17:19:03)-  : [TfmMain.dtpDateChange]: Work time - (0:00:00.016)
+[15.03.2004]-(17:19:04)-  : 
+ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
+[15.03.2004]-(17:19:04)-  > [TfmMain.dtpDateChange]: ->
+[15.03.2004]-(17:19:04)-  :   [TfmMain.dtpDateChange]: Date is (23/09/2004)
+[15.03.2004]-(17:19:04)-  :   
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[15.03.2004]-(17:19:04)-  >   [Refresh_Date]: ->
+[15.03.2004]-(17:19:04)-  <   [Refresh_Date]: <-
+[15.03.2004]-(17:19:04)-  :   
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[15.03.2004]-(17:19:04)-  < [TfmMain.dtpDateChange]: <-
+[15.03.2004]-(17:19:04)-  : 
+ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
+[15.03.2004]-(17:19:04)-  : [TfmMain.dtpDateChange]: Work time - (0:00:00.000)
+[15.03.2004]-(17:19:09)-  : 
+ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
+[15.03.2004]-(17:19:09)-  > [TfmMain.dtpDateChange]: ->
+[15.03.2004]-(17:19:09)-  :   [TfmMain.dtpDateChange]: Date is (23/09/2003)
+[15.03.2004]-(17:19:09)-  :   
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[15.03.2004]-(17:19:09)-  >   [Refresh_Date]: ->
+[15.03.2004]-(17:19:09)-  |   > [Init_Cur_Repert]: ->
+[15.03.2004]-(17:19:09)-  |   >   [Tdm.PrepareQuery_Repert_SQL]: ->
+[15.03.2004]-(17:19:09)-  |   |   : [Tdm.PrepareQuery_Repert_SQL]: FilterMode is (1)
+[15.03.2004]-(17:19:09)-  |   |   : [Tdm.PrepareQuery_Repert_SQL]: Filter_Date is (09/23/2003)
+[15.03.2004]-(17:19:09)-  |   |   : [Tdm.PrepareQuery_Repert_SQL]: Filter_Zal_Kod is (2)
+[15.03.2004]-(17:19:09)-  |   <   [Tdm.PrepareQuery_Repert_SQL]: <-
+[15.03.2004]-(17:19:09)-  |   :   [Init_Cur_Repert]: RecordCount = 0
+[15.03.2004]-(17:19:09)-  |   >   [Combo_Load_DataSet]: ->
+[15.03.2004]-(17:19:09)-  |   |   : [Combo_Load_DataSet]: DataSet.Name is (qRepert).
+[15.03.2004]-(17:19:09)-  |   |   : [Combo_Load_DataSet]: Start cycle...
+[15.03.2004]-(17:19:09)-  |   |   : [Combo_Load_DataSet]: Finish cycle...
+[15.03.2004]-(17:19:09)-  |   <   [Combo_Load_DataSet]: <-
+[15.03.2004]-(17:19:09)-  |   :   [Init_Cur_Repert]: Tabs.Count = 0
+[15.03.2004]-(17:19:09)-  |   < [Init_Cur_Repert]: <-
+[15.03.2004]-(17:19:09)-  |   : 
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+[15.03.2004]-(17:19:09)-  |   > [TfmMain.tbcFilmChange]: ->
+[15.03.2004]-(17:19:09)-  |   :   [TfmMain.tbcFilmChange]: Film_Kod = (-1)
+[15.03.2004]-(17:19:09)-  |   :   
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[15.03.2004]-(17:19:09)-  |   >   [Refresh_Film]: ->
+[15.03.2004]-(17:19:09)-  |   |   > [Load_Tarifet]: ->
+[15.03.2004]-(17:19:09)-  |   |   >   [Tdm.PrepareQuery_Repert_SQL]: ->
+[15.03.2004]-(17:19:09)-  |   |   |   : [Tdm.PrepareQuery_Repert_SQL]: FilterMode is (2)
+[15.03.2004]-(17:19:09)-  |   |   |   : [Tdm.PrepareQuery_Repert_SQL]: Filter_Repert_Kod is (-1)
+[15.03.2004]-(17:19:09)-  |   |   <   [Tdm.PrepareQuery_Repert_SQL]: <-
+[15.03.2004]-(17:19:09)-  |   |   :   [Load_Tarifet]: RecordCount = 0
+[15.03.2004]-(17:19:09)-  |   |   < [Load_Tarifet]: <-
+[15.03.2004]-(17:19:09)-  |   |   : [Load_Tarifet]: Work time - (0:00:00.032)
+[15.03.2004]-(17:19:09)-  |   |   : 
+-----------------------------------------------------------------------------
+[15.03.2004]-(17:19:09)-  |   |   > [Load_All_TC]: ->
+[15.03.2004]-(17:19:09)-  |   |   < [Load_All_TC]: <-
+[15.03.2004]-(17:19:09)-  |   |   : [Load_All_TC]: Work time - (0:00:00.000)
+[15.03.2004]-(17:19:09)-  |   |   > [Refresh_TC_Count]: ->
+[15.03.2004]-(17:19:09)-  |   |   :   [Refresh_TC_Count]: Length(52) = "Помеч. 0, своб. [0] из 0. Сеть: 0 из 0. Сломано = 0."
+[15.03.2004]-(17:19:09)-  |   |   < [Refresh_TC_Count]: <-
+[15.03.2004]-(17:19:09)-  |   <   [Refresh_Film]: <-
+[15.03.2004]-(17:19:09)-  |   :   
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[15.03.2004]-(17:19:09)-  |   < [TfmMain.tbcFilmChange]: <-
+[15.03.2004]-(17:19:09)-  |   : 
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+[15.03.2004]-(17:19:09)-  |   : [TfmMain.tbcFilmChange]: Work time - (0:00:00.032)
+[15.03.2004]-(17:19:09)-  <   [Refresh_Date]: <-
+[15.03.2004]-(17:19:09)-  :   
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[15.03.2004]-(17:19:09)-  < [TfmMain.dtpDateChange]: <-
+[15.03.2004]-(17:19:09)-  : 
+ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
+[15.03.2004]-(17:19:09)-  : [TfmMain.dtpDateChange]: Work time - (0:00:00.078)
+[15.03.2004]-(17:19:09)-  : 
+ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
+[15.03.2004]-(17:19:09)-  > [TfmMain.dtpDateChange]: ->
+[15.03.2004]-(17:19:09)-  :   [TfmMain.dtpDateChange]: Date is (23/09/2002)
+[15.03.2004]-(17:19:09)-  :   
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[15.03.2004]-(17:19:09)-  >   [Refresh_Date]: ->
+[15.03.2004]-(17:19:09)-  |   > [Init_Cur_Repert]: ->
+[15.03.2004]-(17:19:09)-  |   >   [Tdm.PrepareQuery_Repert_SQL]: ->
+[15.03.2004]-(17:19:09)-  |   |   : [Tdm.PrepareQuery_Repert_SQL]: FilterMode is (1)
+[15.03.2004]-(17:19:09)-  |   |   : [Tdm.PrepareQuery_Repert_SQL]: Filter_Date is (09/23/2002)
+[15.03.2004]-(17:19:09)-  |   |   : [Tdm.PrepareQuery_Repert_SQL]: Filter_Zal_Kod is (2)
+[15.03.2004]-(17:19:09)-  |   <   [Tdm.PrepareQuery_Repert_SQL]: <-
+[15.03.2004]-(17:19:09)-  |   :   [Init_Cur_Repert]: RecordCount = 0
+[15.03.2004]-(17:19:09)-  |   >   [Combo_Load_DataSet]: ->
+[15.03.2004]-(17:19:09)-  |   |   : [Combo_Load_DataSet]: DataSet.Name is (qRepert).
+[15.03.2004]-(17:19:09)-  |   |   : [Combo_Load_DataSet]: Start cycle...
+[15.03.2004]-(17:19:09)-  |   |   : [Combo_Load_DataSet]: Finish cycle...
+[15.03.2004]-(17:19:09)-  |   <   [Combo_Load_DataSet]: <-
+[15.03.2004]-(17:19:09)-  |   :   [Init_Cur_Repert]: Tabs.Count = 0
+[15.03.2004]-(17:19:09)-  |   < [Init_Cur_Repert]: <-
+[15.03.2004]-(17:19:09)-  |   : 
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+[15.03.2004]-(17:19:09)-  |   > [TfmMain.tbcFilmChange]: ->
+[15.03.2004]-(17:19:09)-  |   :   [TfmMain.tbcFilmChange]: Film_Kod = (-1)
+[15.03.2004]-(17:19:09)-  |   :   
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[15.03.2004]-(17:19:09)-  |   >   [Refresh_Film]: ->
+[15.03.2004]-(17:19:09)-  |   |   > [Load_Tarifet]: ->
+[15.03.2004]-(17:19:09)-  |   |   >   [Tdm.PrepareQuery_Repert_SQL]: ->
+[15.03.2004]-(17:19:09)-  |   |   |   : [Tdm.PrepareQuery_Repert_SQL]: FilterMode is (2)
+[15.03.2004]-(17:19:09)-  |   |   |   : [Tdm.PrepareQuery_Repert_SQL]: Filter_Repert_Kod is (-1)
+[15.03.2004]-(17:19:09)-  |   |   <   [Tdm.PrepareQuery_Repert_SQL]: <-
+[15.03.2004]-(17:19:09)-  |   |   :   [Load_Tarifet]: RecordCount = 0
+[15.03.2004]-(17:19:09)-  |   |   < [Load_Tarifet]: <-
+[15.03.2004]-(17:19:09)-  |   |   : [Load_Tarifet]: Work time - (0:00:00.032)
+[15.03.2004]-(17:19:09)-  |   |   : 
+-----------------------------------------------------------------------------
+[15.03.2004]-(17:19:09)-  |   |   > [Load_All_TC]: ->
+[15.03.2004]-(17:19:09)-  |   |   < [Load_All_TC]: <-
+[15.03.2004]-(17:19:09)-  |   |   : [Load_All_TC]: Work time - (0:00:00.000)
+[15.03.2004]-(17:19:09)-  |   |   > [Refresh_TC_Count]: ->
+[15.03.2004]-(17:19:09)-  |   |   :   [Refresh_TC_Count]: Length(52) = "Помеч. 0, своб. [0] из 0. Сеть: 0 из 0. Сломано = 0."
+[15.03.2004]-(17:19:09)-  |   |   < [Refresh_TC_Count]: <-
+[15.03.2004]-(17:19:09)-  |   <   [Refresh_Film]: <-
+[15.03.2004]-(17:19:09)-  |   :   
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[15.03.2004]-(17:19:09)-  |   < [TfmMain.tbcFilmChange]: <-
+[15.03.2004]-(17:19:09)-  |   : 
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+[15.03.2004]-(17:19:09)-  |   : [TfmMain.tbcFilmChange]: Work time - (0:00:00.047)
+[15.03.2004]-(17:19:09)-  <   [Refresh_Date]: <-
+[15.03.2004]-(17:19:09)-  :   
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[15.03.2004]-(17:19:09)-  < [TfmMain.dtpDateChange]: <-
+[15.03.2004]-(17:19:09)-  : 
+ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
+[15.03.2004]-(17:19:09)-  : [TfmMain.dtpDateChange]: Work time - (0:00:00.094)
+[15.03.2004]-(17:19:11)-  : 
+ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
+[15.03.2004]-(17:19:11)-  > [TfmMain.dtpDateChange]: ->
+[15.03.2004]-(17:19:11)-  :   [TfmMain.dtpDateChange]: Date is (23/10/2002)
+[15.03.2004]-(17:19:11)-  :   
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[15.03.2004]-(17:19:11)-  >   [Refresh_Date]: ->
+[15.03.2004]-(17:19:11)-  |   > [Init_Cur_Repert]: ->
+[15.03.2004]-(17:19:11)-  |   >   [Tdm.PrepareQuery_Repert_SQL]: ->
+[15.03.2004]-(17:19:11)-  |   |   : [Tdm.PrepareQuery_Repert_SQL]: FilterMode is (1)
+[15.03.2004]-(17:19:11)-  |   |   : [Tdm.PrepareQuery_Repert_SQL]: Filter_Date is (10/23/2002)
+[15.03.2004]-(17:19:11)-  |   |   : [Tdm.PrepareQuery_Repert_SQL]: Filter_Zal_Kod is (2)
+[15.03.2004]-(17:19:11)-  |   <   [Tdm.PrepareQuery_Repert_SQL]: <-
+[15.03.2004]-(17:19:11)-  |   :   [Init_Cur_Repert]: RecordCount = 12
+[15.03.2004]-(17:19:11)-  |   :   [Init_Cur_Repert]: Cur_Repert_Kod = 1
+[15.03.2004]-(17:19:11)-  |   >   [Combo_Load_DataSet]: ->
+[15.03.2004]-(17:19:11)-  |   |   : [Combo_Load_DataSet]: DataSet.Name is (qRepert).
+[15.03.2004]-(17:19:11)-  |   |   : [Combo_Load_DataSet]: Start cycle...
+[15.03.2004]-(17:19:11)-  |   |   : [Combo_Load_DataSet]: Finish cycle...
+[15.03.2004]-(17:19:11)-  |   <   [Combo_Load_DataSet]: <-
+[15.03.2004]-(17:19:11)-  |   :   [Init_Cur_Repert]: Tabs.Count = 12
+[15.03.2004]-(17:19:11)-  |   :   [Init_Cur_Repert]: TabIndex = 0
+[15.03.2004]-(17:19:11)-  |   < [Init_Cur_Repert]: <-
+[15.03.2004]-(17:19:11)-  |   : 
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+[15.03.2004]-(17:19:11)-  |   > [TfmMain.tbcFilmChange]: ->
+[15.03.2004]-(17:19:11)-  |   :   [TfmMain.tbcFilmChange]: Film_Kod = (1)
+[15.03.2004]-(17:19:11)-  |   :   [TfmMain.tbcFilmChange]: Description is ([09:00] - 11 друзей Оушена (180 мин.) - 1)
+[15.03.2004]-(17:19:11)-  |   :   
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[15.03.2004]-(17:19:11)-  |   >   [Refresh_Film]: ->
+[15.03.2004]-(17:19:11)-  |   |   > [Load_Tarifet]: ->
+[15.03.2004]-(17:19:11)-  |   |   >   [Tdm.PrepareQuery_Repert_SQL]: ->
+[15.03.2004]-(17:19:11)-  |   |   |   : [Tdm.PrepareQuery_Repert_SQL]: FilterMode is (2)
+[15.03.2004]-(17:19:11)-  |   |   |   : [Tdm.PrepareQuery_Repert_SQL]: Filter_Repert_Kod is (1)
+[15.03.2004]-(17:19:11)-  |   |   <   [Tdm.PrepareQuery_Repert_SQL]: <-
+[15.03.2004]-(17:19:11)-  |   |   :   [Load_Tarifet]: RecordCount = 1
+[15.03.2004]-(17:19:11)-  |   |   :   [Load_Tarifet]: RecordCount = 1
+[15.03.2004]-(17:19:11)-  |   |   >   [Modify_Tarifpl_Desc]: ->
+[15.03.2004]-(17:19:11)-  |   |   |   : [Modify_Tarifpl_Desc]: Cap[1] =  1 - "Взрослый" :::::                                      350 тенге.
+[15.03.2004]-(17:19:11)-  |   |   |   : [Modify_Tarifpl_Desc]: Cap[2] =  2 - "Студенческий/Пенсионный" :::::       250 тенге.
+[15.03.2004]-(17:19:11)-  |   |   |   : [Modify_Tarifpl_Desc]: Cap[3] =  3 - "Школьный" :::::                                    150 тенге.
+[15.03.2004]-(17:19:11)-  |   |   |   : [Modify_Tarifpl_Desc]: Cap[5] =  5 - "Скидка 20%" :::::                                100 тенге.
+[15.03.2004]-(17:19:11)-  |   |   |   : [Modify_Tarifpl_Desc]: Cap[7] =  7 - "Скидка 50%" :::::                                 50 тенге.
+[15.03.2004]-(17:19:11)-  |   |   |   : [Modify_Tarifpl_Desc]: Cap[8] =  8 - "Скидка групповая 1" :::::                   150 тенге.
+[15.03.2004]-(17:19:11)-  |   |   |   : [Modify_Tarifpl_Desc]: Cap[9] =  9 - "Скидка групповая 2" :::::                   100 тенге.
+[15.03.2004]-(17:19:11)-  |   |   |   : [Modify_Tarifpl_Desc]: Cap[1] =  1 - "Взрослый" :::::                                      350 тенге.
+[15.03.2004]-(17:19:11)-  |   |   |   : [Modify_Tarifpl_Desc]: Cap[2] =  2 - "Студенческий/Пенсионный" :::::       250 тенге.
+[15.03.2004]-(17:19:11)-  |   |   |   : [Modify_Tarifpl_Desc]: Cap[3] =  3 - "Школьный" :::::                                    150 тенге.
+[15.03.2004]-(17:19:11)-  |   |   |   : [Modify_Tarifpl_Desc]: Cap[5] =  5 - "Скидка 20%" :::::                                100 тенге.
+[15.03.2004]-(17:19:11)-  |   |   |   : [Modify_Tarifpl_Desc]: Cap[7] =  7 - "Скидка 50%" :::::                                 50 тенге.
+[15.03.2004]-(17:19:11)-  |   |   |   : [Modify_Tarifpl_Desc]: Cap[8] =  8 - "Скидка групповая 1" :::::                   150 тенге.
+[15.03.2004]-(17:19:11)-  |   |   |   : [Modify_Tarifpl_Desc]: Cap[9] =  9 - "Скидка групповая 2" :::::                   100 тенге.
+[15.03.2004]-(17:19:11)-  |   |   <   [Modify_Tarifpl_Desc]: <-
+[15.03.2004]-(17:19:11)-  |   |   < [Load_Tarifet]: <-
+[15.03.2004]-(17:19:11)-  |   |   : [Load_Tarifet]: Work time - (0:00:00.031)
+[15.03.2004]-(17:19:11)-  |   |   : 
+-----------------------------------------------------------------------------
+[15.03.2004]-(17:19:11)-  |   |   > [Load_All_TC]: ->
+[15.03.2004]-(17:19:11)-  |   |   >   [Tdm.PrepareQuery_Ticket_SQL]: ->
+[15.03.2004]-(17:19:11)-  |   |   |   : [Tdm.PrepareQuery_Ticket_SQL]: FilterMode is (1)
+[15.03.2004]-(17:19:11)-  |   |   |   : [Tdm.PrepareQuery_Ticket_SQL]: s_Ticket_REPERT is (1)
+[15.03.2004]-(17:19:11)-  |   |   |   : [Tdm.PrepareQuery_Ticket_SQL]: SysTypes = (16,17,18,19)
+[15.03.2004]-(17:19:11)-  |   |   |   : [Tdm.PrepareQuery_Ticket_SQL]: SQL.Text(352) is [
+SELECT
+ TICKET_KOD,
+ TICKET_TARIFPL,
+ TICKET_REPERT,
+ TICKET_ROW,
+ TICKET_COLUMN,
+ TICKET_DATE,
+ TICKET_TIME,
+ TICKET_STATE,
+ TICKET_OWNER,
+ TICKET_RESTORED,
+ TICKET_TAG 
+ FROM "TICKET.DB" Ticket
+ WHERE (TICKET_REPERT = 1)
+  AND (TICKET_RESTORED = FALSE)
+  AND TICKET_TARIFPL NOT in (16,17,18,19)
+ ORDER BY TICKET_ROW, TICKET_COLUMN
+
+]
+[15.03.2004]-(17:19:11)-  |   |   |   : [Tdm.PrepareQuery_Ticket_SQL]: Result = (352)
+[15.03.2004]-(17:19:11)-  |   |   <   [Tdm.PrepareQuery_Ticket_SQL]: <-
+[15.03.2004]-(17:19:11)-  |   |   :   [Load_All_TC]: qTicket.Open
+[15.03.2004]-(17:19:11)-  |   |   :   [Load_All_TC]: RecordCount = 0
+[15.03.2004]-(17:19:11)-  |   |   :   [Load_All_TC]: qTicket.Close
+[15.03.2004]-(17:19:11)-  |   |   < [Load_All_TC]: <-
+[15.03.2004]-(17:19:11)-  |   |   : [Load_All_TC]: Work time - (0:00:00.031)
+[15.03.2004]-(17:19:11)-  |   |   > [Refresh_TC_Count]: ->
+[15.03.2004]-(17:19:11)-  |   |   :   [Refresh_TC_Count]: Length(56) = "Помеч. 0, своб. [592] из 592. Сеть: 0 из 0. Сломано = 0."
+[15.03.2004]-(17:19:11)-  |   |   < [Refresh_TC_Count]: <-
+[15.03.2004]-(17:19:11)-  |   <   [Refresh_Film]: <-
+[15.03.2004]-(17:19:11)-  |   :   
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[15.03.2004]-(17:19:11)-  |   < [TfmMain.tbcFilmChange]: <-
+[15.03.2004]-(17:19:11)-  |   : 
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+[15.03.2004]-(17:19:11)-  |   : [TfmMain.tbcFilmChange]: Work time - (0:00:00.078)
+[15.03.2004]-(17:19:11)-  <   [Refresh_Date]: <-
+[15.03.2004]-(17:19:11)-  :   
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[15.03.2004]-(17:19:11)-  < [TfmMain.dtpDateChange]: <-
+[15.03.2004]-(17:19:11)-  : 
+ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
+[15.03.2004]-(17:19:11)-  : [TfmMain.dtpDateChange]: Work time - (0:00:00.141)
+[15.03.2004]-(17:19:15)-  > [TfmMain.FormClose]: ->
+[15.03.2004]-(17:19:15)-  :   [TfmMain.FormClose]: MessageDlg(...mtConfirmation...)
+[15.03.2004]-(17:19:15)-  :   [TfmMain.FormClose]: Answer - Yes
+[15.03.2004]-(17:19:15)-  :   [TfmMain.FormClose]: DataBase is disconnected.
+[15.03.2004]-(17:19:15)-  < [TfmMain.FormClose]: <-
+[15.03.2004]-(17:19:15)-  Application.Finished
+[15.03.2004]-(17:19:15)-  
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+_____________________________________________________________________________
+[15.03.2004]-(17:19:15)-  uAddon.Final
+[15.03.2004]-(17:19:15)-  uMain.Final
+[15.03.2004]-(17:19:15)-  uImports.Final
+[15.03.2004]-(17:19:15)-  Print1c module is closed.
+[15.03.2004]-(17:19:15)-  Bugger.Final
+[15.03.2004]-(17:19:15)-  ----------==========[Finish]==========----------

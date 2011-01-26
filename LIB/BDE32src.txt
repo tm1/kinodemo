@@ -1,0 +1,1385 @@
+unit BDE32;
+{Source files:
+  BDE32.pas (05.08.1999 12:28:34)}
+
+interface
+
+uses
+  Registry {
+    T:TRegistry, A:.TRegistry, A:TRegistry.Create, A:TRegistry.SetRootKey,
+    A:TRegistry.OpenKey, A:TRegistry.ReadString, A:TRegistry.WriteString},
+  Dialogs {
+    A:ShowMessage},
+  Forms {
+    A:Application, A:TApplication.GetExeName},
+  Controls,
+  Graphics,
+  Classes {
+    T:TComponent, A:.TComponent, A:TComponent.DefineProperties,
+    A:TComponent.Loaded, A:TComponent.Notification, A:TComponent.ReadState,
+    A:TComponent.SetName, A:TComponent.ValidateRename,
+    A:TComponent.WriteState, A:TComponent.Destroy,
+    A:TComponent.SafeCallException, A:TPersistent.AssignTo,
+    A:TPersistent.Assign, A:TComponent.Create, T:TFileStream,
+    A:.TFileStream, A:TFileStream.Create, A:fmCreate, A:TStream.CopyFrom,
+    A:soFromBeginning, A:TStream.GetSize, A:RegisterComponents},
+  SysUtils {
+    A:FileExists, A:ExtractFilePath, A:StrToInt, A:IntToStr, A:fmOpenRead,
+    A:fmOpenWrite, A:StrPCopy, A:DeleteFile, A:RenameFile},
+  Messages,
+  Windows {
+    A:HKEY_LOCAL_MACHINE},
+  SysInit,
+  System {
+    T:Boolean, T:AnsiString, T:Integer, T:String, A:TObject.DefaultHandler,
+    A:TObject.NewInstance, A:TObject.FreeInstance, A:False, A:True, A:Halt,
+    A:@Halt0, A:TObject.Free, A:@ClassCreate, A:@LStrCat, A:@LStrCatN,
+    A:@LStrArrayClr, A:@HandleFinally, A:@LStrAsg, A:@LStrCmp, A:@LStrClr,
+    T:Char, A:Length, A:@LStrLen, T:PAnsiChar, A:@LStrAddRef, A:@LStrCat3,
+    T:TextFile, A:AssignFile, A:@Assign, A:Reset, A:@ResetText, A:Readln,
+    A:@ReadLString, A:@ReadLn, A:CloseFile, A:@Close, A:Pos, A:@LStrPos,
+    A:Delete, A:@LStrDelete, A:Copy, A:@LStrCopy, A:@_IOTest, A:@LStrLAsg};
+
+type
+  TBDE32=class ({T#2}Classes.TComponent) 
+  private
+    _Nv_77: System.Boolean;
+    _Nv_78: System.AnsiString;
+    _Nv_79: System.Integer;
+    _Nv_7A: System.Integer;
+    _Nv_7B: System.Integer;
+    _Nv_7C: System.Integer;
+  public
+    constructor Create{65} (Self: TBDE32; : false..true;
+      AOwner: Classes.TComponent); override{; virtual};
+  published
+    property LocalShare:System.Boolean read _Nv_77 write _Nv_77;
+    property PdxNetDir:System.AnsiString read _Nv_78 write _Nv_78;
+    property MaxBufSize:System.Integer read _Nv_79 write _Nv_79;
+    property MaxFileHandles:System.Integer read _Nv_7A write _Nv_7A;
+    property MemSize:System.Integer read _Nv_7B write _Nv_7B;
+    property SharedMemSize:System.Integer read _Nv_7C write _Nv_7C;
+    procedure WriteSettings{6B} (Self: TBDE32);
+    procedure ReadSettings{69} (Self: TBDE32);
+  end;
+
+function FilePos (FileName: System.AnsiString; What: System.AnsiString;
+  startFrom: System.Integer): System.Integer;
+
+procedure Register;
+
+procedure Finalization;
+
+procedure BDE32;
+
+implementation
+
+var
+  _NV_64: -$80000000..$7FFFFFFF;
+
+procedure TBDE32.Create (Self: TBDE32; : false..true;
+  AOwner: Classes.TComponent);
+begin
+   00000000 : 55                            PUSH EBP
+   00000001 : 8B EC                         MOV EBP,ESP
+   00000003 : 6A 00                         PUSH $00
+   00000005 : 6A 00                         PUSH $00
+   00000007 : 6A 00                         PUSH $00
+   00000009 : 6A 00                         PUSH $00
+   0000000B : 6A 00                         PUSH $00
+   0000000D : 53                            PUSH EBX
+   0000000E : 56                            PUSH ESI
+   0000000F : 57                            PUSH EDI
+   00000010 : 84 D2                         TEST DL,DL
+   00000012 : 74 08                         JE +8; (0x1C)
+   00000014 : 83 C4 F0                      ADD ESP,-16
+   00000017 : E8(00 00 00 00                CALL @ClassCreate{0x42}
+   0000001C : 8B DA                         MOV EBX,EDX
+   0000001E : 8B F0                         MOV ESI,EAX
+   00000020 : 33 C0                         XOR EAX,EAX
+   00000022 : 55                            PUSH EBP
+   00000023 : 68(77 01 00 00                PUSH TBDE32.Create{0x65}+$00000177
+   00000028 : 64 FF 30                      PUSH DWORD PTR FS:[EAX]
+   0000002B : 64 89 20                      MOV DWORD PTR FS:[EAX],ESP
+   0000002E : 33 D2                         XOR EDX,EDX
+   00000030 : 8B C6                         MOV EAX,ESI
+   00000032 : E8(00 00 00 00                CALL TComponent.Create{0x1E}
+   00000037 : B2 01                         MOV DL,$01
+   00000039 : A1(00 00 00 00                MOV EAX,DWORD PTR [TRegistry{0x3}]
+   0000003E : E8(00 00 00 00                CALL TRegistry.Create{0x4}
+   00000043 : 8B F8                         MOV EDI,EAX
+   00000045 : BA 02 00 00 80                MOV EDX,$80000002
+   0000004A : 8B C7                         MOV EAX,EDI
+   0000004C : E8(00 00 00 00                CALL TRegistry.SetRootKey{0x5}
+   00000051 : 33 C9                         XOR ECX,ECX
+   00000053 : BA(A0 01 00 00                MOV EDX,TBDE32.Create{0x65}+$000001A0
+   00000058 : 8B C7                         MOV EAX,EDI
+   0000005A : E8(00 00 00 00                CALL TRegistry.OpenKey{0x6}
+   0000005F : 84 C0                         TEST AL,AL
+   00000061 : 74 2C                         JE +44; (0x8F)
+   00000063 : 8D 4D F4                      LEA ECX,DWORD PTR [EBP-12]
+   00000066 : BA(CC 01 00 00                MOV EDX,TBDE32.Create{0x65}+$000001CC
+   0000006B : 8B C7                         MOV EAX,EDI
+   0000006D : E8(00 00 00 00                CALL TRegistry.ReadString{0x7}
+   00000072 : 8D 45 F4                      LEA EAX,DWORD PTR [EBP-12]
+   00000075 : BA(DC 01 00 00                MOV EDX,TBDE32.Create{0x65}+$000001DC
+   0000007A : E8(00 00 00 00                CALL @LStrCat{0x43}
+   0000007F : 8B 45 F4                      MOV EAX,DWORD PTR [EBP-12]
+   00000082 : E8(00 00 00 00                CALL FileExists{0x28}
+   00000087 : 84 C0                         TEST AL,AL
+   00000089 : 0F 85 BF 00 00 00             JNE +191; (0x14E)
+   0000008F : 8D 4D F8                      LEA ECX,DWORD PTR [EBP-8]
+   00000092 : 8D 55 FC                      LEA EDX,DWORD PTR [EBP-4]
+   00000095 : 8B C6                         MOV EAX,ESI
+   00000097 : E8(00 00 00 00                CALL _NF_73
+   0000009C : 84 C0                         TEST AL,AL
+   0000009E : 74 6D                         JE +109; (0x10D)
+   000000A0 : BA 02 00 00 80                MOV EDX,$80000002
+   000000A5 : 8B C7                         MOV EAX,EDI
+   000000A7 : E8(00 00 00 00                CALL TRegistry.SetRootKey{0x5}
+   000000AC : B1 01                         MOV CL,$01
+   000000AE : BA(A0 01 00 00                MOV EDX,TBDE32.Create{0x65}+$000001A0
+   000000B3 : 8B C7                         MOV EAX,EDI
+   000000B5 : E8(00 00 00 00                CALL TRegistry.OpenKey{0x6}
+   000000BA : 8B 4D FC                      MOV ECX,DWORD PTR [EBP-4]
+   000000BD : BA(F4 01 00 00                MOV EDX,TBDE32.Create{0x65}+$000001F4
+   000000C2 : 8B C7                         MOV EAX,EDI
+   000000C4 : E8(00 00 00 00                CALL TRegistry.WriteString{0x8}
+   000000C9 : 8B 4D F8                      MOV ECX,DWORD PTR [EBP-8]
+   000000CC : BA(CC 01 00 00                MOV EDX,TBDE32.Create{0x65}+$000001CC
+   000000D1 : 8B C7                         MOV EAX,EDI
+   000000D3 : E8(00 00 00 00                CALL TRegistry.WriteString{0x8}
+   000000D8 : B9(0C 02 00 00                MOV ECX,TBDE32.Create{0x65}+$0000020C
+   000000DD : BA(1C 02 00 00                MOV EDX,TBDE32.Create{0x65}+$0000021C
+   000000E2 : 8B C7                         MOV EAX,EDI
+   000000E4 : E8(00 00 00 00                CALL TRegistry.WriteString{0x8}
+   000000E9 : B9(30 02 00 00                MOV ECX,TBDE32.Create{0x65}+$00000230
+   000000EE : BA(40 02 00 00                MOV EDX,TBDE32.Create{0x65}+$00000240
+   000000F3 : 8B C7                         MOV EAX,EDI
+   000000F5 : E8(00 00 00 00                CALL TRegistry.WriteString{0x8}
+   000000FA : B9(54 02 00 00                MOV ECX,TBDE32.Create{0x65}+$00000254
+   000000FF : BA(60 02 00 00                MOV EDX,TBDE32.Create{0x65}+$00000260
+   00000104 : 8B C7                         MOV EAX,EDI
+   00000106 : E8(00 00 00 00                CALL TRegistry.WriteString{0x8}
+   0000010B : EB 41                         JMP +65; (0x14E)
+   0000010D : 68(74 02 00 00                PUSH TBDE32.Create{0x65}+$00000274
+   00000112 : 8D 55 EC                      LEA EDX,DWORD PTR [EBP-20]
+   00000115 : A1(00 00 00 00                MOV EAX,DWORD PTR [Application{0xC}]
+   0000011A : 8B 00                         MOV EAX,DWORD PTR [EAX]
+   0000011C : E8(00 00 00 00                CALL TApplication.GetExeName{0xD}
+   00000121 : 8B 45 EC                      MOV EAX,DWORD PTR [EBP-20]
+   00000124 : 8D 55 F0                      LEA EDX,DWORD PTR [EBP-16]
+   00000127 : E8(00 00 00 00                CALL ExtractFilePath{0x29}
+   0000012C : FF 75 F0                      PUSH DWORD PTR [EBP-16]
+   0000012F : 68(98 02 00 00                PUSH TBDE32.Create{0x65}+$00000298
+   00000134 : 8D 45 F4                      LEA EAX,DWORD PTR [EBP-12]
+   00000137 : BA 03 00 00 00                MOV EDX,$00000003
+   0000013C : E8(00 00 00 00                CALL @LStrCatN{0x44}
+   00000141 : 8B 45 F4                      MOV EAX,DWORD PTR [EBP-12]
+   00000144 : E8(00 00 00 00                CALL ShowMessage{0xA}
+   00000149 : E8(00 00 00 00                CALL @Halt0{0x40}
+   0000014E : 8B C7                         MOV EAX,EDI
+   00000150 : E8(00 00 00 00                CALL TObject.Free{0x41}
+   00000155 : 8B C6                         MOV EAX,ESI
+   00000157 : E8(00 00 00 00                CALL TBDE32.ReadSettings{0x69}
+   0000015C : 33 C0                         XOR EAX,EAX
+   0000015E : 5A                            POP EDX
+   0000015F : 59                            POP ECX
+   00000160 : 59                            POP ECX
+   00000161 : 64 89 10                      MOV DWORD PTR FS:[EAX],EDX
+   00000164 : 68(7E 01 00 00                PUSH TBDE32.Create{0x65}+$0000017E
+   00000169 : 8D 45 EC                      LEA EAX,DWORD PTR [EBP-20]
+   0000016C : BA 05 00 00 00                MOV EDX,$00000005
+   00000171 : E8(00 00 00 00                CALL @LStrArrayClr{0x45}
+   00000176 : C3                            RET NEAR
+   00000177 : E9(00 00 00 00                JMP @HandleFinally{0x46}
+   0000017C : EB EB                         JMP -21; (0x169)
+   0000017E : 84 DB                         TEST BL,BL
+   00000180 : 74 0A                         JE +10; (0x18C)
+   00000182 : 64 8F 05 00 00 00 00          POP DWORD PTR FS:[$00000000]
+   00000189 : 83 C4 0C                      ADD ESP,12
+   0000018C : 8B C6                         MOV EAX,ESI
+   0000018E : 5F                            POP EDI
+   0000018F : 5E                            POP ESI
+   00000190 : 5B                            POP EBX
+   00000191 : 8B E5                         MOV ESP,EBP
+   00000193 : 5D                            POP EBP
+   00000194 : C3                            RET NEAR
+   00000195 : 00 00                         ADD BYTE PTR [EAX],AL
+   00000197 : 00 FF                         ADD BH,BH
+   00000199 : FF FF                         ? EDI
+   0000019B : FF 20                         JMP DWORD PTR [EAX],NEAR
+   0000019D : 00 00                         ADD BYTE PTR [EAX],AL
+   0000019F : 00 53 4F                      ADD BYTE PTR [EBX+79],DL
+   000001A2 : 46                            INC ESI
+   000001A3 : 54                            PUSH ESP
+   000001A4 : 57                            PUSH EDI
+   000001A5 : 41                            INC ECX
+   000001A6 : 52                            PUSH EDX
+   000001A7 : 45                            INC EBP
+   000001A8 : 5C                            POP ESP
+   000001A9 : 42                            INC EDX
+   000001AA : 4F                            DEC EDI
+   000001AB : 52                            PUSH EDX
+   000001AC : 4C                            DEC ESP
+   000001AD : 41                            INC ECX
+   000001AE : 4E                            DEC ESI
+   000001AF : 44                            INC ESP
+   000001B0 : 5C                            POP ESP
+   000001B1 : 44                            INC ESP
+   000001B2 : 41                            INC ECX
+   000001B3 : 54                            PUSH ESP
+   000001B4 : 41                            INC ECX
+   000001B5 : 42                            INC EDX
+   000001B6 : 41                            INC ECX
+   000001B7 : 53                            PUSH EBX
+   000001B8 : 45                            INC EBP
+   000001B9 : 20 45 4E                      AND BYTE PTR [EBP+78],AL
+   000001BC : 47                            INC EDI
+   000001BD : 49                            DEC ECX
+   000001BE : 4E                            DEC ESI
+   000001BF : 45                            INC EBP
+   000001C0 : 00 00                         ADD BYTE PTR [EAX],AL
+   000001C2 : 00 00                         ADD BYTE PTR [EAX],AL
+   000001C4 : FF FF                         ? EDI
+   000001C6 : FF FF                         ? EDI
+   000001C8 : 07                            POP ES
+   000001C9 : 00 00                         ADD BYTE PTR [EAX],AL
+   000001CB : 00 44 4C 4C                   ADD BYTE PTR [ESP+2*ECX+76],AL
+   000001CF : 50                            PUSH EAX
+   000001D0 : 41                            INC ECX
+   000001D1 : 54                            PUSH ESP
+   000001D2 : 48                            DEC EAX
+   000001D3 : 00 FF                         ADD BH,BH
+   000001D5 : FF FF                         ? EDI
+   000001D7 : FF 0C 00                      DEC DWORD PTR [EAX+EAX]
+   000001DA : 00 00                         ADD BYTE PTR [EAX],AL
+   000001DC : 5C                            POP ESP
+   000001DD : 69 64 61 70 69 33 32 2E       IMUL DWORD PTR [ECX+112],$2E323369
+   000001E5 : 64 6C                         INSB
+   000001E7 : 6C                            INSB
+   000001E8 : 00 00                         ADD BYTE PTR [EAX],AL
+   000001EA : 00 00                         ADD BYTE PTR [EAX],AL
+   000001EC : FF FF                         ? EDI
+   000001EE : FF FF                         ? EDI
+   000001F0 : 0C 00                         OR AL,$00
+   000001F2 : 00 00                         ADD BYTE PTR [EAX],AL
+   000001F4 : 43                            INC EBX
+   000001F5 : 4F                            DEC EDI
+   000001F6 : 4E                            DEC ESI
+   000001F7 : 46                            INC ESI
+   000001F8 : 49                            DEC ECX
+   000001F9 : 47                            INC EDI
+   000001FA : 46                            INC ESI
+   000001FB : 49                            DEC ECX
+   000001FC : 4C                            DEC ESP
+   000001FD : 45                            INC EBP
+   000001FE : 30 31                         XOR BYTE PTR [ECX],DH
+   00000200 : 00 00                         ADD BYTE PTR [EAX],AL
+   00000202 : 00 00                         ADD BYTE PTR [EAX],AL
+   00000204 : FF FF                         ? EDI
+   00000206 : FF FF                         ? EDI
+   00000208 : 04 00                         ADD AL,$00
+   0000020A : 00 00                         ADD BYTE PTR [EAX],AL
+   0000020C : 30 30                         XOR BYTE PTR [EAX],DH
+   0000020E : 30 39                         XOR BYTE PTR [ECX],BH
+   00000210 : 00 00                         ADD BYTE PTR [EAX],AL
+   00000212 : 00 00                         ADD BYTE PTR [EAX],AL
+   00000214 : FF FF                         ? EDI
+   00000216 : FF FF                         ? EDI
+   00000218 : 08 00                         OR BYTE PTR [EAX],AL
+   0000021A : 00 00                         ADD BYTE PTR [EAX],AL
+   0000021C : 52                            PUSH EDX
+   0000021D : 45                            INC EBP
+   0000021E : 53                            PUSH EBX
+   0000021F : 4F                            DEC EDI
+   00000220 : 55                            PUSH EBP
+   00000221 : 52                            PUSH EDX
+   00000222 : 43                            INC EBX
+   00000223 : 45                            INC EBP
+   00000224 : 00 00                         ADD BYTE PTR [EAX],AL
+   00000226 : 00 00                         ADD BYTE PTR [EAX],AL
+   00000228 : FF FF                         ? EDI
+   0000022A : FF FF                         ? EDI
+   0000022C : 05 00 00 00 57                ADD EAX,$57000000
+   00000231 : 49                            DEC ECX
+   00000232 : 4E                            DEC ESI
+   00000233 : 33 31                         XOR ESI,DWORD PTR [ECX]
+   00000235 : 00 00                         ADD BYTE PTR [EAX],AL
+   00000237 : 00 FF                         ADD BH,BH
+   00000239 : FF FF                         ? EDI
+   0000023B : FF 0A                         DEC DWORD PTR [EDX]
+   0000023D : 00 00                         ADD BYTE PTR [EAX],AL
+   0000023F : 00 53 41                      ADD BYTE PTR [EBX+65],DL
+   00000242 : 56                            PUSH ESI
+   00000243 : 45                            INC EBP
+   00000244 : 43                            INC EBX
+   00000245 : 4F                            DEC EDI
+   00000246 : 4E                            DEC ESI
+   00000247 : 46                            INC ESI
+   00000248 : 49                            DEC ECX
+   00000249 : 47                            INC EDI
+   0000024A : 00 00                         ADD BYTE PTR [EAX],AL
+   0000024C : FF FF                         ? EDI
+   0000024E : FF FF                         ? EDI
+   00000250 : 02 00                         ADD AL,BYTE PTR [EAX]
+   00000252 : 00 00                         ADD BYTE PTR [EAX],AL
+   00000254 : 31 35 00 00 FF FF             XOR DWORD PTR [$FFFF0000],ESI
+   0000025A : FF FF                         ? EDI
+   0000025C : 08 00                         OR BYTE PTR [EAX],AL
+   0000025E : 00 00                         ADD BYTE PTR [EAX],AL
+   00000260 : 55                            PUSH EBP
+   00000261 : 73 65                         JNB +101; (0x2C8)
+   00000263 : 43                            INC EBX
+   00000264 : 6F                            OUTSW
+   00000265 : 75 6E                         JNE +110; (0x2D5)
+   00000267 : 74 00                         JE 0; (0x269)
+   00000269 : 00 00                         ADD BYTE PTR [EAX],AL
+   0000026B : 00 FF                         ADD BH,BH
+   0000026D : FF FF                         ? EDI
+   0000026F : FF 18                         CALL DWORD PTR [EAX],FAR
+   00000271 : 00 00                         ADD BYTE PTR [EAX],AL
+   00000273 : 00 50 6C                      ADD BYTE PTR [EAX+108],DL
+   00000276 : 65 61                         POPA
+   00000278 : 73 65                         JNB +101; (0x2DF)
+   0000027A : 20 70 75                      AND BYTE PTR [EAX+117],DH
+   0000027D : 74 20                         JE +32; (0x29F)
+   0000027F : 42                            INC EDX
+   00000280 : 44                            INC ESP
+   00000281 : 45                            INC EBP
+   00000282 : 20 66 69                      AND BYTE PTR [ESI+105],AH
+   00000285 : 6C                            INSB
+   00000286 : 65 73 20                      JNB +32; (0x2A9)
+   00000289 : 69 6E 20 00 00 00 00          IMUL DWORD PTR [ESI+32],$00000000
+   00000290 : FF FF                         ? EDI
+   00000292 : FF FF                         ? EDI
+   00000294 : 03 00                         ADD EAX,DWORD PTR [EAX]
+   00000296 : 00 00                         ADD BYTE PTR [EAX],AL
+   00000298 : 42                            INC EDX
+   00000299 : 44                            INC ESP
+   0000029A : 45                            INC EBP
+   0000029B : 00                            ?
+end;
+
+procedure TBDE32.ReadSettings (Self: TBDE32);
+begin
+   00000000 : 55                            PUSH EBP
+   00000001 : 8B EC                         MOV EBP,ESP
+   00000003 : 6A 00                         PUSH $00
+   00000005 : 53                            PUSH EBX
+   00000006 : 8B D8                         MOV EBX,EAX
+   00000008 : 33 C0                         XOR EAX,EAX
+   0000000A : 55                            PUSH EBP
+   0000000B : 68(F4 00 00 00                PUSH TBDE32.ReadSettings{0x69}+$000000F4
+   00000010 : 64 FF 30                      PUSH DWORD PTR FS:[EAX]
+   00000013 : 64 89 20                      MOV DWORD PTR FS:[EAX],ESP
+   00000016 : 8D 45 FC                      LEA EAX,DWORD PTR [EBP-4]
+   00000019 : 50                            PUSH EAX
+   0000001A : B9(08 01 00 00                MOV ECX,TBDE32.ReadSettings{0x69}+$00000108
+   0000001F : BA(14 01 00 00                MOV EDX,TBDE32.ReadSettings{0x69}+$00000114
+   00000024 : 8B C3                         MOV EAX,EBX
+   00000026 : E8(00 00 00 00                CALL _NF_6E
+   0000002B : 8B 55 FC                      MOV EDX,DWORD PTR [EBP-4]
+   0000002E : 8D 43 28                      LEA EAX,DWORD PTR [EBX+40]
+   00000031 : E8(00 00 00 00                CALL @LStrAsg{0x47}
+   00000036 : 8D 45 FC                      LEA EAX,DWORD PTR [EBP-4]
+   00000039 : 50                            PUSH EAX
+   0000003A : B9(24 01 00 00                MOV ECX,TBDE32.ReadSettings{0x69}+$00000124
+   0000003F : BA(34 01 00 00                MOV EDX,TBDE32.ReadSettings{0x69}+$00000134
+   00000044 : 8B C3                         MOV EAX,EBX
+   00000046 : E8(00 00 00 00                CALL _NF_6E
+   0000004B : 8B 45 FC                      MOV EAX,DWORD PTR [EBP-4]
+   0000004E : BA(48 01 00 00                MOV EDX,TBDE32.ReadSettings{0x69}+$00000148
+   00000053 : E8(00 00 00 00                CALL @LStrCmp{0x48}
+   00000058 : 0F 94 C0                      SETE AL
+   0000005B : 88 43 24                      MOV BYTE PTR [EBX+36],AL
+   0000005E : 8D 45 FC                      LEA EAX,DWORD PTR [EBP-4]
+   00000061 : 50                            PUSH EAX
+   00000062 : B9(58 01 00 00                MOV ECX,TBDE32.ReadSettings{0x69}+$00000158
+   00000067 : BA(68 01 00 00                MOV EDX,TBDE32.ReadSettings{0x69}+$00000168
+   0000006C : 8B C3                         MOV EAX,EBX
+   0000006E : E8(00 00 00 00                CALL _NF_6E
+   00000073 : 8B 45 FC                      MOV EAX,DWORD PTR [EBP-4]
+   00000076 : E8(00 00 00 00                CALL StrToInt{0x2A}
+   0000007B : 89 43 2C                      MOV DWORD PTR [EBX+44],EAX
+   0000007E : 8D 45 FC                      LEA EAX,DWORD PTR [EBP-4]
+   00000081 : 50                            PUSH EAX
+   00000082 : B9(7C 01 00 00                MOV ECX,TBDE32.ReadSettings{0x69}+$0000017C
+   00000087 : BA(88 01 00 00                MOV EDX,TBDE32.ReadSettings{0x69}+$00000188
+   0000008C : 8B C3                         MOV EAX,EBX
+   0000008E : E8(00 00 00 00                CALL _NF_6E
+   00000093 : 8B 45 FC                      MOV EAX,DWORD PTR [EBP-4]
+   00000096 : E8(00 00 00 00                CALL StrToInt{0x2A}
+   0000009B : 89 43 30                      MOV DWORD PTR [EBX+48],EAX
+   0000009E : 8D 45 FC                      LEA EAX,DWORD PTR [EBP-4]
+   000000A1 : 50                            PUSH EAX
+   000000A2 : B9(A0 01 00 00                MOV ECX,TBDE32.ReadSettings{0x69}+$000001A0
+   000000A7 : BA(AC 01 00 00                MOV EDX,TBDE32.ReadSettings{0x69}+$000001AC
+   000000AC : 8B C3                         MOV EAX,EBX
+   000000AE : E8(00 00 00 00                CALL _NF_6E
+   000000B3 : 8B 45 FC                      MOV EAX,DWORD PTR [EBP-4]
+   000000B6 : E8(00 00 00 00                CALL StrToInt{0x2A}
+   000000BB : 89 43 34                      MOV DWORD PTR [EBX+52],EAX
+   000000BE : 8D 45 FC                      LEA EAX,DWORD PTR [EBP-4]
+   000000C1 : 50                            PUSH EAX
+   000000C2 : B9(58 01 00 00                MOV ECX,TBDE32.ReadSettings{0x69}+$00000158
+   000000C7 : BA(BC 01 00 00                MOV EDX,TBDE32.ReadSettings{0x69}+$000001BC
+   000000CC : 8B C3                         MOV EAX,EBX
+   000000CE : E8(00 00 00 00                CALL _NF_6E
+   000000D3 : 8B 45 FC                      MOV EAX,DWORD PTR [EBP-4]
+   000000D6 : E8(00 00 00 00                CALL StrToInt{0x2A}
+   000000DB : 89 43 38                      MOV DWORD PTR [EBX+56],EAX
+   000000DE : 33 C0                         XOR EAX,EAX
+   000000E0 : 5A                            POP EDX
+   000000E1 : 59                            POP ECX
+   000000E2 : 59                            POP ECX
+   000000E3 : 64 89 10                      MOV DWORD PTR FS:[EAX],EDX
+   000000E6 : 68(FB 00 00 00                PUSH TBDE32.ReadSettings{0x69}+$000000FB
+   000000EB : 8D 45 FC                      LEA EAX,DWORD PTR [EBP-4]
+   000000EE : E8(00 00 00 00                CALL @LStrClr{0x49}
+   000000F3 : C3                            RET NEAR
+   000000F4 : E9(00 00 00 00                JMP @HandleFinally{0x46}
+   000000F9 : EB F0                         JMP -16; (0xEB)
+   000000FB : 5B                            POP EBX
+   000000FC : 59                            POP ECX
+   000000FD : 5D                            POP EBP
+   000000FE : C3                            RET NEAR
+   000000FF : 00 FF                         ADD BH,BH
+   00000101 : FF FF                         ? EDI
+   00000103 : FF 03                         INC DWORD PTR [EBX]
+   00000105 : 00 00                         ADD BYTE PTR [EAX],AL
+   00000107 : 00 46 3A                      ADD BYTE PTR [ESI+58],AL
+   0000010A : 5C                            POP ESP
+   0000010B : 00 FF                         ADD BH,BH
+   0000010D : FF FF                         ? EDI
+   0000010F : FF 07                         INC DWORD PTR [EDI]
+   00000111 : 00 00                         ADD BYTE PTR [EAX],AL
+   00000113 : 00 4E 45                      ADD BYTE PTR [ESI+69],CL
+   00000116 : 54                            PUSH ESP
+   00000117 : 20 44 49 52                   AND BYTE PTR [ECX+2*ECX+82],AL
+   0000011B : 00 FF                         ADD BH,BH
+   0000011D : FF FF                         ? EDI
+   0000011F : FF 05 00 00 00 46             INC DWORD PTR [$46000000]
+   00000125 : 41                            INC ECX
+   00000126 : 4C                            DEC ESP
+   00000127 : 53                            PUSH EBX
+   00000128 : 45                            INC EBP
+   00000129 : 00 00                         ADD BYTE PTR [EAX],AL
+   0000012B : 00 FF                         ADD BH,BH
+   0000012D : FF FF                         ? EDI
+   0000012F : FF 0B                         DEC DWORD PTR [EBX]
+   00000131 : 00 00                         ADD BYTE PTR [EAX],AL
+   00000133 : 00 4C 4F 43                   ADD BYTE PTR [EDI+2*ECX+67],CL
+   00000137 : 41                            INC ECX
+   00000138 : 4C                            DEC ESP
+   00000139 : 20 53 48                      AND BYTE PTR [EBX+72],DL
+   0000013C : 41                            INC ECX
+   0000013D : 52                            PUSH EDX
+   0000013E : 45                            INC EBP
+   0000013F : 00 FF                         ADD BH,BH
+   00000141 : FF FF                         ? EDI
+   00000143 : FF 04 00                      INC DWORD PTR [EAX+EAX]
+   00000146 : 00 00                         ADD BYTE PTR [EAX],AL
+   00000148 : 54                            PUSH ESP
+   00000149 : 52                            PUSH EDX
+   0000014A : 55                            PUSH EBP
+   0000014B : 45                            INC EBP
+   0000014C : 00 00                         ADD BYTE PTR [EAX],AL
+   0000014E : 00 00                         ADD BYTE PTR [EAX],AL
+   00000150 : FF FF                         ? EDI
+   00000152 : FF FF                         ? EDI
+   00000154 : 04 00                         ADD AL,$00
+   00000156 : 00 00                         ADD BYTE PTR [EAX],AL
+   00000158 : 32 30                         XOR DH,BYTE PTR [EAX]
+   0000015A : 34 38                         XOR AL,$38
+   0000015C : 00 00                         ADD BYTE PTR [EAX],AL
+   0000015E : 00 00                         ADD BYTE PTR [EAX],AL
+   00000160 : FF FF                         ? EDI
+   00000162 : FF FF                         ? EDI
+   00000164 : 0A 00                         OR AL,BYTE PTR [EAX]
+   00000166 : 00 00                         ADD BYTE PTR [EAX],AL
+   00000168 : 4D                            DEC EBP
+   00000169 : 41                            INC ECX
+   0000016A : 58                            POP EAX
+   0000016B : 42                            INC EDX
+   0000016C : 55                            PUSH EBP
+   0000016D : 46                            INC ESI
+   0000016E : 53                            PUSH EBX
+   0000016F : 49                            DEC ECX
+   00000170 : 5A                            POP EDX
+   00000171 : 45                            INC EBP
+   00000172 : 00 00                         ADD BYTE PTR [EAX],AL
+   00000174 : FF FF                         ? EDI
+   00000176 : FF FF                         ? EDI
+   00000178 : 02 00                         ADD AL,BYTE PTR [EAX]
+   0000017A : 00 00                         ADD BYTE PTR [EAX],AL
+   0000017C : 34 38                         XOR AL,$38
+   0000017E : 00 00                         ADD BYTE PTR [EAX],AL
+   00000180 : FF FF                         ? EDI
+   00000182 : FF FF                         ? EDI
+   00000184 : 0E                            PUSH CS
+   00000185 : 00 00                         ADD BYTE PTR [EAX],AL
+   00000187 : 00 4D 41                      ADD BYTE PTR [EBP+65],CL
+   0000018A : 58                            POP EAX
+   0000018B : 46                            INC ESI
+   0000018C : 49                            DEC ECX
+   0000018D : 4C                            DEC ESP
+   0000018E : 45                            INC EBP
+   0000018F : 48                            DEC EAX
+   00000190 : 41                            INC ECX
+   00000191 : 4E                            DEC ESI
+   00000192 : 44                            INC ESP
+   00000193 : 4C                            DEC ESP
+   00000194 : 45                            INC EBP
+   00000195 : 53                            PUSH EBX
+   00000196 : 00 00                         ADD BYTE PTR [EAX],AL
+   00000198 : FF FF                         ? EDI
+   0000019A : FF FF                         ? EDI
+   0000019C : 02 00                         ADD AL,BYTE PTR [EAX]
+   0000019E : 00 00                         ADD BYTE PTR [EAX],AL
+   000001A0 : 31 36                         XOR DWORD PTR [ESI],ESI
+   000001A2 : 00 00                         ADD BYTE PTR [EAX],AL
+   000001A4 : FF FF                         ? EDI
+   000001A6 : FF FF                         ? EDI
+   000001A8 : 07                            POP ES
+   000001A9 : 00 00                         ADD BYTE PTR [EAX],AL
+   000001AB : 00 4D 45                      ADD BYTE PTR [EBP+69],CL
+   000001AE : 4D                            DEC EBP
+   000001AF : 53                            PUSH EBX
+   000001B0 : 49                            DEC ECX
+   000001B1 : 5A                            POP EDX
+   000001B2 : 45                            INC EBP
+   000001B3 : 00 FF                         ADD BH,BH
+   000001B5 : FF FF                         ? EDI
+   000001B7 : FF 0D 00 00 00 53             DEC DWORD PTR [$53000000]
+   000001BD : 48                            DEC EAX
+   000001BE : 41                            INC ECX
+   000001BF : 52                            PUSH EDX
+   000001C0 : 45                            INC EBP
+   000001C1 : 44                            INC ESP
+   000001C2 : 4D                            DEC EBP
+   000001C3 : 45                            INC EBP
+   000001C4 : 4D                            DEC EBP
+   000001C5 : 53                            PUSH EBX
+   000001C6 : 49                            DEC ECX
+   000001C7 : 5A                            POP EDX
+   000001C8 : 45                            INC EBP
+   000001C9 : 00 00                         ADD BYTE PTR [EAX],AL
+   000001CB : 00                            ?
+end;
+
+procedure TBDE32.WriteSettings (Self: TBDE32);
+begin
+   00000000 : 55                            PUSH EBP
+   00000001 : 8B EC                         MOV EBP,ESP
+   00000003 : 6A 00                         PUSH $00
+   00000005 : 53                            PUSH EBX
+   00000006 : 8B D8                         MOV EBX,EAX
+   00000008 : 33 C0                         XOR EAX,EAX
+   0000000A : 55                            PUSH EBP
+   0000000B : 68(CD 00 00 00                PUSH TBDE32.WriteSettings{0x6B}+$000000CD
+   00000010 : 64 FF 30                      PUSH DWORD PTR FS:[EAX]
+   00000013 : 64 89 20                      MOV DWORD PTR FS:[EAX],ESP
+   00000016 : 80 7B 24 00                   CMP BYTE PTR [EBX+36],$00
+   0000001A : 74 13                         JE +19; (0x2F)
+   0000001C : B9(E0 00 00 00                MOV ECX,TBDE32.WriteSettings{0x6B}+$000000E0
+   00000021 : BA(F0 00 00 00                MOV EDX,TBDE32.WriteSettings{0x6B}+$000000F0
+   00000026 : 8B C3                         MOV EAX,EBX
+   00000028 : E8(00 00 00 00                CALL _NF_6D
+   0000002D : EB 11                         JMP +17; (0x40)
+   0000002F : B9(04 01 00 00                MOV ECX,TBDE32.WriteSettings{0x6B}+$00000104
+   00000034 : BA(F0 00 00 00                MOV EDX,TBDE32.WriteSettings{0x6B}+$000000F0
+   00000039 : 8B C3                         MOV EAX,EBX
+   0000003B : E8(00 00 00 00                CALL _NF_6D
+   00000040 : 8B 4B 28                      MOV ECX,DWORD PTR [EBX+40]
+   00000043 : BA(14 01 00 00                MOV EDX,TBDE32.WriteSettings{0x6B}+$00000114
+   00000048 : 8B C3                         MOV EAX,EBX
+   0000004A : E8(00 00 00 00                CALL _NF_6D
+   0000004F : 8D 55 FC                      LEA EDX,DWORD PTR [EBP-4]
+   00000052 : 8B 43 2C                      MOV EAX,DWORD PTR [EBX+44]
+   00000055 : E8(00 00 00 00                CALL IntToStr{0x2B}
+   0000005A : 8B 4D FC                      MOV ECX,DWORD PTR [EBP-4]
+   0000005D : BA(24 01 00 00                MOV EDX,TBDE32.WriteSettings{0x6B}+$00000124
+   00000062 : 8B C3                         MOV EAX,EBX
+   00000064 : E8(00 00 00 00                CALL _NF_6D
+   00000069 : 8D 55 FC                      LEA EDX,DWORD PTR [EBP-4]
+   0000006C : 8B 43 30                      MOV EAX,DWORD PTR [EBX+48]
+   0000006F : E8(00 00 00 00                CALL IntToStr{0x2B}
+   00000074 : 8B 4D FC                      MOV ECX,DWORD PTR [EBP-4]
+   00000077 : BA(38 01 00 00                MOV EDX,TBDE32.WriteSettings{0x6B}+$00000138
+   0000007C : 8B C3                         MOV EAX,EBX
+   0000007E : E8(00 00 00 00                CALL _NF_6D
+   00000083 : 8D 55 FC                      LEA EDX,DWORD PTR [EBP-4]
+   00000086 : 8B 43 34                      MOV EAX,DWORD PTR [EBX+52]
+   00000089 : E8(00 00 00 00                CALL IntToStr{0x2B}
+   0000008E : 8B 4D FC                      MOV ECX,DWORD PTR [EBP-4]
+   00000091 : BA(50 01 00 00                MOV EDX,TBDE32.WriteSettings{0x6B}+$00000150
+   00000096 : 8B C3                         MOV EAX,EBX
+   00000098 : E8(00 00 00 00                CALL _NF_6D
+   0000009D : 8D 55 FC                      LEA EDX,DWORD PTR [EBP-4]
+   000000A0 : 8B 43 38                      MOV EAX,DWORD PTR [EBX+56]
+   000000A3 : E8(00 00 00 00                CALL IntToStr{0x2B}
+   000000A8 : 8B 4D FC                      MOV ECX,DWORD PTR [EBP-4]
+   000000AB : BA(60 01 00 00                MOV EDX,TBDE32.WriteSettings{0x6B}+$00000160
+   000000B0 : 8B C3                         MOV EAX,EBX
+   000000B2 : E8(00 00 00 00                CALL _NF_6D
+   000000B7 : 33 C0                         XOR EAX,EAX
+   000000B9 : 5A                            POP EDX
+   000000BA : 59                            POP ECX
+   000000BB : 59                            POP ECX
+   000000BC : 64 89 10                      MOV DWORD PTR FS:[EAX],EDX
+   000000BF : 68(D4 00 00 00                PUSH TBDE32.WriteSettings{0x6B}+$000000D4
+   000000C4 : 8D 45 FC                      LEA EAX,DWORD PTR [EBP-4]
+   000000C7 : E8(00 00 00 00                CALL @LStrClr{0x49}
+   000000CC : C3                            RET NEAR
+   000000CD : E9(00 00 00 00                JMP @HandleFinally{0x46}
+   000000D2 : EB F0                         JMP -16; (0xC4)
+   000000D4 : 5B                            POP EBX
+   000000D5 : 59                            POP ECX
+   000000D6 : 5D                            POP EBP
+   000000D7 : C3                            RET NEAR
+   000000D8 : FF FF                         ? EDI
+   000000DA : FF FF                         ? EDI
+   000000DC : 04 00                         ADD AL,$00
+   000000DE : 00 00                         ADD BYTE PTR [EAX],AL
+   000000E0 : 54                            PUSH ESP
+   000000E1 : 52                            PUSH EDX
+   000000E2 : 55                            PUSH EBP
+   000000E3 : 45                            INC EBP
+   000000E4 : 00 00                         ADD BYTE PTR [EAX],AL
+   000000E6 : 00 00                         ADD BYTE PTR [EAX],AL
+   000000E8 : FF FF                         ? EDI
+   000000EA : FF FF                         ? EDI
+   000000EC : 0B 00                         OR EAX,DWORD PTR [EAX]
+   000000EE : 00 00                         ADD BYTE PTR [EAX],AL
+   000000F0 : 4C                            DEC ESP
+   000000F1 : 4F                            DEC EDI
+   000000F2 : 43                            INC EBX
+   000000F3 : 41                            INC ECX
+   000000F4 : 4C                            DEC ESP
+   000000F5 : 20 53 48                      AND BYTE PTR [EBX+72],DL
+   000000F8 : 41                            INC ECX
+   000000F9 : 52                            PUSH EDX
+   000000FA : 45                            INC EBP
+   000000FB : 00 FF                         ADD BH,BH
+   000000FD : FF FF                         ? EDI
+   000000FF : FF 05 00 00 00 46             INC DWORD PTR [$46000000]
+   00000105 : 41                            INC ECX
+   00000106 : 4C                            DEC ESP
+   00000107 : 53                            PUSH EBX
+   00000108 : 45                            INC EBP
+   00000109 : 00 00                         ADD BYTE PTR [EAX],AL
+   0000010B : 00 FF                         ADD BH,BH
+   0000010D : FF FF                         ? EDI
+   0000010F : FF 07                         INC DWORD PTR [EDI]
+   00000111 : 00 00                         ADD BYTE PTR [EAX],AL
+   00000113 : 00 4E 45                      ADD BYTE PTR [ESI+69],CL
+   00000116 : 54                            PUSH ESP
+   00000117 : 20 44 49 52                   AND BYTE PTR [ECX+2*ECX+82],AL
+   0000011B : 00 FF                         ADD BH,BH
+   0000011D : FF FF                         ? EDI
+   0000011F : FF 0A                         DEC DWORD PTR [EDX]
+   00000121 : 00 00                         ADD BYTE PTR [EAX],AL
+   00000123 : 00 4D 41                      ADD BYTE PTR [EBP+65],CL
+   00000126 : 58                            POP EAX
+   00000127 : 42                            INC EDX
+   00000128 : 55                            PUSH EBP
+   00000129 : 46                            INC ESI
+   0000012A : 53                            PUSH EBX
+   0000012B : 49                            DEC ECX
+   0000012C : 5A                            POP EDX
+   0000012D : 45                            INC EBP
+   0000012E : 00 00                         ADD BYTE PTR [EAX],AL
+   00000130 : FF FF                         ? EDI
+   00000132 : FF FF                         ? EDI
+   00000134 : 0E                            PUSH CS
+   00000135 : 00 00                         ADD BYTE PTR [EAX],AL
+   00000137 : 00 4D 41                      ADD BYTE PTR [EBP+65],CL
+   0000013A : 58                            POP EAX
+   0000013B : 46                            INC ESI
+   0000013C : 49                            DEC ECX
+   0000013D : 4C                            DEC ESP
+   0000013E : 45                            INC EBP
+   0000013F : 48                            DEC EAX
+   00000140 : 41                            INC ECX
+   00000141 : 4E                            DEC ESI
+   00000142 : 44                            INC ESP
+   00000143 : 4C                            DEC ESP
+   00000144 : 45                            INC EBP
+   00000145 : 53                            PUSH EBX
+   00000146 : 00 00                         ADD BYTE PTR [EAX],AL
+   00000148 : FF FF                         ? EDI
+   0000014A : FF FF                         ? EDI
+   0000014C : 07                            POP ES
+   0000014D : 00 00                         ADD BYTE PTR [EAX],AL
+   0000014F : 00 4D 45                      ADD BYTE PTR [EBP+69],CL
+   00000152 : 4D                            DEC EBP
+   00000153 : 53                            PUSH EBX
+   00000154 : 49                            DEC ECX
+   00000155 : 5A                            POP EDX
+   00000156 : 45                            INC EBP
+   00000157 : 00 FF                         ADD BH,BH
+   00000159 : FF FF                         ? EDI
+   0000015B : FF 0D 00 00 00 53             DEC DWORD PTR [$53000000]
+   00000161 : 48                            DEC EAX
+   00000162 : 41                            INC ECX
+   00000163 : 52                            PUSH EDX
+   00000164 : 45                            INC EBP
+   00000165 : 44                            INC ESP
+   00000166 : 4D                            DEC EBP
+   00000167 : 45                            INC EBP
+   00000168 : 4D                            DEC EBP
+   00000169 : 53                            PUSH EBX
+   0000016A : 49                            DEC ECX
+   0000016B : 5A                            POP EDX
+   0000016C : 45                            INC EBP
+   0000016D : 00 00                         ADD BYTE PTR [EAX],AL
+   0000016F : 00                            ?
+end;
+
+procedure _NF_6D?;
+begin
+   00000000 : 55                            PUSH EBP
+   00000001 : 8B EC                         MOV EBP,ESP
+   00000003 : 81 C4 E8 FE FF FF             ADD ESP,$FFFFFEE8
+   00000009 : 53                            PUSH EBX
+   0000000A : 56                            PUSH ESI
+   0000000B : 33 DB                         XOR EBX,EBX
+   0000000D : 89 5D F4                      MOV DWORD PTR [EBP-12],EBX
+   00000010 : 89 5D F0                      MOV DWORD PTR [EBP-16],EBX
+   00000013 : 89 4D F8                      MOV DWORD PTR [EBP-8],ECX
+   00000016 : 89 55 FC                      MOV DWORD PTR [EBP-4],EDX
+   00000019 : 8B 45 FC                      MOV EAX,DWORD PTR [EBP-4]
+   0000001C : E8(00 00 00 00                CALL @LStrAddRef{0x4E}
+   00000021 : 8B 45 F8                      MOV EAX,DWORD PTR [EBP-8]
+   00000024 : E8(00 00 00 00                CALL @LStrAddRef{0x4E}
+   00000029 : 33 C0                         XOR EAX,EAX
+   0000002B : 55                            PUSH EBP
+   0000002C : 68(85 01 00 00                PUSH _NF_6D+$00000185
+   00000031 : 64 FF 30                      PUSH DWORD PTR FS:[EAX]
+   00000034 : 64 89 20                      MOV DWORD PTR FS:[EAX],ESP
+   00000037 : B2 01                         MOV DL,$01
+   00000039 : A1(00 00 00 00                MOV EAX,DWORD PTR [TRegistry{0x3}]
+   0000003E : E8(00 00 00 00                CALL TRegistry.Create{0x4}
+   00000043 : 8B D8                         MOV EBX,EAX
+   00000045 : BA 02 00 00 80                MOV EDX,$80000002
+   0000004A : 8B C3                         MOV EAX,EBX
+   0000004C : E8(00 00 00 00                CALL TRegistry.SetRootKey{0x5}
+   00000051 : 33 C9                         XOR ECX,ECX
+   00000053 : BA(9C 01 00 00                MOV EDX,_NF_6D+$0000019C
+   00000058 : 8B C3                         MOV EAX,EBX
+   0000005A : E8(00 00 00 00                CALL TRegistry.OpenKey{0x6}
+   0000005F : 8D 4D F4                      LEA ECX,DWORD PTR [EBP-12]
+   00000062 : BA(C8 01 00 00                MOV EDX,_NF_6D+$000001C8
+   00000067 : 8B C3                         MOV EAX,EBX
+   00000069 : E8(00 00 00 00                CALL TRegistry.ReadString{0x7}
+   0000006E : 8B C3                         MOV EAX,EBX
+   00000070 : E8(00 00 00 00                CALL TObject.Free{0x41}
+   00000075 : 8D 45 F0                      LEA EAX,DWORD PTR [EBP-16]
+   00000078 : B9(E0 01 00 00                MOV ECX,_NF_6D+$000001E0
+   0000007D : 8B 55 F4                      MOV EDX,DWORD PTR [EBP-12]
+   00000080 : E8(00 00 00 00                CALL @LStrCat3{0x4F}
+   00000085 : 33 C9                         XOR ECX,ECX
+   00000087 : 8B 55 FC                      MOV EDX,DWORD PTR [EBP-4]
+   0000008A : 8B 45 F4                      MOV EAX,DWORD PTR [EBP-12]
+   0000008D : E8(00 00 00 00                CALL FilePos{0x6F}
+   00000092 : 8B F0                         MOV ESI,EAX
+   00000094 : 85 F6                         TEST ESI,ESI
+   00000096 : 0F 8E BB 00 00 00             JLE +187; (0x157)
+   0000009C : 8B 45 FC                      MOV EAX,DWORD PTR [EBP-4]
+   0000009F : E8(00 00 00 00                CALL @LStrLen{0x4C}
+   000000A4 : 8B C8                         MOV ECX,EAX
+   000000A6 : 03 CE                         ADD ECX,ESI
+   000000A8 : 83 C1 03                      ADD ECX,3
+   000000AB : BA(EC 01 00 00                MOV EDX,_NF_6D+$000001EC
+   000000B0 : 8B 45 F4                      MOV EAX,DWORD PTR [EBP-12]
+   000000B3 : E8(00 00 00 00                CALL FilePos{0x6F}
+   000000B8 : 89 45 E8                      MOV DWORD PTR [EBP-24],EAX
+   000000BB : 6A 00                         PUSH $00
+   000000BD : 8B 4D F4                      MOV ECX,DWORD PTR [EBP-12]
+   000000C0 : B2 01                         MOV DL,$01
+   000000C2 : A1(00 00 00 00                MOV EAX,DWORD PTR [TFileStream{0x20}]
+   000000C7 : E8(00 00 00 00                CALL TFileStream.Create{0x21}
+   000000CC : 8B D8                         MOV EBX,EAX
+   000000CE : 68 FF FF 00 00                PUSH $0000FFFF
+   000000D3 : 8B 4D F0                      MOV ECX,DWORD PTR [EBP-16]
+   000000D6 : B2 01                         MOV DL,$01
+   000000D8 : A1(00 00 00 00                MOV EAX,DWORD PTR [TFileStream{0x20}]
+   000000DD : E8(00 00 00 00                CALL TFileStream.Create{0x21}
+   000000E2 : 89 45 EC                      MOV DWORD PTR [EBP-20],EAX
+   000000E5 : 8B 45 FC                      MOV EAX,DWORD PTR [EBP-4]
+   000000E8 : E8(00 00 00 00                CALL @LStrLen{0x4C}
+   000000ED : 8B C8                         MOV ECX,EAX
+   000000EF : 03 CE                         ADD ECX,ESI
+   000000F1 : 83 C1 02                      ADD ECX,2
+   000000F4 : 8B D3                         MOV EDX,EBX
+   000000F6 : 8B 45 EC                      MOV EAX,DWORD PTR [EBP-20]
+   000000F9 : E8(00 00 00 00                CALL TStream.CopyFrom{0x23}
+   000000FE : 8D 85 E8 FE FF FF             LEA EAX,DWORD PTR [EBP-280]
+   00000104 : 8B 55 F8                      MOV EDX,DWORD PTR [EBP-8]
+   00000107 : E8(00 00 00 00                CALL StrPCopy{0x2E}
+   0000010C : 8B 45 F8                      MOV EAX,DWORD PTR [EBP-8]
+   0000010F : E8(00 00 00 00                CALL @LStrLen{0x4C}
+   00000114 : 8B C8                         MOV ECX,EAX
+   00000116 : 8D 95 E8 FE FF FF             LEA EDX,DWORD PTR [EBP-280]
+   0000011C : 8B 45 EC                      MOV EAX,DWORD PTR [EBP-20]
+   0000011F : 8B 30                         MOV ESI,DWORD PTR [EAX]
+   00000121 : FF 56 08                      CALL DWORD PTR [ESI+8],NEAR
+   00000124 : 8B 55 E8                      MOV EDX,DWORD PTR [EBP-24]
+   00000127 : 4A                            DEC EDX
+   00000128 : 33 C9                         XOR ECX,ECX
+   0000012A : 8B C3                         MOV EAX,EBX
+   0000012C : 8B 30                         MOV ESI,DWORD PTR [EAX]
+   0000012E : FF 56 0C                      CALL DWORD PTR [ESI+12],NEAR
+   00000131 : 8B C3                         MOV EAX,EBX
+   00000133 : E8(00 00 00 00                CALL TStream.GetSize{0x25}
+   00000138 : 8B C8                         MOV ECX,EAX
+   0000013A : 2B 4D E8                      SUB ECX,DWORD PTR [EBP-24]
+   0000013D : 41                            INC ECX
+   0000013E : 8B D3                         MOV EDX,EBX
+   00000140 : 8B 45 EC                      MOV EAX,DWORD PTR [EBP-20]
+   00000143 : E8(00 00 00 00                CALL TStream.CopyFrom{0x23}
+   00000148 : 8B 45 EC                      MOV EAX,DWORD PTR [EBP-20]
+   0000014B : E8(00 00 00 00                CALL TObject.Free{0x41}
+   00000150 : 8B C3                         MOV EAX,EBX
+   00000152 : E8(00 00 00 00                CALL TObject.Free{0x41}
+   00000157 : 8B 45 F4                      MOV EAX,DWORD PTR [EBP-12]
+   0000015A : E8(00 00 00 00                CALL DeleteFile{0x2F}
+   0000015F : 8B 55 F4                      MOV EDX,DWORD PTR [EBP-12]
+   00000162 : 8B 45 F0                      MOV EAX,DWORD PTR [EBP-16]
+   00000165 : E8(00 00 00 00                CALL RenameFile{0x30}
+   0000016A : 33 C0                         XOR EAX,EAX
+   0000016C : 5A                            POP EDX
+   0000016D : 59                            POP ECX
+   0000016E : 59                            POP ECX
+   0000016F : 64 89 10                      MOV DWORD PTR FS:[EAX],EDX
+   00000172 : 68(8C 01 00 00                PUSH _NF_6D+$0000018C
+   00000177 : 8D 45 F0                      LEA EAX,DWORD PTR [EBP-16]
+   0000017A : BA 04 00 00 00                MOV EDX,$00000004
+   0000017F : E8(00 00 00 00                CALL @LStrArrayClr{0x45}
+   00000184 : C3                            RET NEAR
+   00000185 : E9(00 00 00 00                JMP @HandleFinally{0x46}
+   0000018A : EB EB                         JMP -21; (0x177)
+   0000018C : 5E                            POP ESI
+   0000018D : 5B                            POP EBX
+   0000018E : 8B E5                         MOV ESP,EBP
+   00000190 : 5D                            POP EBP
+   00000191 : C3                            RET NEAR
+   00000192 : 00 00                         ADD BYTE PTR [EAX],AL
+   00000194 : FF FF                         ? EDI
+   00000196 : FF FF                         ? EDI
+   00000198 : 20 00                         AND BYTE PTR [EAX],AL
+   0000019A : 00 00                         ADD BYTE PTR [EAX],AL
+   0000019C : 53                            PUSH EBX
+   0000019D : 4F                            DEC EDI
+   0000019E : 46                            INC ESI
+   0000019F : 54                            PUSH ESP
+   000001A0 : 57                            PUSH EDI
+   000001A1 : 41                            INC ECX
+   000001A2 : 52                            PUSH EDX
+   000001A3 : 45                            INC EBP
+   000001A4 : 5C                            POP ESP
+   000001A5 : 42                            INC EDX
+   000001A6 : 4F                            DEC EDI
+   000001A7 : 52                            PUSH EDX
+   000001A8 : 4C                            DEC ESP
+   000001A9 : 41                            INC ECX
+   000001AA : 4E                            DEC ESI
+   000001AB : 44                            INC ESP
+   000001AC : 5C                            POP ESP
+   000001AD : 44                            INC ESP
+   000001AE : 41                            INC ECX
+   000001AF : 54                            PUSH ESP
+   000001B0 : 41                            INC ECX
+   000001B1 : 42                            INC EDX
+   000001B2 : 41                            INC ECX
+   000001B3 : 53                            PUSH EBX
+   000001B4 : 45                            INC EBP
+   000001B5 : 20 45 4E                      AND BYTE PTR [EBP+78],AL
+   000001B8 : 47                            INC EDI
+   000001B9 : 49                            DEC ECX
+   000001BA : 4E                            DEC ESI
+   000001BB : 45                            INC EBP
+   000001BC : 00 00                         ADD BYTE PTR [EAX],AL
+   000001BE : 00 00                         ADD BYTE PTR [EAX],AL
+   000001C0 : FF FF                         ? EDI
+   000001C2 : FF FF                         ? EDI
+   000001C4 : 0C 00                         OR AL,$00
+   000001C6 : 00 00                         ADD BYTE PTR [EAX],AL
+   000001C8 : 43                            INC EBX
+   000001C9 : 4F                            DEC EDI
+   000001CA : 4E                            DEC ESI
+   000001CB : 46                            INC ESI
+   000001CC : 49                            DEC ECX
+   000001CD : 47                            INC EDI
+   000001CE : 46                            INC ESI
+   000001CF : 49                            DEC ECX
+   000001D0 : 4C                            DEC ESP
+   000001D1 : 45                            INC EBP
+   000001D2 : 30 31                         XOR BYTE PTR [ECX],DH
+   000001D4 : 00 00                         ADD BYTE PTR [EAX],AL
+   000001D6 : 00 00                         ADD BYTE PTR [EAX],AL
+   000001D8 : FF FF                         ? EDI
+   000001DA : FF FF                         ? EDI
+   000001DC : 01 00                         ADD DWORD PTR [EAX],EAX
+   000001DE : 00 00                         ADD BYTE PTR [EAX],AL
+   000001E0 : 32 00                         XOR AL,BYTE PTR [EAX]
+   000001E2 : 00 00                         ADD BYTE PTR [EAX],AL
+   000001E4 : FF FF                         ? EDI
+   000001E6 : FF FF                         ? EDI
+   000001E8 : 01 00                         ADD DWORD PTR [EAX],EAX
+   000001EA : 00 00                         ADD BYTE PTR [EAX],AL
+   000001EC : 00 00                         ADD BYTE PTR [EAX],AL
+   000001EE : 00 00                         ADD BYTE PTR [EAX],AL
+end;
+
+procedure _NF_6E?;
+begin
+   00000000 : 55                            PUSH EBP
+   00000001 : 8B EC                         MOV EBP,ESP
+   00000003 : 81 C4 24 FE FF FF             ADD ESP,$FFFFFE24
+   00000009 : 53                            PUSH EBX
+   0000000A : 33 DB                         XOR EBX,EBX
+   0000000C : 89 5D F4                      MOV DWORD PTR [EBP-12],EBX
+   0000000F : 89 5D F0                      MOV DWORD PTR [EBP-16],EBX
+   00000012 : 89 4D F8                      MOV DWORD PTR [EBP-8],ECX
+   00000015 : 89 55 FC                      MOV DWORD PTR [EBP-4],EDX
+   00000018 : 8B 45 FC                      MOV EAX,DWORD PTR [EBP-4]
+   0000001B : E8(00 00 00 00                CALL @LStrAddRef{0x4E}
+   00000020 : 8B 45 F8                      MOV EAX,DWORD PTR [EBP-8]
+   00000023 : E8(00 00 00 00                CALL @LStrAddRef{0x4E}
+   00000028 : 33 C0                         XOR EAX,EAX
+   0000002A : 55                            PUSH EBP
+   0000002B : 68(45 01 00 00                PUSH _NF_6E+$00000145
+   00000030 : 64 FF 30                      PUSH DWORD PTR FS:[EAX]
+   00000033 : 64 89 20                      MOV DWORD PTR FS:[EAX],ESP
+   00000036 : B2 01                         MOV DL,$01
+   00000038 : A1(00 00 00 00                MOV EAX,DWORD PTR [TRegistry{0x3}]
+   0000003D : E8(00 00 00 00                CALL TRegistry.Create{0x4}
+   00000042 : 8B D8                         MOV EBX,EAX
+   00000044 : BA 02 00 00 80                MOV EDX,$80000002
+   00000049 : 8B C3                         MOV EAX,EBX
+   0000004B : E8(00 00 00 00                CALL TRegistry.SetRootKey{0x5}
+   00000050 : 33 C9                         XOR ECX,ECX
+   00000052 : BA(5C 01 00 00                MOV EDX,_NF_6E+$0000015C
+   00000057 : 8B C3                         MOV EAX,EBX
+   00000059 : E8(00 00 00 00                CALL TRegistry.OpenKey{0x6}
+   0000005E : 8D 4D F4                      LEA ECX,DWORD PTR [EBP-12]
+   00000061 : BA(88 01 00 00                MOV EDX,_NF_6E+$00000188
+   00000066 : 8B C3                         MOV EAX,EBX
+   00000068 : E8(00 00 00 00                CALL TRegistry.ReadString{0x7}
+   0000006D : 8B C3                         MOV EAX,EBX
+   0000006F : E8(00 00 00 00                CALL TObject.Free{0x41}
+   00000074 : 8B 45 F4                      MOV EAX,DWORD PTR [EBP-12]
+   00000077 : E8(00 00 00 00                CALL FileExists{0x28}
+   0000007C : 84 C0                         TEST AL,AL
+   0000007E : 0F 84 A6 00 00 00             JE +166; (0x12A)
+   00000084 : 8B 55 F4                      MOV EDX,DWORD PTR [EBP-12]
+   00000087 : 8D 85 24 FE FF FF             LEA EAX,DWORD PTR [EBP-476]
+   0000008D : E8(00 00 00 00                CALL @Assign{0x52}
+   00000092 : 8D 85 24 FE FF FF             LEA EAX,DWORD PTR [EBP-476]
+   00000098 : E8(00 00 00 00                CALL @ResetText{0x54}
+   0000009D : E8(00 00 00 00                CALL @_IOTest{0x60}
+   000000A2 : 8D 55 F0                      LEA EDX,DWORD PTR [EBP-16]
+   000000A5 : 8D 85 24 FE FF FF             LEA EAX,DWORD PTR [EBP-476]
+   000000AB : E8(00 00 00 00                CALL @ReadLString{0x56}
+   000000B0 : 8D 85 24 FE FF FF             LEA EAX,DWORD PTR [EBP-476]
+   000000B6 : E8(00 00 00 00                CALL @ReadLn{0x57}
+   000000BB : E8(00 00 00 00                CALL @_IOTest{0x60}
+   000000C0 : 8D 85 24 FE FF FF             LEA EAX,DWORD PTR [EBP-476]
+   000000C6 : E8(00 00 00 00                CALL @Close{0x59}
+   000000CB : E8(00 00 00 00                CALL @_IOTest{0x60}
+   000000D0 : 8B 55 F0                      MOV EDX,DWORD PTR [EBP-16]
+   000000D3 : 8B 45 FC                      MOV EAX,DWORD PTR [EBP-4]
+   000000D6 : E8(00 00 00 00                CALL @LStrPos{0x5B}
+   000000DB : 8B D8                         MOV EBX,EAX
+   000000DD : 85 DB                         TEST EBX,EBX
+   000000DF : 7E 3E                         JLE +62; (0x11F)
+   000000E1 : 8B 45 FC                      MOV EAX,DWORD PTR [EBP-4]
+   000000E4 : E8(00 00 00 00                CALL @LStrLen{0x4C}
+   000000E9 : 8B C8                         MOV ECX,EAX
+   000000EB : 03 CB                         ADD ECX,EBX
+   000000ED : 83 C1 02                      ADD ECX,2
+   000000F0 : 8D 45 F0                      LEA EAX,DWORD PTR [EBP-16]
+   000000F3 : BA 01 00 00 00                MOV EDX,$00000001
+   000000F8 : E8(00 00 00 00                CALL @LStrDelete{0x5D}
+   000000FD : 8B 55 F0                      MOV EDX,DWORD PTR [EBP-16]
+   00000100 : B8(A0 01 00 00                MOV EAX,_NF_6E+$000001A0
+   00000105 : E8(00 00 00 00                CALL @LStrPos{0x5B}
+   0000010A : 8B D8                         MOV EBX,EAX
+   0000010C : 8B 45 08                      MOV EAX,DWORD PTR [EBP+8]
+   0000010F : 50                            PUSH EAX
+   00000110 : 8D 4B 01                      LEA ECX,DWORD PTR [EBX+1]
+   00000113 : 33 D2                         XOR EDX,EDX
+   00000115 : 8B 45 F0                      MOV EAX,DWORD PTR [EBP-16]
+   00000118 : E8(00 00 00 00                CALL @LStrCopy{0x5F}
+   0000011D : EB 0B                         JMP +11; (0x12A)
+   0000011F : 8B 45 08                      MOV EAX,DWORD PTR [EBP+8]
+   00000122 : 8B 55 F8                      MOV EDX,DWORD PTR [EBP-8]
+   00000125 : E8(00 00 00 00                CALL @LStrLAsg{0x61}
+   0000012A : 33 C0                         XOR EAX,EAX
+   0000012C : 5A                            POP EDX
+   0000012D : 59                            POP ECX
+   0000012E : 59                            POP ECX
+   0000012F : 64 89 10                      MOV DWORD PTR FS:[EAX],EDX
+   00000132 : 68(4C 01 00 00                PUSH _NF_6E+$0000014C
+   00000137 : 8D 45 F0                      LEA EAX,DWORD PTR [EBP-16]
+   0000013A : BA 04 00 00 00                MOV EDX,$00000004
+   0000013F : E8(00 00 00 00                CALL @LStrArrayClr{0x45}
+   00000144 : C3                            RET NEAR
+   00000145 : E9(00 00 00 00                JMP @HandleFinally{0x46}
+   0000014A : EB EB                         JMP -21; (0x137)
+   0000014C : 5B                            POP EBX
+   0000014D : 8B E5                         MOV ESP,EBP
+   0000014F : 5D                            POP EBP
+   00000150 : C2 04 00                      RET NEAR,4
+   00000153 : 00 FF                         ADD BH,BH
+   00000155 : FF FF                         ? EDI
+   00000157 : FF 20                         JMP DWORD PTR [EAX],NEAR
+   00000159 : 00 00                         ADD BYTE PTR [EAX],AL
+   0000015B : 00 53 4F                      ADD BYTE PTR [EBX+79],DL
+   0000015E : 46                            INC ESI
+   0000015F : 54                            PUSH ESP
+   00000160 : 57                            PUSH EDI
+   00000161 : 41                            INC ECX
+   00000162 : 52                            PUSH EDX
+   00000163 : 45                            INC EBP
+   00000164 : 5C                            POP ESP
+   00000165 : 42                            INC EDX
+   00000166 : 4F                            DEC EDI
+   00000167 : 52                            PUSH EDX
+   00000168 : 4C                            DEC ESP
+   00000169 : 41                            INC ECX
+   0000016A : 4E                            DEC ESI
+   0000016B : 44                            INC ESP
+   0000016C : 5C                            POP ESP
+   0000016D : 44                            INC ESP
+   0000016E : 41                            INC ECX
+   0000016F : 54                            PUSH ESP
+   00000170 : 41                            INC ECX
+   00000171 : 42                            INC EDX
+   00000172 : 41                            INC ECX
+   00000173 : 53                            PUSH EBX
+   00000174 : 45                            INC EBP
+   00000175 : 20 45 4E                      AND BYTE PTR [EBP+78],AL
+   00000178 : 47                            INC EDI
+   00000179 : 49                            DEC ECX
+   0000017A : 4E                            DEC ESI
+   0000017B : 45                            INC EBP
+   0000017C : 00 00                         ADD BYTE PTR [EAX],AL
+   0000017E : 00 00                         ADD BYTE PTR [EAX],AL
+   00000180 : FF FF                         ? EDI
+   00000182 : FF FF                         ? EDI
+   00000184 : 0C 00                         OR AL,$00
+   00000186 : 00 00                         ADD BYTE PTR [EAX],AL
+   00000188 : 43                            INC EBX
+   00000189 : 4F                            DEC EDI
+   0000018A : 4E                            DEC ESI
+   0000018B : 46                            INC ESI
+   0000018C : 49                            DEC ECX
+   0000018D : 47                            INC EDI
+   0000018E : 46                            INC ESI
+   0000018F : 49                            DEC ECX
+   00000190 : 4C                            DEC ESP
+   00000191 : 45                            INC EBP
+   00000192 : 30 31                         XOR BYTE PTR [ECX],DH
+   00000194 : 00 00                         ADD BYTE PTR [EAX],AL
+   00000196 : 00 00                         ADD BYTE PTR [EAX],AL
+   00000198 : FF FF                         ? EDI
+   0000019A : FF FF                         ? EDI
+   0000019C : 01 00                         ADD DWORD PTR [EAX],EAX
+   0000019E : 00 00                         ADD BYTE PTR [EAX],AL
+   000001A0 : 00 00                         ADD BYTE PTR [EAX],AL
+   000001A2 : 00 00                         ADD BYTE PTR [EAX],AL
+end;
+
+function FilePos (FileName: System.AnsiString; What: System.AnsiString;
+  startFrom: System.Integer): System.Integer;
+begin
+   00000000 : 55                            PUSH EBP
+   00000001 : 8B EC                         MOV EBP,ESP
+   00000003 : 81 C4 28 FE FF FF             ADD ESP,$FFFFFE28
+   00000009 : 53                            PUSH EBX
+   0000000A : 33 DB                         XOR EBX,EBX
+   0000000C : 89 5D F4                      MOV DWORD PTR [EBP-12],EBX
+   0000000F : 8B D9                         MOV EBX,ECX
+   00000011 : 89 55 F8                      MOV DWORD PTR [EBP-8],EDX
+   00000014 : 89 45 FC                      MOV DWORD PTR [EBP-4],EAX
+   00000017 : 8B 45 FC                      MOV EAX,DWORD PTR [EBP-4]
+   0000001A : E8(00 00 00 00                CALL @LStrAddRef{0x4E}
+   0000001F : 8B 45 F8                      MOV EAX,DWORD PTR [EBP-8]
+   00000022 : E8(00 00 00 00                CALL @LStrAddRef{0x4E}
+   00000027 : 33 C0                         XOR EAX,EAX
+   00000029 : 55                            PUSH EBP
+   0000002A : 68(C8 00 00 00                PUSH FilePos{0x6F}+$000000C8
+   0000002F : 64 FF 30                      PUSH DWORD PTR FS:[EAX]
+   00000032 : 64 89 20                      MOV DWORD PTR FS:[EAX],ESP
+   00000035 : 8B 45 FC                      MOV EAX,DWORD PTR [EBP-4]
+   00000038 : E8(00 00 00 00                CALL FileExists{0x28}
+   0000003D : 84 C0                         TEST AL,AL
+   0000003F : 74 6A                         JE +106; (0xAB)
+   00000041 : 8B 55 FC                      MOV EDX,DWORD PTR [EBP-4]
+   00000044 : 8D 85 28 FE FF FF             LEA EAX,DWORD PTR [EBP-472]
+   0000004A : E8(00 00 00 00                CALL @Assign{0x52}
+   0000004F : 8D 85 28 FE FF FF             LEA EAX,DWORD PTR [EBP-472]
+   00000055 : E8(00 00 00 00                CALL @ResetText{0x54}
+   0000005A : E8(00 00 00 00                CALL @_IOTest{0x60}
+   0000005F : 8D 55 F4                      LEA EDX,DWORD PTR [EBP-12]
+   00000062 : 8D 85 28 FE FF FF             LEA EAX,DWORD PTR [EBP-472]
+   00000068 : E8(00 00 00 00                CALL @ReadLString{0x56}
+   0000006D : 8D 85 28 FE FF FF             LEA EAX,DWORD PTR [EBP-472]
+   00000073 : E8(00 00 00 00                CALL @ReadLn{0x57}
+   00000078 : E8(00 00 00 00                CALL @_IOTest{0x60}
+   0000007D : 8D 45 F4                      LEA EAX,DWORD PTR [EBP-12]
+   00000080 : 8B CB                         MOV ECX,EBX
+   00000082 : BA 01 00 00 00                MOV EDX,$00000001
+   00000087 : E8(00 00 00 00                CALL @LStrDelete{0x5D}
+   0000008C : 8B 55 F4                      MOV EDX,DWORD PTR [EBP-12]
+   0000008F : 8B 45 F8                      MOV EAX,DWORD PTR [EBP-8]
+   00000092 : E8(00 00 00 00                CALL @LStrPos{0x5B}
+   00000097 : 03 D8                         ADD EBX,EAX
+   00000099 : 8D 85 28 FE FF FF             LEA EAX,DWORD PTR [EBP-472]
+   0000009F : E8(00 00 00 00                CALL @Close{0x59}
+   000000A4 : E8(00 00 00 00                CALL @_IOTest{0x60}
+   000000A9 : EB 02                         JMP +2; (0xAD)
+   000000AB : 33 DB                         XOR EBX,EBX
+   000000AD : 33 C0                         XOR EAX,EAX
+   000000AF : 5A                            POP EDX
+   000000B0 : 59                            POP ECX
+   000000B1 : 59                            POP ECX
+   000000B2 : 64 89 10                      MOV DWORD PTR FS:[EAX],EDX
+   000000B5 : 68(CF 00 00 00                PUSH FilePos{0x6F}+$000000CF
+   000000BA : 8D 45 F4                      LEA EAX,DWORD PTR [EBP-12]
+   000000BD : BA 03 00 00 00                MOV EDX,$00000003
+   000000C2 : E8(00 00 00 00                CALL @LStrArrayClr{0x45}
+   000000C7 : C3                            RET NEAR
+   000000C8 : E9(00 00 00 00                JMP @HandleFinally{0x46}
+   000000CD : EB EB                         JMP -21; (0xBA)
+   000000CF : 8B C3                         MOV EAX,EBX
+   000000D1 : 5B                            POP EBX
+   000000D2 : 8B E5                         MOV ESP,EBP
+   000000D4 : 5D                            POP EBP
+   000000D5 : C3                            RET NEAR
+end;
+
+procedure _NF_73?;
+begin
+   00000000 : 55                            PUSH EBP
+   00000001 : 8B EC                         MOV EBP,ESP
+   00000003 : 6A 00                         PUSH $00
+   00000005 : 6A 00                         PUSH $00
+   00000007 : 53                            PUSH EBX
+   00000008 : 56                            PUSH ESI
+   00000009 : 8B F1                         MOV ESI,ECX
+   0000000B : 8B DA                         MOV EBX,EDX
+   0000000D : 33 C0                         XOR EAX,EAX
+   0000000F : 55                            PUSH EBP
+   00000010 : 68(34 01 00 00                PUSH _NF_73+$00000134
+   00000015 : 64 FF 30                      PUSH DWORD PTR FS:[EAX]
+   00000018 : 64 89 20                      MOV DWORD PTR FS:[EAX],ESP
+   0000001B : 8D 55 F8                      LEA EDX,DWORD PTR [EBP-8]
+   0000001E : A1(00 00 00 00                MOV EAX,DWORD PTR [Application{0xC}]
+   00000023 : 8B 00                         MOV EAX,DWORD PTR [EAX]
+   00000025 : E8(00 00 00 00                CALL TApplication.GetExeName{0xD}
+   0000002A : 8B 45 F8                      MOV EAX,DWORD PTR [EBP-8]
+   0000002D : 8D 55 FC                      LEA EDX,DWORD PTR [EBP-4]
+   00000030 : E8(00 00 00 00                CALL ExtractFilePath{0x29}
+   00000035 : 8D 45 F8                      LEA EAX,DWORD PTR [EBP-8]
+   00000038 : B9(4C 01 00 00                MOV ECX,_NF_73+$0000014C
+   0000003D : 8B 55 FC                      MOV EDX,DWORD PTR [EBP-4]
+   00000040 : E8(00 00 00 00                CALL @LStrCat3{0x4F}
+   00000045 : 8B 45 F8                      MOV EAX,DWORD PTR [EBP-8]
+   00000048 : E8(00 00 00 00                CALL FileExists{0x28}
+   0000004D : 84 C0                         TEST AL,AL
+   0000004F : 74 0F                         JE +15; (0x60)
+   00000051 : 8B C3                         MOV EAX,EBX
+   00000053 : B9(4C 01 00 00                MOV ECX,_NF_73+$0000014C
+   00000058 : 8B 55 FC                      MOV EDX,DWORD PTR [EBP-4]
+   0000005B : E8(00 00 00 00                CALL @LStrCat3{0x4F}
+   00000060 : 8D 45 F8                      LEA EAX,DWORD PTR [EBP-8]
+   00000063 : B9(60 01 00 00                MOV ECX,_NF_73+$00000160
+   00000068 : 8B 55 FC                      MOV EDX,DWORD PTR [EBP-4]
+   0000006B : E8(00 00 00 00                CALL @LStrCat3{0x4F}
+   00000070 : 8B 45 F8                      MOV EAX,DWORD PTR [EBP-8]
+   00000073 : E8(00 00 00 00                CALL FileExists{0x28}
+   00000078 : 84 C0                         TEST AL,AL
+   0000007A : 74 19                         JE +25; (0x95)
+   0000007C : 56                            PUSH ESI
+   0000007D : 8B 45 FC                      MOV EAX,DWORD PTR [EBP-4]
+   00000080 : E8(00 00 00 00                CALL @LStrLen{0x4C}
+   00000085 : 8B C8                         MOV ECX,EAX
+   00000087 : 49                            DEC ECX
+   00000088 : BA 01 00 00 00                MOV EDX,$00000001
+   0000008D : 8B 45 FC                      MOV EAX,DWORD PTR [EBP-4]
+   00000090 : E8(00 00 00 00                CALL @LStrCopy{0x5F}
+   00000095 : 8D 45 F8                      LEA EAX,DWORD PTR [EBP-8]
+   00000098 : B9(74 01 00 00                MOV ECX,_NF_73+$00000174
+   0000009D : 8B 55 FC                      MOV EDX,DWORD PTR [EBP-4]
+   000000A0 : E8(00 00 00 00                CALL @LStrCat3{0x4F}
+   000000A5 : 8B 45 F8                      MOV EAX,DWORD PTR [EBP-8]
+   000000A8 : E8(00 00 00 00                CALL FileExists{0x28}
+   000000AD : 84 C0                         TEST AL,AL
+   000000AF : 74 0F                         JE +15; (0xC0)
+   000000B1 : 8B C3                         MOV EAX,EBX
+   000000B3 : B9(74 01 00 00                MOV ECX,_NF_73+$00000174
+   000000B8 : 8B 55 FC                      MOV EDX,DWORD PTR [EBP-4]
+   000000BB : E8(00 00 00 00                CALL @LStrCat3{0x4F}
+   000000C0 : 8D 45 F8                      LEA EAX,DWORD PTR [EBP-8]
+   000000C3 : B9(8C 01 00 00                MOV ECX,_NF_73+$0000018C
+   000000C8 : 8B 55 FC                      MOV EDX,DWORD PTR [EBP-4]
+   000000CB : E8(00 00 00 00                CALL @LStrCat3{0x4F}
+   000000D0 : 8B 45 F8                      MOV EAX,DWORD PTR [EBP-8]
+   000000D3 : E8(00 00 00 00                CALL FileExists{0x28}
+   000000D8 : 84 C0                         TEST AL,AL
+   000000DA : 74 0F                         JE +15; (0xEB)
+   000000DC : 8B C6                         MOV EAX,ESI
+   000000DE : B9(A4 01 00 00                MOV ECX,_NF_73+$000001A4
+   000000E3 : 8B 55 FC                      MOV EDX,DWORD PTR [EBP-4]
+   000000E6 : E8(00 00 00 00                CALL @LStrCat3{0x4F}
+   000000EB : 8B 03                         MOV EAX,DWORD PTR [EBX]
+   000000ED : E8(00 00 00 00                CALL FileExists{0x28}
+   000000F2 : 84 C0                         TEST AL,AL
+   000000F4 : 74 1B                         JE +27; (0x111)
+   000000F6 : 8B 16                         MOV EDX,DWORD PTR [ESI]
+   000000F8 : 8D 45 F8                      LEA EAX,DWORD PTR [EBP-8]
+   000000FB : B9(B0 01 00 00                MOV ECX,_NF_73+$000001B0
+   00000100 : E8(00 00 00 00                CALL @LStrCat3{0x4F}
+   00000105 : 8B 45 F8                      MOV EAX,DWORD PTR [EBP-8]
+   00000108 : E8(00 00 00 00                CALL FileExists{0x28}
+   0000010D : 84 C0                         TEST AL,AL
+   0000010F : 75 04                         JNE +4; (0x115)
+   00000111 : 33 C0                         XOR EAX,EAX
+   00000113 : EB 02                         JMP +2; (0x117)
+   00000115 : B0 01                         MOV AL,$01
+   00000117 : 8B D8                         MOV EBX,EAX
+   00000119 : 33 C0                         XOR EAX,EAX
+   0000011B : 5A                            POP EDX
+   0000011C : 59                            POP ECX
+   0000011D : 59                            POP ECX
+   0000011E : 64 89 10                      MOV DWORD PTR FS:[EAX],EDX
+   00000121 : 68(3B 01 00 00                PUSH _NF_73+$0000013B
+   00000126 : 8D 45 F8                      LEA EAX,DWORD PTR [EBP-8]
+   00000129 : BA 02 00 00 00                MOV EDX,$00000002
+   0000012E : E8(00 00 00 00                CALL @LStrArrayClr{0x45}
+   00000133 : C3                            RET NEAR
+   00000134 : E9(00 00 00 00                JMP @HandleFinally{0x46}
+   00000139 : EB EB                         JMP -21; (0x126)
+   0000013B : 8B C3                         MOV EAX,EBX
+   0000013D : 5E                            POP ESI
+   0000013E : 5B                            POP EBX
+   0000013F : 59                            POP ECX
+   00000140 : 59                            POP ECX
+   00000141 : 5D                            POP EBP
+   00000142 : C3                            RET NEAR
+   00000143 : 00 FF                         ADD BH,BH
+   00000145 : FF FF                         ? EDI
+   00000147 : FF 0B                         DEC DWORD PTR [EBX]
+   00000149 : 00 00                         ADD BYTE PTR [EAX],AL
+   0000014B : 00 69 64                      ADD BYTE PTR [ECX+100],CH
+   0000014E : 61                            POPA
+   0000014F : 70 69                         JO +105; (0x1BA)
+   00000151 : 33 32                         XOR ESI,DWORD PTR [EDX]
+   00000153 : 2E 63                         ARPL
+   00000155 : 66 67 00 FF                   ADD BH,BH
+   00000159 : FF FF                         ? EDI
+   0000015B : FF 0B                         DEC DWORD PTR [EBX]
+   0000015D : 00 00                         ADD BYTE PTR [EAX],AL
+   0000015F : 00 69 64                      ADD BYTE PTR [ECX+100],CH
+   00000162 : 61                            POPA
+   00000163 : 70 69                         JO +105; (0x1CE)
+   00000165 : 33 32                         XOR ESI,DWORD PTR [EDX]
+   00000167 : 2E 64 6C                      INSB
+   0000016A : 6C                            INSB
+   0000016B : 00 FF                         ADD BH,BH
+   0000016D : FF FF                         ? EDI
+   0000016F : FF 0F                         DEC DWORD PTR [EDI]
+   00000171 : 00 00                         ADD BYTE PTR [EAX],AL
+   00000173 : 00 42 44                      ADD BYTE PTR [EDX+68],AL
+   00000176 : 45                            INC EBP
+   00000177 : 5C                            POP ESP
+   00000178 : 69 64 61 70 69 33 32 2E       IMUL DWORD PTR [ECX+112],$2E323369
+   00000180 : 63                            ARPL
+   00000181 : 66 67 00 FF                   ADD BH,BH
+   00000185 : FF FF                         ? EDI
+   00000187 : FF 0F                         DEC DWORD PTR [EDI]
+   00000189 : 00 00                         ADD BYTE PTR [EAX],AL
+   0000018B : 00 42 44                      ADD BYTE PTR [EDX+68],AL
+   0000018E : 45                            INC EBP
+   0000018F : 5C                            POP ESP
+   00000190 : 69 64 61 70 69 33 32 2E       IMUL DWORD PTR [ECX+112],$2E323369
+   00000198 : 64 6C                         INSB
+   0000019A : 6C                            INSB
+   0000019B : 00 FF                         ADD BH,BH
+   0000019D : FF FF                         ? EDI
+   0000019F : FF 03                         INC DWORD PTR [EBX]
+   000001A1 : 00 00                         ADD BYTE PTR [EAX],AL
+   000001A3 : 00 42 44                      ADD BYTE PTR [EDX+68],AL
+   000001A6 : 45                            INC EBP
+   000001A7 : 00 FF                         ADD BH,BH
+   000001A9 : FF FF                         ? EDI
+   000001AB : FF 0C 00                      DEC DWORD PTR [EAX+EAX]
+   000001AE : 00 00                         ADD BYTE PTR [EAX],AL
+   000001B0 : 5C                            POP ESP
+   000001B1 : 69 64 61 70 69 33 32 2E       IMUL DWORD PTR [ECX+112],$2E323369
+   000001B9 : 64 6C                         INSB
+   000001BB : 6C                            INSB
+   000001BC : 00 00                         ADD BYTE PTR [EAX],AL
+   000001BE : 00 00                         ADD BYTE PTR [EAX],AL
+end;
+
+procedure Register;
+begin
+   00000000 : 51                            PUSH ECX
+   00000001 : A1(00 00 00 00                MOV EAX,DWORD PTR [TBDE32{0x62}]
+   00000006 : 89 04 24                      MOV DWORD PTR [ESP],EAX
+   00000009 : 8B D4                         MOV EDX,ESP
+   0000000B : 33 C9                         XOR ECX,ECX
+   0000000D : B8(24 00 00 00                MOV EAX,Register{0x74}+$00000024
+   00000012 : E8(00 00 00 00                CALL RegisterComponents{0x26}
+   00000017 : 5A                            POP EDX
+   00000018 : C3                            RET NEAR
+   00000019 : 00 00                         ADD BYTE PTR [EAX],AL
+   0000001B : 00 FF                         ADD BH,BH
+   0000001D : FF FF                         ? EDI
+   0000001F : FF 0B                         DEC DWORD PTR [EBX]
+   00000021 : 00 00                         ADD BYTE PTR [EAX],AL
+   00000023 : 00 44 61 74                   ADD BYTE PTR [ECX+116],AL
+   00000027 : 61                            POPA
+   00000028 : 20 41 63                      AND BYTE PTR [ECX+99],AL
+   0000002B : 63                            ARPL
+   0000002C : 65 73 73                      JNB +115; (0xA2)
+   0000002F : 00                            ?
+end;
+
+procedure Finalization;
+begin
+   00000000 : 55                            PUSH EBP
+   00000001 : 8B EC                         MOV EBP,ESP
+   00000003 : 33 C0                         XOR EAX,EAX
+   00000005 : 55                            PUSH EBP
+   00000006 : 68(25 00 00 00                PUSH Finalization{0x75}+$00000025
+   0000000B : 64 FF 30                      PUSH DWORD PTR FS:[EAX]
+   0000000E : 64 89 20                      MOV DWORD PTR FS:[EAX],ESP
+   00000011 : FF 05(00 00 00 00             INC DWORD PTR [_NV_64]
+   00000017 : 33 C0                         XOR EAX,EAX
+   00000019 : 5A                            POP EDX
+   0000001A : 59                            POP ECX
+   0000001B : 59                            POP ECX
+   0000001C : 64 89 10                      MOV DWORD PTR FS:[EAX],EDX
+   0000001F : 68(2C 00 00 00                PUSH Finalization{0x75}+$0000002C
+   00000024 : C3                            RET NEAR
+   00000025 : E9(00 00 00 00                JMP @HandleFinally{0x46}
+   0000002A : EB F8                         JMP -8; (0x24)
+   0000002C : 5D                            POP EBP
+   0000002D : C3                            RET NEAR
+end;
+
+procedure BDE32;
+begin
+   00000000 : 83 2D(00 00 00 00 01          SUB DWORD PTR [_NV_64],1
+   00000007 : C3(                           RET NEAR
+end;
+
+end.
+
+
