@@ -24,6 +24,8 @@ const
   DEBUGShowScr: boolean = false;
   DEBUGShowPrn: boolean = false;
   DEBUGNewLogFile: boolean = true;
+  DEBUGFileNameDateTimeAddon: string = '_(yyyy.mm.dd_hh-nn-ss_ddd)';
+  DEBUGFileNameExt: string = 'log';
 // ****************************************************************************
   procedure DEBUGMess(Shift: integer; Mess: string);
   procedure DEBUGSave(FName, Data: string; DateStamp: boolean);
@@ -138,7 +140,9 @@ initialization
   begin
     DateSeparator := '-';
     TimeSeparator := '-';
-    DEBUGFileName := DEBUGProjectName + '_(' + DateToStr(Now) + '_' + TimeToStr(Time) + ').log';
+    // DEBUGFileName := DEBUGProjectName + '_(' + DateToStr(Now) + '_' + TimeToStr(Time) + ').log';
+    DEBUGFileName := DEBUGProjectName +
+      FormatDateTime(DEBUGFileNameDateTimeAddon, Now) + '.' + DEBUGFileNameExt;
   end
   else
     DEBUGFileName := DEBUGProjectName + '.log';
